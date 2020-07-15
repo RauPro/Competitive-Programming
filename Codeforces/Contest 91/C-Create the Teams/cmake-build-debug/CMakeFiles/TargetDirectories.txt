@@ -1,0 +1,3 @@
+C:/Users/CORE i5/Desktop/Universidad/ICPC/C-Create the Teams/cmake-build-debug/CMakeFiles/C_Create_the_Teams.dir
+C:/Users/CORE i5/Desktop/Universidad/ICPC/C-Create the Teams/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/CORE i5/Desktop/Universidad/ICPC/C-Create the Teams/cmake-build-debug/CMakeFiles/rebuild_cache.dir
