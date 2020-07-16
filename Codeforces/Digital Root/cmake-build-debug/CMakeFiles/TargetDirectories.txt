@@ -1,3 +1,0 @@
-C:/Users/CORE i5/Desktop/Universidad/ICPC/Digital Root/cmake-build-debug/CMakeFiles/Digital_Root.dir
-C:/Users/CORE i5/Desktop/Universidad/ICPC/Digital Root/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/CORE i5/Desktop/Universidad/ICPC/Digital Root/cmake-build-debug/CMakeFiles/rebuild_cache.dir

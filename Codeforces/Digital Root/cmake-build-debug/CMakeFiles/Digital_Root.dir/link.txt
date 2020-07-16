@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\Digital_Root.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Digital_Root.dir/objects.a @CMakeFiles\Digital_Root.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Digital_Root.dir/objects.a -Wl,--no-whole-archive  -o Digital_Root.exe -Wl,--out-implib,libDigital_Root.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Digital_Root.dir\linklibs.rsp
