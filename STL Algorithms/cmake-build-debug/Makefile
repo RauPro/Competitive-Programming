@@ -148,6 +148,19 @@ count_if/fast:
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/build
 .PHONY : count_if/fast
 
+#=============================================================================
+# Target rules for targets named finding
+
+# Build rule for target.
+finding: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 finding
+.PHONY : finding
+
+# fast build rule for target.
+finding/fast:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/build
+.PHONY : finding/fast
+
 Counting_and_Finding/count.obj: Counting_and_Finding/count.cpp.obj
 
 .PHONY : Counting_and_Finding/count.obj
@@ -202,6 +215,33 @@ Counting_and_Finding/count_if.cpp.s:
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/Counting_and_Finding/count_if.cpp.s
 .PHONY : Counting_and_Finding/count_if.cpp.s
 
+Counting_and_Finding/finding.obj: Counting_and_Finding/finding.cpp.obj
+
+.PHONY : Counting_and_Finding/finding.obj
+
+# target to build an object file
+Counting_and_Finding/finding.cpp.obj:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/Counting_and_Finding/finding.cpp.obj
+.PHONY : Counting_and_Finding/finding.cpp.obj
+
+Counting_and_Finding/finding.i: Counting_and_Finding/finding.cpp.i
+
+.PHONY : Counting_and_Finding/finding.i
+
+# target to preprocess a source file
+Counting_and_Finding/finding.cpp.i:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/Counting_and_Finding/finding.cpp.i
+.PHONY : Counting_and_Finding/finding.cpp.i
+
+Counting_and_Finding/finding.s: Counting_and_Finding/finding.cpp.s
+
+.PHONY : Counting_and_Finding/finding.s
+
+# target to generate assembly for a file
+Counting_and_Finding/finding.cpp.s:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/Counting_and_Finding/finding.cpp.s
+.PHONY : Counting_and_Finding/finding.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -239,6 +279,7 @@ help:
 	@echo ... STL_Algorithms
 	@echo ... count
 	@echo ... count_if
+	@echo ... finding
 	@echo ... edit_cache
 	@echo ... Counting_and_Finding/count.obj
 	@echo ... Counting_and_Finding/count.i
@@ -246,6 +287,9 @@ help:
 	@echo ... Counting_and_Finding/count_if.obj
 	@echo ... Counting_and_Finding/count_if.i
 	@echo ... Counting_and_Finding/count_if.s
+	@echo ... Counting_and_Finding/finding.obj
+	@echo ... Counting_and_Finding/finding.i
+	@echo ... Counting_and_Finding/finding.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

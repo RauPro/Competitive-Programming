@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programmi
 all: CMakeFiles/STL_Algorithms.dir/all
 all: CMakeFiles/count.dir/all
 all: CMakeFiles/count_if.dir/all
+all: CMakeFiles/finding.dir/all
 
 .PHONY : all
 
@@ -62,6 +63,7 @@ all: CMakeFiles/count_if.dir/all
 clean: CMakeFiles/STL_Algorithms.dir/clean
 clean: CMakeFiles/count.dir/clean
 clean: CMakeFiles/count_if.dir/clean
+clean: CMakeFiles/finding.dir/clean
 
 .PHONY : clean
 
@@ -150,6 +152,33 @@ count_if: CMakeFiles/count_if.dir/rule
 CMakeFiles/count_if.dir/clean:
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/clean
 .PHONY : CMakeFiles/count_if.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/finding.dir
+
+# All Build rule for target.
+CMakeFiles/finding.dir/all:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/depend
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=7,8 "Built target finding"
+.PHONY : CMakeFiles/finding.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/finding.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/finding.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/finding.dir/rule
+
+# Convenience name for target.
+finding: CMakeFiles/finding.dir/rule
+
+.PHONY : finding
+
+# clean rule for target.
+CMakeFiles/finding.dir/clean:
+	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/clean
+.PHONY : CMakeFiles/finding.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

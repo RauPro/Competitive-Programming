@@ -2,4 +2,5 @@ C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cm
 C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cmake-build-debug/CMakeFiles/STL_Algorithms.dir
 C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cmake-build-debug/CMakeFiles/count.dir
 C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cmake-build-debug/CMakeFiles/count_if.dir
+C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cmake-build-debug/CMakeFiles/finding.dir
 C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/STL Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
