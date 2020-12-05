@@ -54,12 +54,14 @@ CMAKE_BINARY_DIR = "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programmi
 # The main recursive "all" target.
 all: CMakeFiles/STL_Algorithms.dir/all
 all: CMakeFiles/count.dir/all
+all: CMakeFiles/count_if.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/STL_Algorithms.dir/clean
 clean: CMakeFiles/count.dir/clean
+clean: CMakeFiles/count_if.dir/clean
 
 .PHONY : clean
 
@@ -121,6 +123,33 @@ count: CMakeFiles/count.dir/rule
 CMakeFiles/count.dir/clean:
 	$(MAKE) -f CMakeFiles\count.dir\build.make CMakeFiles/count.dir/clean
 .PHONY : CMakeFiles/count.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/count_if.dir
+
+# All Build rule for target.
+CMakeFiles/count_if.dir/all:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/depend
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=5,6 "Built target count_if"
+.PHONY : CMakeFiles/count_if.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/count_if.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/count_if.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/count_if.dir/rule
+
+# Convenience name for target.
+count_if: CMakeFiles/count_if.dir/rule
+
+.PHONY : count_if
+
+# clean rule for target.
+CMakeFiles/count_if.dir/clean:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/clean
+.PHONY : CMakeFiles/count_if.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

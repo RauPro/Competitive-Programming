@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(STL_Algorithms main.cpp)
 add_executable(count "Counting and Finding/count.cpp")
+add_executable(count_if "Counting and Finding/count_if.cpp")

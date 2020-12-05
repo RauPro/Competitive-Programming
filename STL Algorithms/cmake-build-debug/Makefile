@@ -135,6 +135,19 @@ count/fast:
 	$(MAKE) -f CMakeFiles\count.dir\build.make CMakeFiles/count.dir/build
 .PHONY : count/fast
 
+#=============================================================================
+# Target rules for targets named count_if
+
+# Build rule for target.
+count_if: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 count_if
+.PHONY : count_if
+
+# fast build rule for target.
+count_if/fast:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/build
+.PHONY : count_if/fast
+
 Counting_and_Finding/count.obj: Counting_and_Finding/count.cpp.obj
 
 .PHONY : Counting_and_Finding/count.obj
@@ -161,6 +174,33 @@ Counting_and_Finding/count.s: Counting_and_Finding/count.cpp.s
 Counting_and_Finding/count.cpp.s:
 	$(MAKE) -f CMakeFiles\count.dir\build.make CMakeFiles/count.dir/Counting_and_Finding/count.cpp.s
 .PHONY : Counting_and_Finding/count.cpp.s
+
+Counting_and_Finding/count_if.obj: Counting_and_Finding/count_if.cpp.obj
+
+.PHONY : Counting_and_Finding/count_if.obj
+
+# target to build an object file
+Counting_and_Finding/count_if.cpp.obj:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/Counting_and_Finding/count_if.cpp.obj
+.PHONY : Counting_and_Finding/count_if.cpp.obj
+
+Counting_and_Finding/count_if.i: Counting_and_Finding/count_if.cpp.i
+
+.PHONY : Counting_and_Finding/count_if.i
+
+# target to preprocess a source file
+Counting_and_Finding/count_if.cpp.i:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/Counting_and_Finding/count_if.cpp.i
+.PHONY : Counting_and_Finding/count_if.cpp.i
+
+Counting_and_Finding/count_if.s: Counting_and_Finding/count_if.cpp.s
+
+.PHONY : Counting_and_Finding/count_if.s
+
+# target to generate assembly for a file
+Counting_and_Finding/count_if.cpp.s:
+	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/Counting_and_Finding/count_if.cpp.s
+.PHONY : Counting_and_Finding/count_if.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -198,10 +238,14 @@ help:
 	@echo ... rebuild_cache
 	@echo ... STL_Algorithms
 	@echo ... count
+	@echo ... count_if
 	@echo ... edit_cache
 	@echo ... Counting_and_Finding/count.obj
 	@echo ... Counting_and_Finding/count.i
 	@echo ... Counting_and_Finding/count.s
+	@echo ... Counting_and_Finding/count_if.obj
+	@echo ... Counting_and_Finding/count_if.i
+	@echo ... Counting_and_Finding/count_if.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
