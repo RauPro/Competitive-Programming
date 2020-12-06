@@ -53,17 +53,21 @@ CMAKE_BINARY_DIR = "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programmi
 
 # The main recursive "all" target.
 all: CMakeFiles/STL_Algorithms.dir/all
+all: CMakeFiles/find_if.dir/all
 all: CMakeFiles/count.dir/all
 all: CMakeFiles/count_if.dir/all
 all: CMakeFiles/finding.dir/all
+all: CMakeFiles/Sort.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/STL_Algorithms.dir/clean
+clean: CMakeFiles/find_if.dir/clean
 clean: CMakeFiles/count.dir/clean
 clean: CMakeFiles/count_if.dir/clean
 clean: CMakeFiles/finding.dir/clean
+clean: CMakeFiles/Sort.dir/clean
 
 .PHONY : clean
 
@@ -100,13 +104,40 @@ CMakeFiles/STL_Algorithms.dir/clean:
 .PHONY : CMakeFiles/STL_Algorithms.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/find_if.dir
+
+# All Build rule for target.
+CMakeFiles/find_if.dir/all:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/depend
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=9,10 "Built target find_if"
+.PHONY : CMakeFiles/find_if.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/find_if.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/find_if.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/find_if.dir/rule
+
+# Convenience name for target.
+find_if: CMakeFiles/find_if.dir/rule
+
+.PHONY : find_if
+
+# clean rule for target.
+CMakeFiles/find_if.dir/clean:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/clean
+.PHONY : CMakeFiles/find_if.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/count.dir
 
 # All Build rule for target.
 CMakeFiles/count.dir/all:
 	$(MAKE) -f CMakeFiles\count.dir\build.make CMakeFiles/count.dir/depend
 	$(MAKE) -f CMakeFiles\count.dir\build.make CMakeFiles/count.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=3,4 "Built target count"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=5,6 "Built target count"
 .PHONY : CMakeFiles/count.dir/all
 
 # Build rule for subdir invocation for target.
@@ -133,7 +164,7 @@ CMakeFiles/count.dir/clean:
 CMakeFiles/count_if.dir/all:
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/depend
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=5,6 "Built target count_if"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=7,8 "Built target count_if"
 .PHONY : CMakeFiles/count_if.dir/all
 
 # Build rule for subdir invocation for target.
@@ -160,7 +191,7 @@ CMakeFiles/count_if.dir/clean:
 CMakeFiles/finding.dir/all:
 	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/depend
 	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=7,8 "Built target finding"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=11,12 "Built target finding"
 .PHONY : CMakeFiles/finding.dir/all
 
 # Build rule for subdir invocation for target.
@@ -179,6 +210,33 @@ finding: CMakeFiles/finding.dir/rule
 CMakeFiles/finding.dir/clean:
 	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/clean
 .PHONY : CMakeFiles/finding.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Sort.dir
+
+# All Build rule for target.
+CMakeFiles/Sort.dir/all:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/depend
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" --progress-num=3,4 "Built target Sort"
+.PHONY : CMakeFiles/Sort.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Sort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Sort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\CORE i5\Desktop\Nueva carpeta\Competitive-Programming\STL Algorithms\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/Sort.dir/rule
+
+# Convenience name for target.
+Sort: CMakeFiles/Sort.dir/rule
+
+.PHONY : Sort
+
+# clean rule for target.
+CMakeFiles/Sort.dir/clean:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/clean
+.PHONY : CMakeFiles/Sort.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

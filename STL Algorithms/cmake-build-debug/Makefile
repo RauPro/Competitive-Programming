@@ -123,6 +123,19 @@ STL_Algorithms/fast:
 .PHONY : STL_Algorithms/fast
 
 #=============================================================================
+# Target rules for targets named find_if
+
+# Build rule for target.
+find_if: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 find_if
+.PHONY : find_if
+
+# fast build rule for target.
+find_if/fast:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/build
+.PHONY : find_if/fast
+
+#=============================================================================
 # Target rules for targets named count
 
 # Build rule for target.
@@ -160,6 +173,19 @@ finding: cmake_check_build_system
 finding/fast:
 	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/build
 .PHONY : finding/fast
+
+#=============================================================================
+# Target rules for targets named Sort
+
+# Build rule for target.
+Sort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Sort
+.PHONY : Sort
+
+# fast build rule for target.
+Sort/fast:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/build
+.PHONY : Sort/fast
 
 Counting_and_Finding/count.obj: Counting_and_Finding/count.cpp.obj
 
@@ -215,6 +241,33 @@ Counting_and_Finding/count_if.cpp.s:
 	$(MAKE) -f CMakeFiles\count_if.dir\build.make CMakeFiles/count_if.dir/Counting_and_Finding/count_if.cpp.s
 .PHONY : Counting_and_Finding/count_if.cpp.s
 
+Counting_and_Finding/find_if.obj: Counting_and_Finding/find_if.cpp.obj
+
+.PHONY : Counting_and_Finding/find_if.obj
+
+# target to build an object file
+Counting_and_Finding/find_if.cpp.obj:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/Counting_and_Finding/find_if.cpp.obj
+.PHONY : Counting_and_Finding/find_if.cpp.obj
+
+Counting_and_Finding/find_if.i: Counting_and_Finding/find_if.cpp.i
+
+.PHONY : Counting_and_Finding/find_if.i
+
+# target to preprocess a source file
+Counting_and_Finding/find_if.cpp.i:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/Counting_and_Finding/find_if.cpp.i
+.PHONY : Counting_and_Finding/find_if.cpp.i
+
+Counting_and_Finding/find_if.s: Counting_and_Finding/find_if.cpp.s
+
+.PHONY : Counting_and_Finding/find_if.s
+
+# target to generate assembly for a file
+Counting_and_Finding/find_if.cpp.s:
+	$(MAKE) -f CMakeFiles\find_if.dir\build.make CMakeFiles/find_if.dir/Counting_and_Finding/find_if.cpp.s
+.PHONY : Counting_and_Finding/find_if.cpp.s
+
 Counting_and_Finding/finding.obj: Counting_and_Finding/finding.cpp.obj
 
 .PHONY : Counting_and_Finding/finding.obj
@@ -241,6 +294,33 @@ Counting_and_Finding/finding.s: Counting_and_Finding/finding.cpp.s
 Counting_and_Finding/finding.cpp.s:
 	$(MAKE) -f CMakeFiles\finding.dir\build.make CMakeFiles/finding.dir/Counting_and_Finding/finding.cpp.s
 .PHONY : Counting_and_Finding/finding.cpp.s
+
+Sorting/Sort.obj: Sorting/Sort.cpp.obj
+
+.PHONY : Sorting/Sort.obj
+
+# target to build an object file
+Sorting/Sort.cpp.obj:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/Sorting/Sort.cpp.obj
+.PHONY : Sorting/Sort.cpp.obj
+
+Sorting/Sort.i: Sorting/Sort.cpp.i
+
+.PHONY : Sorting/Sort.i
+
+# target to preprocess a source file
+Sorting/Sort.cpp.i:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/Sorting/Sort.cpp.i
+.PHONY : Sorting/Sort.cpp.i
+
+Sorting/Sort.s: Sorting/Sort.cpp.s
+
+.PHONY : Sorting/Sort.s
+
+# target to generate assembly for a file
+Sorting/Sort.cpp.s:
+	$(MAKE) -f CMakeFiles\Sort.dir\build.make CMakeFiles/Sort.dir/Sorting/Sort.cpp.s
+.PHONY : Sorting/Sort.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -277,9 +357,11 @@ help:
 	@echo ... depend
 	@echo ... rebuild_cache
 	@echo ... STL_Algorithms
+	@echo ... find_if
 	@echo ... count
 	@echo ... count_if
 	@echo ... finding
+	@echo ... Sort
 	@echo ... edit_cache
 	@echo ... Counting_and_Finding/count.obj
 	@echo ... Counting_and_Finding/count.i
@@ -287,9 +369,15 @@ help:
 	@echo ... Counting_and_Finding/count_if.obj
 	@echo ... Counting_and_Finding/count_if.i
 	@echo ... Counting_and_Finding/count_if.s
+	@echo ... Counting_and_Finding/find_if.obj
+	@echo ... Counting_and_Finding/find_if.i
+	@echo ... Counting_and_Finding/find_if.s
 	@echo ... Counting_and_Finding/finding.obj
 	@echo ... Counting_and_Finding/finding.i
 	@echo ... Counting_and_Finding/finding.s
+	@echo ... Sorting/Sort.obj
+	@echo ... Sorting/Sort.i
+	@echo ... Sorting/Sort.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
