@@ -1,7 +1,0 @@
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/ProblemC.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/Global12.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/ProblemA.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/ProblemB.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/CORE i5/Desktop/Nueva carpeta/Competitive-Programming/Codeforces/Global12/cmake-build-debug/CMakeFiles/ProblemD.dir

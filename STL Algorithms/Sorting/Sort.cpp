@@ -28,6 +28,5 @@ int main(){
     partial_sort(v2.begin(),find(v.begin(),v.end(),10),v2.end());
     show(v2);
 
-
     //shuffle is the method to unshort
 }
