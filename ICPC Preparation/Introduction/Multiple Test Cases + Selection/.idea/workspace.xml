@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4fd5350-00f1-4448-84fe-2fff6c258b3e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="cp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mQf3Ep4YKcslWcfyrch4SdXshU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.PackingforHoliday">
+    <configuration name="LanguageDetection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LanguageDetection" />
+      <module name="Super Easy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PackingforHoliday" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PackingforHoliday" />
+      <module name="Super Easy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RelationalOperator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RelationalOperator" />
+      <module name="Super Easy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PackingforHoliday" />
+        <item itemvalue="Application.LanguageDetection" />
+        <item itemvalue="Application.RelationalOperator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4fd5350-00f1-4448-84fe-2fff6c258b3e" name="Default Changelist" comment="" />
+      <created>1609430533298</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609430533298</updated>
+      <workItem from="1609430565940" duration="1938000" />
+      <workItem from="1609432578589" duration="97000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1305" height="176" key="GridCell.Tab.0.bottom" timestamp="1609432565920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1305" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609432565920" />
+    <state width="1305" height="176" key="GridCell.Tab.0.center" timestamp="1609432565920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1305" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609432565920" />
+    <state width="1305" height="176" key="GridCell.Tab.0.left" timestamp="1609432565920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1305" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609432565920" />
+    <state width="1305" height="176" key="GridCell.Tab.0.right" timestamp="1609432565920">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1305" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609432565920" />
+    <state x="65" y="0" key="new project wizard" timestamp="1609432562875">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1609432562875" />
+  </component>
+</project>
