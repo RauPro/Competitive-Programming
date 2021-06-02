@@ -11,36 +11,40 @@ public class JustPruneTheList {
 		while (t!=0){
 			int n = fs.nextInt();
 			int m = fs.nextInt();
-			int[] hashA = new int[10000+1];
-			int[] hashANegative = new int[10000+1];
-			int[] hashB = new int[10000+1];
-			int[] hashBNegative = new int[10000+1];
+			HashMap<Integer, Integer> hashA = new HashMap<>();
+			HashMap<Integer, Integer> hashB = new HashMap<>();
+			TreeSet<Integer> treeSet = new TreeSet<>();
 
 			int aws = 0;
 			for (int i = 0; i < n; i++) {
 				int aux = fs.nextInt();
-				if (aux>=0){
-					hashA[aux]++;
-				}
-				else{
-					hashANegative[Math.abs(aux)]++;
+				treeSet.add(aux);
+				if (hashA.containsKey(aux)){
+					int hash = hashA.get(aux);
+					hash++;
+					hashA.put(aux, hash);
+				}else{
+					hashA.put(aux, 1);
 				}
 			}
 			for (int i = 0; i < m; i++) {
 				int aux = fs.nextInt();
-				if (aux>=0){
-					hashB[aux]++;
-				}
-				else{
-					hashBNegative[Math.abs(aux)]++;
+				treeSet.add(aux);
+				if (hashB.containsKey(aux)){
+					int hash = hashB.get(aux);
+					hash++;
+					hashB.put(aux, hash);
+				}else{
+					hashB.put(aux, 1);
 				}
 			}
-			for (int i = 0; i < hashA.length; i++) {
-				if (hashA[i]!=hashB[i]){
-					aws+=Math.abs(hashA[i]-hashB[i]);
-				}
-				if (hashANegative[i]!=hashBNegative[i]){
-					aws+=Math.abs(hashANegative[i]-hashBNegative[i]);
+			for (int d:treeSet) {
+				if (hashA.containsKey(d) && !hashB.containsKey(d)){
+					aws+= hashA.get(d);
+				}else if (!hashA.containsKey(d) && hashB.containsKey(d)){
+					aws+= hashB.get(d);
+				}else{
+					aws+= Math.abs(hashA.get(d)-hashB.get(d));
 				}
 			}
 			System.out.println(aws);
