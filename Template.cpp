@@ -8,8 +8,10 @@ typedef long long ll;
 typedef long int li;
 typedef vector<int> vi;
 typedef vector<ll> vl;
+typedef pair<int, int> pi;
+
 
 int main(){
 	Fast
-
+	return 0;
 } 
