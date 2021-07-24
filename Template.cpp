@@ -17,8 +17,11 @@ typedef pair<int, int> pi;
 
 class FastScanner{
 public:
-	int next(){int a;cin>>a;return a;}
-	vi readArray(int n){
+	int nextInt(){int a;cin>>a;return a;}
+    char nextChar(){char a;cin>>a;return a;}
+    ll nextLong(){ll a;cin>>a;return a;}
+    string next(){string a;cin>>a;return a;}
+    vi readArray(int n){
 		vi a(n);
 		for (size_t i = 0; i < n; i++)cin>>a[i];
 		return a;}
