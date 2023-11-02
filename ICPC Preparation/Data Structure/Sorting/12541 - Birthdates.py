@@ -8,6 +8,8 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
+import datetime
+
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -69,16 +71,25 @@ def comb(n, r):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        arr = list(ints())
-        print(solve(n, arr))
+    n = int(input())
+    arr = []
+    for _ in range(n):
+        arr.append(input())
+    solve(n, arr)
 
 
 def solve(n, arr):
-    pass
-
+    ans = []
+    for i in range(n):
+        name, day, month, year = arr[i].split()
+        day = int(day)
+        month = int(month)
+        year = int(year)
+        date = datetime.datetime(year, month, day)
+        ans.append((name, date))
+    ans.sort(key=lambda x: x[1])
+    print(ans[-1][0])
+    print(ans[0][0])
 
 if __name__ == "__main__":
     main()

@@ -67,17 +67,44 @@ def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
+g = 9.81
+
+def get_weight(a, b, c):
+    return (a * b * c) * g
+
+def get_volume(a, b, c):
+    return a * b * c
+
+def get_acceleration(l, w, h):
+    return g - (g / (2*h))
 
 def main():
-    t = int(input())
-    for _ in range(t):
+    while True:
         n = int(input())
-        arr = list(ints())
-        print(solve(n, arr))
-
+        if n == 0: break
+        ants = []
+        for _ in range(n):
+            l, w, h = ints()
+            ants.append((l, w, h))
+        solve(n, ants)
 
 def solve(n, arr):
-    pass
+    volumes = []
+    max_vol = 0
+    ans = 0.0
+    for i in range(n):
+        l , w, h = arr[i]
+        volumes.append(get_volume(l, w, h))
+        a = get_acceleration(l, w, h)
+        #print(a, volumes[-1])
+        if a >= ans:
+            if a > ans:
+                max_vol = volumes[-1]
+            elif volumes[-1] > max_vol:
+                max_vol = volumes[-1]
+            ans = a
+
+    print(max_vol)
 
 
 if __name__ == "__main__":
