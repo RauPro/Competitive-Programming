@@ -9,6 +9,8 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 
+
+# Template RauPro
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -71,15 +73,21 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        x, y, k = ints()
+        print(solve(x, y, k))
 
 
-def solve():
-    pass
+def solve(x, y, k):
+    distance_to_key = abs(y)
+    distance_to_chest = abs(x)
+    if distance_to_chest > distance_to_key:
+        return distance_to_chest
 
+    if distance_to_chest + k >= distance_to_key:
+        return distance_to_key
 
+    if distance_to_chest + k < distance_to_key:
+        return distance_to_chest + k + ((distance_to_key - (distance_to_chest + k)) * 2)
 
 if __name__ == "__main__":
     main()

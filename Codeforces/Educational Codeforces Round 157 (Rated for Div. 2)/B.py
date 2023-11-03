@@ -72,13 +72,23 @@ def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        arr = list(ints())
+        min_length, points = solve(n, arr)
+        print(min_length)
+        for point in points:
+            print(*point)
 
 
-def solve():
-    pass
+def solve(n, arr):
+    sorted_coords = sorted(arr)
+    x_coords = sorted_coords[:n]
+    y_coords = sorted_coords[n:]
+    points = list(zip(x_coords, y_coords))
+    path_length = 0
+    for i in range(1, n):
+        path_length += abs(points[i][0] - points[i - 1][0]) + abs(points[i][1] - points[i - 1][1])
 
+    return path_length, points
 
 
 if __name__ == "__main__":
