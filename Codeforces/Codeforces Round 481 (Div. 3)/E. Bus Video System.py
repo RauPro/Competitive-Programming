@@ -69,42 +69,28 @@ def comb(n, r):
 
 
 def main():
-    n, k = map(int, input().split())
-    habilidades = list(map(int, input().split()))
-    peleas = [tuple(map(int, input().split())) for _ in range(k)]
-    resultado = solve(n, k, habilidades, peleas)
-    print(" ".join(map(str, resultado)))
+    n, w = ints()
+    a = list(ints())
+    print(solve(n, w, a))
 
 
-def solve(n, k, habilidades, peleas):
-    programadores = [(hab, i) for i, hab in enumerate(habilidades)]
-    programadores.sort(reverse=True)
-    resultado = [0] * n
-    peleas_dict = {i: set() for i in range(n)}
-    for x, y in peleas:
-        peleas_dict[x - 1].add(y - 1)
-        peleas_dict[y - 1].add(x - 1)
-    mapper = {}
-    for i in range(0, n):
-        mapper[programadores[i][0]] = i
+def solve(n,w,cambios):
+    min_pasajeros, max_pasajeros = 0, w
+    pasajeros_actual = 0
 
-    for i in range(n):
-        resultado[programadores[i][1]] = n - mapper[programadores[i][0]] - 1
+    for cambio in cambios:
+        pasajeros_actual += cambio
+        if pasajeros_actual < 0:
+            min_pasajeros = max(min_pasajeros, -pasajeros_actual)
+        if pasajeros_actual > w:
+            return 0
+        max_pasajeros = min(max_pasajeros, w - pasajeros_actual)
+        if min_pasajeros > max_pasajeros:
+            return 0
 
-    for i in range(n):
-        for j in peleas_dict[programadores[i][1]]:
-
-            if programadores[i][0] > habilidades[j]:
-                resultado[programadores[i][1]] -= 1
-
-    return resultado
+    return max_pasajeros - min_pasajeros + 1
 
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
-

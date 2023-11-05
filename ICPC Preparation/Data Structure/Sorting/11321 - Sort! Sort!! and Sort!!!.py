@@ -8,6 +8,7 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
+from functools import cmp_to_key
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -20,8 +21,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -32,7 +39,11 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -66,45 +77,31 @@ def factorial(n): return n * factorial(n - 1) if n else 1
 def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
+def c_mod(a, b):
+    return a % b if a >= 0 else -(abs(a) % b)
 
+def custom_key(x, m):
+    mod = c_mod(x, m)
+    return (mod, x % 2 == 0, -x if x % 2 else x)
 
+def sort_numbers(numbers, m):
+    return sorted(numbers, key=lambda n: custom_key(n, m))
 def main():
-    n, k = map(int, input().split())
-    habilidades = list(map(int, input().split()))
-    peleas = [tuple(map(int, input().split())) for _ in range(k)]
-    resultado = solve(n, k, habilidades, peleas)
-    print(" ".join(map(str, resultado)))
+    while True:
+        n, m = ints()
+        if n == 0 and m == 0:
+            print("0 0")
+            break
+        nums = [int(input()) for _ in range(n)]
+        sorted_numbers = sort_numbers(nums, m)
+        print(f"{n} {m}")
+        for n in sorted_numbers:
+            print(n)
 
 
-def solve(n, k, habilidades, peleas):
-    programadores = [(hab, i) for i, hab in enumerate(habilidades)]
-    programadores.sort(reverse=True)
-    resultado = [0] * n
-    peleas_dict = {i: set() for i in range(n)}
-    for x, y in peleas:
-        peleas_dict[x - 1].add(y - 1)
-        peleas_dict[y - 1].add(x - 1)
-    mapper = {}
-    for i in range(0, n):
-        mapper[programadores[i][0]] = i
-
-    for i in range(n):
-        resultado[programadores[i][1]] = n - mapper[programadores[i][0]] - 1
-
-    for i in range(n):
-        for j in peleas_dict[programadores[i][1]]:
-
-            if programadores[i][0] > habilidades[j]:
-                resultado[programadores[i][1]] -= 1
-
-    return resultado
-
+def solve():
+    pass
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
