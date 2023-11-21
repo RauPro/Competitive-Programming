@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from collections import Counter
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -21,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -39,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -73,7 +62,7 @@ def factorial(n): return n * factorial(n - 1) if n else 1
 
 
 # Combinaciones con memoización (nCr)
-@lru_cache(maxsize=10)
+@lru_cache(maxsize=None)
 def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
@@ -82,18 +71,39 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(a))
+        n, m, k = ints()
+        ans, grid = solve(n,m,k)
+        print(ans)
+        for row in grid:
+            print(row)
 
 
-def solve(nums):
-    frec = Counter(nums)
-    result = 0
-    result += frec[1] * frec[2]
-    for key in frec:
-        result += comb(frec[key], 2)
-    return result
+
+def is_coloring_possible(n, m, k):
+    total_segments = n * (m - 1) + (n - 1) * m
+    return k + 1 <= total_segments
+
+def generate_color_pattern(n, m):
+    color_pattern = []
+
+    for i in range(n):
+        row_pattern = ['B' if (i + j) % 2 == 0 else 'R' for j in range(m - 1)]
+        color_pattern.append(' '.join(row_pattern))
+
+    for i in range(n - 1):
+        col_pattern = ['B' if (i + j) % 2 == 0 else 'R' for j in range(m)]
+        color_pattern.append(' '.join(col_pattern))
+
+    return color_pattern
+
+def solve(n, m, k):
+    if not is_coloring_possible(n, m, k):
+        return "NO"
+
+    color_pattern = generate_color_pattern(n, m)
+
+    return "YES", color_pattern
+
 
 
 if __name__ == "__main__":
