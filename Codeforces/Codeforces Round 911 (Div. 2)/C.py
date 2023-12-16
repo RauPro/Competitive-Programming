@@ -8,6 +8,7 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
+from collections import deque
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -71,31 +72,31 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n, q = ints()
-        a = list(ints())
-        queries = [list(map(int, input().split())) for _ in range(q)]
-        ans = solve(n, a, queries)
-        for el in ans:
-            print(el)
+        n = int(input())
+        s = input()
+        a = []
+        for _ in range(n):
+            a.append(ints())
+        print(solve(n,s, a))
 
 
-def solve(n, a, queries):
-    prefix_sum = [0] * (n + 1)
-    for i in range(n):
-        prefix_sum[i + 1] = prefix_sum[i] + a[i]
-    results = []
-    for query in queries:
-        if query[0] == 1:
-            s = query[1]
-            results.append("YES" if any(s == prefix_sum[j] - prefix_sum[i] for i in range(n) for j in range(i + 1, n + 1)) else "NO")
-        elif query[0] == 2:
-            i, v = query[1], query[2]
-            diff = v - a[i - 1]
-            a[i - 1] = v
-            for j in range(i, n + 1):
-                prefix_sum[j] += diff
-    return results
-
+def solve(n, s, children):
+    tree = [None] * (n + 1)
+    for i, (l, r) in enumerate(children, start=1):
+        tree[i] = (l, r)
+    queue = deque([(1, 0)])
+    min_changes = float('inf')
+    while queue:
+        node, changes = queue.popleft()
+        left_child, right_child = tree[node]
+        if left_child == 0 and right_child == 0:
+            min_changes = min(min_changes, changes)
+            continue
+        if left_child != 0:
+            queue.append((left_child, changes + (s[node - 1] != 'L')))
+        if right_child != 0:
+            queue.append((right_child, changes + (s[node - 1] != 'R')))
+    return min_changes
 
 
 

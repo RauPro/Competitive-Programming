@@ -71,32 +71,39 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n, q = ints()
-        a = list(ints())
-        queries = [list(map(int, input().split())) for _ in range(q)]
-        ans = solve(n, a, queries)
-        for el in ans:
-            print(el)
+        a = input()
+        print(solve(a))
 
 
-def solve(n, a, queries):
-    prefix_sum = [0] * (n + 1)
-    for i in range(n):
-        prefix_sum[i + 1] = prefix_sum[i] + a[i]
-    results = []
-    for query in queries:
-        if query[0] == 1:
-            s = query[1]
-            results.append("YES" if any(s == prefix_sum[j] - prefix_sum[i] for i in range(n) for j in range(i + 1, n + 1)) else "NO")
-        elif query[0] == 2:
-            i, v = query[1], query[2]
-            diff = v - a[i - 1]
-            a[i - 1] = v
-            for j in range(i, n + 1):
-                prefix_sum[j] += diff
-    return results
+def solve(s):
+    index_lower = []
+    index_upper = []
+    ignore_lower = set()
+    ignore_upper = set()
+    for i in range(len(s)):
+        if s[i] == 'B' or s[i] == 'b':
+            if s[i].isupper():
+                if not index_lower:
+                    continue
+                ignore_lower.add(index_lower[-1])
+                index_lower.pop()
+            else:
+                if not index_upper:
+                    continue
+                ignore_upper.add(index_upper[-1])
+                index_upper.pop()
+            continue
+        if s[i].isupper():
+            index_lower.append(i)
+        else:
+            index_upper.append(i)
 
-
+    ans = ''
+    for i in range(len(s)):
+        if i in ignore_lower or i in ignore_upper or s[i].lower() == 'b':
+            continue
+        ans += s[i]
+    return ans
 
 
 if __name__ == "__main__":

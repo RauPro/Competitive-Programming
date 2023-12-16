@@ -76,7 +76,7 @@ def main():
         print(solve(n, a))
 
 
-def solve():
+def solve(n ,a ):
     pass
 
 

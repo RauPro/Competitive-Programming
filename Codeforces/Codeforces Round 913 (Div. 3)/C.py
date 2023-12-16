@@ -1,3 +1,4 @@
+
 import os
 import sys
 from collections import *
@@ -71,32 +72,16 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n, q = ints()
-        a = list(ints())
-        queries = [list(map(int, input().split())) for _ in range(q)]
-        ans = solve(n, a, queries)
-        for el in ans:
-            print(el)
+        n = int(input())
+        a = input()
+        print(solve(a, n))
 
 
-def solve(n, a, queries):
-    prefix_sum = [0] * (n + 1)
-    for i in range(n):
-        prefix_sum[i + 1] = prefix_sum[i] + a[i]
-    results = []
-    for query in queries:
-        if query[0] == 1:
-            s = query[1]
-            results.append("YES" if any(s == prefix_sum[j] - prefix_sum[i] for i in range(n) for j in range(i + 1, n + 1)) else "NO")
-        elif query[0] == 2:
-            i, v = query[1], query[2]
-            diff = v - a[i - 1]
-            a[i - 1] = v
-            for j in range(i, n + 1):
-                prefix_sum[j] += diff
-    return results
-
-
+def solve(s, n):
+    mapper = Counter(s)
+    max_app = max(mapper.values())
+    result = 2 * max_app - n if max_app > n // 2 else 1 if n % 2 == 1 else 0
+    return result
 
 
 if __name__ == "__main__":

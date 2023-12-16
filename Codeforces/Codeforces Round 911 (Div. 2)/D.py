@@ -28,7 +28,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-
+SIZE = 100001
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -71,31 +71,51 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n, q = ints()
+        n = int(input())
         a = list(ints())
-        queries = [list(map(int, input().split())) for _ in range(q)]
-        ans = solve(n, a, queries)
-        for el in ans:
-            print(el)
+        prime_factors = PrimeFactorCalculator(SIZE)
+        print(solve(n, a, prime_factors))
 
+class PrimeFactorCalculator:
+    def __init__(self, max_number):
+        self.factors_of_each_number = [[] for _ in range(max_number + 1)]
+        for current_number in range(1, max_number + 1):
+            for factor in range(current_number, max_number + 1, current_number):
+                self.factors_of_each_number[factor].append(current_number)
 
-def solve(n, a, queries):
-    prefix_sum = [0] * (n + 1)
-    for i in range(n):
-        prefix_sum[i + 1] = prefix_sum[i] + a[i]
-    results = []
-    for query in queries:
-        if query[0] == 1:
-            s = query[1]
-            results.append("YES" if any(s == prefix_sum[j] - prefix_sum[i] for i in range(n) for j in range(i + 1, n + 1)) else "NO")
-        elif query[0] == 2:
-            i, v = query[1], query[2]
-            diff = v - a[i - 1]
-            a[i - 1] = v
-            for j in range(i, n + 1):
-                prefix_sum[j] += diff
-    return results
+def solve(n, numbers, prime_factors):
+    frequency_count = Counter(numbers)
+    prefix_sum = [0] * (SIZE + 1)
+    answer = 0
+    remaining_numbers = n
+    for i in range(1, SIZE + 1):
+        factors_list = prime_factors.factors_of_each_number[i]
+        frequency_of_i = frequency_count[i]
+        remaining_numbers -= frequency_of_i
 
+        if frequency_of_i:
+            number_of_factors = len(factors_list)
+            factor_counts = [0] * number_of_factors
+
+            for factor_index in range(number_of_factors - 1, -1, -1):
+                factor = factors_list[factor_index]
+                current_sum = prefix_sum[factor]
+
+                for k in range(factor_index + 1, number_of_factors):
+                    if factors_list[k] % factor == 0:
+                        current_sum -= factor_counts[k]
+
+                answer += current_sum * factor * frequency_of_i * remaining_numbers
+                answer += current_sum * factor * frequency_of_i * (frequency_of_i - 1) // 2
+                factor_counts[factor_index] = current_sum
+
+            answer += frequency_of_i * (frequency_of_i - 1) // 2 * i * remaining_numbers
+            answer += frequency_of_i * (frequency_of_i - 1) * (frequency_of_i - 2) // 6 * i
+
+            for factor in factors_list:
+                prefix_sum[factor] += frequency_of_i
+
+    return answer
 
 
 

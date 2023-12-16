@@ -71,31 +71,43 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        n, q = ints()
+        n,m = ints()
         a = list(ints())
-        queries = [list(map(int, input().split())) for _ in range(q)]
-        ans = solve(n, a, queries)
-        for el in ans:
-            print(el)
+        AL = []
+        for _ in range(m):
+            AL.append(ints())
+        adj_matrix = floyd_warshall(n, AL)
+        print(*solve(n, a, adj_matrix))
 
 
-def solve(n, a, queries):
-    prefix_sum = [0] * (n + 1)
+def floyd_warshall(n, edges):
+    adj_matrix = [[False for _ in range(n)] for _ in range(n)]
+    for u, v in edges:
+        adj_matrix[u - 1][v - 1] = True
     for i in range(n):
-        prefix_sum[i + 1] = prefix_sum[i] + a[i]
-    results = []
-    for query in queries:
-        if query[0] == 1:
-            s = query[1]
-            results.append("YES" if any(s == prefix_sum[j] - prefix_sum[i] for i in range(n) for j in range(i + 1, n + 1)) else "NO")
-        elif query[0] == 2:
-            i, v = query[1], query[2]
-            diff = v - a[i - 1]
-            a[i - 1] = v
-            for j in range(i, n + 1):
-                prefix_sum[j] += diff
-    return results
+        adj_matrix[i][i] = True
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                adj_matrix[i][j] = adj_matrix[i][j] or (adj_matrix[i][k] and adj_matrix[k][j])
 
+    return adj_matrix
+
+def solve(n, a_values, adj_matrix):
+    max_length = 0
+    min_value = float('inf')
+
+    for start in range(n):
+        for end in range(n):
+            if adj_matrix[start][end]:
+                length = sum(1 for i in range(n) if adj_matrix[start][i] and adj_matrix[i][end])
+                value = sum(a_values[i] for i in range(n) if adj_matrix[start][i] and adj_matrix[i][end])
+                print(value)
+                if length > max_length or (length == max_length and value < min_value):
+                    max_length = length
+                    min_value = value
+
+    return max_length, min_value
 
 
 
