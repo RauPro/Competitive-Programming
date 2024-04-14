@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -81,17 +71,63 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n, k = ints()
+        a = list(ints())
+        print(solve(n,k, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def can(n, k, a, mid):
+    first = k // 2
+    last = n - first
+    pair = k % 2 == 0
+    if pair:
+        index = 0
+        ans = 0
+        for i in range(0, first):
+            a[index]-=1
+            if a[index] == 0:
+                index+=1
+                ans += 1
+        index = n-1
+        for i in range(n-1, last-1, -1):
+            a[index]-=1
+            if a[index] == 0:
+                index-=1
+                ans += 1
+        print(a, mid, first, last, ans)
+        if ans <= k:
+            return True
+        else:
+            return False
+    else:
+        index = 0
+        ans = 0
+        for i in range(0, first):
+            a[index] -= 1
+            if a[index] == 0:
+                index += 1
+                ans += 1
+        index = n - 1
+        for i in range(n - 1, last, -1):
+            a[index] -= 1
+            if a[index] == 0:
+                index -= 1
+                ans += 1
+        print(a, mid, first, last, ans)
+        if ans <= k:
+            return True
+        else:
+            return False
+def solve(n,k ,a ):
+    lo = 0
+    hi = n
+    while abs(lo - hi) != 1:
+        mid = (lo + hi) // 2
+        if can(n, k, a, mid):
+            lo = mid
+        else:
+            hi = mid
+    return hi if can(n, k, a, hi) else lo
 
 if __name__ == "__main__":
     main()

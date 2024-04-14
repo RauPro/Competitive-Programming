@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -81,17 +71,26 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n = int(input())
+        a = []
+        for i in range(n):
+            a.append(list(ints()))
+        print(solve(n, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n ,a ):
+    max_global = 0
+    for i in range(n):
+        for j in range(n):
+            max_local = 0
+            for k in range(i, n):
+                for q in range(j, n):
+                    max_local = max(max_local+ a[k][i], a[k][i])
+            max_global = max(max_global, max_local)
+
+    return max_global
+
+
 
 if __name__ == "__main__":
     main()

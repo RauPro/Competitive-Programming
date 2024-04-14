@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -77,21 +67,33 @@ def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
+AL = []
+
+def flood_fill(i,j,n):
+    global AL
+    if i+1 >= n:
+        return
+    if AL[i+1][j] == '*' or AL[i+1][j] == 'o':
+        return
+    AL[i][j] = '.'
+    AL[i+1][j] = '*'
+    flood_fill(i+1, j, n)
 
 def main():
+    global AL
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
-
-
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+        AL = []
+        n, m = ints()
+        for i in range(n):
+            AL.append([a for a in input()])
+        for i in range(n-1, -1, -1):
+            for j in range(m):
+                if AL[i][j] == '*':
+                    flood_fill(i,j,n)
+        for i in range(n):
+            print(''.join(AL[i]))
+        print()
 
 if __name__ == "__main__":
     main()

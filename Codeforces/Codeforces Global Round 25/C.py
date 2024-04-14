@@ -81,17 +81,26 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n, m, k = ints()
+        a = list(ints())
+        print(solve(n, m, k, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n, m, k, a):
+    tickets_day = sorted([(it, i) for i, it in enumerate(a)])
+    dp = [0] * n
+    for val, index in tickets_day:
+        if k > 0:
+            purchase = min(m, k)
+            dp[index] = purchase
+            k -= purchase
+    ans, amount = 0, 0
+    for i in range(n):
+        ans += dp[i] * (a[i] + amount)
+        amount += dp[i]
+
+    return ans
+
 
 if __name__ == "__main__":
     main()

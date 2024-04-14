@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -81,17 +71,25 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n = int(input())
+        a = [int(it) for it in input()]
+        print(solve(n, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n ,a ):
+    mapper = defaultdict(lambda: 0)
+    ans = 0
+    sum = 0
+    mapper[0] = 1
+    for i, it in enumerate(a):
+        sum += it
+        x = sum - (i+1)
+        mapper[x]+=1
+        print(mapper, ans, sum)
+        ans += mapper[x] -1
+    return ans
+
+
 
 if __name__ == "__main__":
     main()

@@ -9,6 +9,8 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 
+from collections import Counter
+
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -20,14 +22,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +34,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -81,17 +73,21 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n, c, d = ints()
+        a = list(ints())
+        print(solve(n,c,d, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n,c,d, a):
+    min_ = min(a)
+    mapper = Counter(a)
+    matrix = [item for sublist in [[min_ + i * c + j * d for j in range(n)] for i in range(n)] for item in sublist]
+    for it in matrix:
+        if mapper[it] == 0:
+            return "NO"
+        else:
+            mapper[it] -= 1
+    return "YES"
 
 if __name__ == "__main__":
     main()

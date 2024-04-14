@@ -81,17 +81,39 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n, k = ints()
+        a = list(ints())
+        print(solve(n, k, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
-
+def solve(n, k, a):
+    k -= 1
+    index = []
+    for i in range(n):
+        if i >= a[k] and a.index(i) < k:
+            index.append(i)
+    if n == 2:
+        return 1 if max(a) == a[k] else 0
+    wins = 0
+    #print(index)
+    if len(index) == 0:
+        return abs(k -  a.index(max(a)))-1
+    else:
+        aws = 0
+        index.append(k)
+        for it in index:
+            a[k], a[it] = a[it], a[k]
+            winner = a[0]
+            ans = defaultdict(lambda : 0)
+            for i in range(1, n):
+                if winner > a[i]:
+                    ans[winner] += 1
+                else:
+                    winner = a[i]
+                    ans[winner] += 1
+            #print(ans[a[it]])
+            aws = max(aws,  ans[a[it]])
+            a[k],  a[it] = a[it], a[k]
+        return aws
 if __name__ == "__main__":
     main()

@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -77,21 +67,34 @@ def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
+b = []
 
 def main():
+
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n = int(input())
+        a = list(ints())
+        print(solve(n, a))
+        dp.cache_clear()
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+@lru_cache(maxsize=None)
+def dp(i, state):
+    if i == 0:
+        return int(1e9) * -1
+    if state == 0:
+        return max(dp(i-1, 0), b[i-1] + (i-1))
+    if state == 1:
+        return max(dp(i-1, 1), dp(i-1, 0) + b[i-1])
+    if state == 2:
+        return max(dp(i-1, 2), dp(i-1, 1)  + b[i-1] - (i-1))
+def solve(n ,a ):
+    global b
+    b = a
+    return dp(n, 2)
+
+
 
 if __name__ == "__main__":
     main()

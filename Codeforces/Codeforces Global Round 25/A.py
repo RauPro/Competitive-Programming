@@ -81,17 +81,49 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        n = int(input())
+        a = input()
+        print(solve(n, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n, a):
+    i = 0
+    pairs = []
+    index = []
+    while i < n-1:
+        if n != 1 and (a[i] == '1' and a[i + 1] == '1'):
+            pairs.append('11')
+            index.append(i)
+            index.append(i + 1)
+            i += 2
+            continue
+        i += 1
+    ones = []
+    #print(index)
+    for i in range(n):
+        if a[i] == '1' and i not in index:
+            ones.append(1)
+
+    print(ones, pairs)
+    for it in ones:
+        if len(pairs) > 0:
+            pairs.pop()
+    for i in range(len(pairs)):
+        if len(pairs) >=3:
+            pairs.pop()
+            pairs.pop()
+            pairs.pop()
+            ones.append(1)
+            ones.append(1)
+        elif len(pairs) == 2:
+            pairs.pop()
+            pairs.pop()
+
+    return "YES" if len(ones) % 2 == 0 and len(pairs) == 0 else "NO"
+
+
+#    return "YES" if (ones % 2 == 0 and ones // 2 == ones_ad and ones_ad!=1) or (dispersed >= ones_ad and ones % 2 == 0 and dispersed % 2 == 0) else "NO"
+
 
 if __name__ == "__main__":
     main()

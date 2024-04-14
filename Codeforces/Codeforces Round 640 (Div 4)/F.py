@@ -78,20 +78,49 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
+s = ""
+a = []
+x = ["0", "0", "1"]
+possible = ["0", "1"]
+mapper = {"00": 0, "10": 1, "11": 2, "01": 1}
 def main():
+    global a
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        a = list(ints())
+        n = 3
+        solve(n, a)
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def dfs(u, index):
+    global s, a
+    if a[index] == 0:
+        return
+    s += u
+    if len(s) >= 2:
+        aux = s[-2:]
+        a[mapper[aux]] -= 1
+
+    for v in possible:
+        new_ = s + v
+        if a[0] == 0 and v == "0" and a[1] <= 1 <= a[2]:
+            continue
+        if a[2] == 0 and v == "1" and a[1] <= 1 <= a[0]:
+            continue
+        if a[mapper[new_[-2:]]] != 0:
+            dfs(v, mapper[new_[-2:]])
+def solve(n, a):
+    global s
+
+
+
+
+    for i in range(3):
+        if a[i] != 0:
+            dfs(x[i], i)
+    print(s)
+    s = ""
+
 
 if __name__ == "__main__":
     main()

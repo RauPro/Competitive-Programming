@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,11 +32,7 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -79,19 +69,41 @@ def comb(n, r):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+    n, m = ints()
+    a = list(ints())
+    b = list(ints())
+    print(solve(n,b, a))
 
+def can(cover, a, b):
+    piv_i = 0
+    i = 0
+    while i < len(a):
+        last = b[piv_i] + cover
+        last_down = b[piv_i] - cover
+        if last_down <= a[i] <= last:
+            i += 1
+            continue
+        elif last < a[i] and piv_i < len(b)-1:
+            piv_i += 1
+            continue
+        else:
+            return False
+    return True
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n,b ,a ):
+    a.sort()
+    b.sort()
+    lo = 0
+    hi = int(10e9 + 5)
+    #hi = 100
+    while abs(lo - hi) != 1:
+        mid = (lo + hi) // 2
+        if can(mid, a, b):
+            hi = mid
+        else:
+            lo = mid
+
+    return lo if can(lo, a, b) else hi
 
 if __name__ == "__main__":
     main()

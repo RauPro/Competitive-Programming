@@ -81,17 +81,17 @@ def comb(n, r):
 def main():
     t = int(input())
     for _ in range(t):
-        a, b, c = ints()
-        print(solve(a, b, c))
+        a = list(ints())
+        print(solve(3, a))
 
 
-def solve(a, b, c):
-    if a != c-1:
-        return -1
-    if (a + b + c) == 0 or (a + b + c) == 1:
-        return 0
-    lvl = a.bit_length()
-    return (b-2**lvl+a+c)//c+lvl
+def solve(n, a):
+    min_parts = ceil(a[0] / a[1])
+    if min_parts == a[0]:
+        return "NO"
+    if a[0] - min_parts > a[2]:
+        return "YES"
+    return "NO"
 
 if __name__ == "__main__":
     main()
