@@ -69,12 +69,20 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = input()
+        b = input()
+        print(solve(n, a, b))
 
-def solve(n ,a ):
-    pass
+
+def solve(n ,a, b ):
+    gb = ['G', 'B']
+    for i in range(n):
+        if a[i] != b[i] and (a[i] not in gb or b[i] not in gb):
+            return "NO"
+    return "YES"
 
 
 

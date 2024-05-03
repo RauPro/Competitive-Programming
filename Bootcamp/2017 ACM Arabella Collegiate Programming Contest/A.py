@@ -20,8 +20,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -32,7 +38,11 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -69,13 +79,32 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n, q = ints()
+        a = list(ints())
+        solve(n, q, a)
 
-def solve(n ,a ):
-    pass
 
+def solve(n, q, arr):
+    mapper = Counter(arr)
+    for i in range(q):
+        input_s = input()
+        a, b, c = 0, 0, 0
+        if input_s[0] == '1':
+            a, b, c = map(int, input_s.split())
+            b_index = b - 1
+            b = arr[b_index]
+            mapper[c] += 1
+            mapper[b] -= 1
+            if mapper[b] == 0:
+                mapper.pop(b)
+            arr[b_index] = c
+        else:
+            ans = 0
+            if mapper[0]:
+                ans += 1
+            print(len(mapper.keys()) -ans)
 
 
 if __name__ == "__main__":

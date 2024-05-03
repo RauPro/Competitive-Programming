@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,12 +53,46 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n, k, pb, ps = ints()
+        p = list(ints())
+        a = list(ints())
+        print(solve(n, k, pb, ps, p, a))
 
-def solve(n ,a ):
-    pass
+
+def solve(n, k, pb, ps, p, a):
+    score_Bodya, score_Sasha = 0, 0
+    pos_Bodya, pos_Sasha = pb - 1, ps - 1
+    positions_Bodya, positions_Sasha = [], []
+    scores_Bodya, scores_Sasha = [], []
+    for _ in range(k):
+        score_Bodya += a[pos_Bodya]
+        if pos_Bodya in positions_Bodya:
+            remaining_turns = k - len(positions_Bodya)
+            score_Bodya += (a[pos_Bodya] * (remaining_turns - 1))
+            break
+        if a[p[pos_Bodya] - 1] > a[pos_Bodya]:
+            pos_Bodya = p[pos_Bodya] - 1
+        positions_Bodya.append(pos_Bodya)
+        scores_Bodya.append(score_Bodya)
+    for _ in range(k):
+        score_Sasha += a[pos_Sasha]
+        if pos_Sasha in positions_Sasha:
+            remaining_turns = k - len(positions_Sasha)
+            score_Sasha += (a[pos_Sasha] * (remaining_turns - 1))
+            break
+        if a[p[pos_Sasha] - 1] > a[pos_Sasha]:
+            pos_Sasha = p[pos_Sasha] - 1
+        positions_Sasha.append(pos_Sasha)
+        scores_Sasha.append(score_Sasha)
+    print(score_Sasha, score_Bodya)
+    if score_Bodya > score_Sasha:
+        return "Bodya"
+    elif score_Sasha > score_Bodya:
+        return "Sasha"
+    else:
+        return "Draw"
 
 
 

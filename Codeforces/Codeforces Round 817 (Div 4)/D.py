@@ -20,8 +20,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -32,7 +38,11 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -69,13 +79,40 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = input()
+        solve(n, a)
 
-def solve(n ,a ):
-    pass
 
+def sort_by_distance_from_middle(arr, mid):
+    middle_index = mid
+    distance_tuples = [(num, abs(num - middle_index)) for i, num in enumerate(arr)]
+    distance_tuples.sort(key=lambda x: x[1])
+    sorted_arr = [num for num, _ in distance_tuples]
+    return sorted_arr
+
+
+def solve(n, a):
+    ans = 0
+    prefix = []
+    for i in range(1, n + 1):
+        l = i - 1
+        r = n - i
+        if a[i - 1] == 'L':
+            ans += l
+            prefix.append(r - l)
+        if a[i - 1] == 'R':
+            ans += r
+            prefix.append(l - r)
+        prefix.append(0)
+
+    prefix.sort(reverse=True)
+    #print(prefix)
+    for i in range(n):
+        ans += prefix[i]
+        print(ans, end=" ")
 
 
 if __name__ == "__main__":

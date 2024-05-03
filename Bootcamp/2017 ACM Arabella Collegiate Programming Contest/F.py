@@ -68,10 +68,25 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
+def minutes_time(start, end):
+    min_start = start[0] * 60 + start[1]
+    min_end = end[0] * 60 + end[1]
+    mins_w = min_end - min_start
+    return mins_w
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n, m = ints()
+        ans = []
+        for i in range(n):
+            start, end = map(str, input().split())
+            entra_s, entra_m = map(int, start.split(':'))
+            go_s, gom_s = map(int, end.split(':'))
+            ans.append(minutes_time((entra_s, entra_m), (go_s, gom_s)))
+
+        horas = sum(ans) // 60
+        print("YES" if horas >= m else "NO")
+
 
 def solve(n ,a ):
     pass

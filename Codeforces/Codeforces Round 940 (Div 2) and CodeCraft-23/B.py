@@ -69,13 +69,29 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n, k = ints()
+        print(*solve(n, k))
 
-def solve(n ,a ):
-    pass
 
+def solve(n ,k ):
+    if n == 1:
+        return [k]
+    seq = [0] * (n - 2)
+    remaining = k
+    current = 0
+    while remaining:
+        current += 1
+        remaining >>= 1
+    seq.append(2 ** (current - 1) - 1)
+    seq.append(k - seq[-1])
+    or_result = 0
+    for num in seq:
+        or_result |= num
+    #count_ones = bin(or_result).count('1')
+
+    return seq
 
 
 if __name__ == "__main__":

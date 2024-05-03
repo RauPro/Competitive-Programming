@@ -20,8 +20,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -32,7 +38,11 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
 
 
@@ -69,13 +79,34 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        for i in range(n):
+            ans = {}
+            input()
+            for q in range(8):
+                key, s = map(str, input().split('={'))
+                if q != 7:
+                    ans[key] = s[:-2]
+                else:
+                    ans[key] = s[:-1]
+            authors = ans["author"].split(", ")
+            st = ""
+            for i, aut in enumerate(authors):
+                author_name, author_lastname = map(str, aut.split())
+                if i != len(authors) - 1:
+                    st += author_name[:2] + '. ' + author_lastname[:1] + ', '
+                else:
+                    st += author_name[:2] + '. ' + author_lastname[:1] + '. '
 
-def solve(n ,a ):
+            st += ans["title"] + '. ' + ans["journal"] + '. ' + ans["year"] + ';' + ans["volume"] + '(' + ans["number"] + ')' + ':' + ans["pages"] + '.'
+            input()
+            print(st)
+
+
+def solve(n, a):
     pass
-
 
 
 if __name__ == "__main__":

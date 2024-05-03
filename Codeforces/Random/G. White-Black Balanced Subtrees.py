@@ -15,7 +15,7 @@ flush = lambda: sys.stdout.flush()
 print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
 
 # Optimización de la recursión para Python
-sys.setrecursionlimit(100000)
+#sys.setrecursionlimit(100000)
 
 
 # Funciones para lectura de múltiples tipos de datos
@@ -68,15 +68,36 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
+
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(ints())
+        colors = input()
+        print(solve(n, a, colors))
 
-def solve(n ,a ):
-    pass
 
+d = []
+def dfs(u, colors, AL_sum):
+    global d
+    d[u] = 1 if colors[u-1] == 'B' else -1
+    for v in AL_sum[u]:
+        dfs(v, colors, AL_sum)
+        d[u] += d[v]
 
+def solve(n ,a, colors ):
+    global d
+    AL_sum = [[] for _ in range(n+1)]
+    for i in range(2, n + 1):
+        AL_sum[a[i-2]].append(i)
+
+    d = [0] * (n+1)
+
+    dfs(1, colors, AL_sum)
+    #print(d)
+
+    return d[1:].count(0)
 
 if __name__ == "__main__":
     main()

@@ -67,15 +67,24 @@ def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
-
+MAX = int(1e20) + 20
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        y, x = ints()
+        print(solve(x, y))
 
-def solve(n ,a ):
-    pass
 
+def solve(x, y):
+    rows = y <= x
+    if rows:
+        row = pow(x, 2) if x % 2 != 0 else pow(x-1, 2) + 1
+        to_add = y-1 if x % 2 == 0 else -1 * (y-1)
+        return row + to_add
+    else:
+        col = pow(y, 2) if y % 2 == 0 else pow(y - 1, 2) + 1
+        to_add = x - 1 if y % 2 != 0 else -1 * (x - 1)
+        return col + to_add
 
 
 if __name__ == "__main__":

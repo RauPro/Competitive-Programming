@@ -69,12 +69,22 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = input()
+        print(solve(n, a))
+
 
 def solve(n ,a ):
-    pass
+    timur = [_ for _ in "Timur"]
+    timur.sort()
+    timur = ''.join(timur)
+    a = [_ for _ in a]
+    a.sort()
+    a = ''.join(a)
+    return "YES" if timur == a else "NO"
+
 
 
 

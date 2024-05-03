@@ -69,12 +69,38 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(strs())
+        b = list(strs())
+        c = list(strs())
+        a = a + b + c
+        print(*solve(n, a))
+
 
 def solve(n ,a ):
-    pass
+    frec = Counter(a)
+    ans_a = 0
+    for i in range(n):
+        if frec[a[i]] == 1:
+            ans_a += 3
+        elif frec[a[i]] == 2:
+            ans_a += 1
+    ans_b = 0
+    for i in range(n, 2*n):
+        if frec[a[i]] == 1:
+            ans_b += 3
+        elif frec[a[i]] == 2:
+            ans_b += 1
+    ans_c = 0
+    for i in range(2*n, 3*n):
+        if frec[a[i]] == 1:
+            ans_c += 3
+        elif frec[a[i]] == 2:
+            ans_c += 1
+
+    return [ans_a, ans_b, ans_c]
 
 
 

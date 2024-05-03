@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,12 +53,41 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    n = int(input())
+    a = [i for i in range(1, n+1)]
+    solve(n,a)
+
 
 def solve(n ,a ):
-    pass
+    sum_ = sum(a)
+    total_w = sum_ // 2
+    if sum_ - total_w*2 != 0:
+        print("NO")
+    else:
+        @lru_cache(maxsize=None)
+        def kns(i, rem):
+            if i == n - 1 or rem == 0:
+                if rem ==0:
+                    print("YES")
+                    """list_ = [int(el) for el in list_]
+                    frec = Counter(list_)
+                    print(len(list_))
+                    print(*list_)
+                    print(n-len(list_))
+                    for it in a:
+                        if frec[it] == 1:
+                            continue
+                        print(it, end = " ")"""
+                    exit(0)
+                return 0
+            if a[i] > rem:
+                return kns(i+1, rem, )
+            return max(kns(i+1, rem, ), a[i] + kns(i+1, rem - a[i], ))
+        ans = kns(0, total_w)
+        if ans - total_w == 0:
+            print("YES")
+        else:
+            print("NO")
 
 
 

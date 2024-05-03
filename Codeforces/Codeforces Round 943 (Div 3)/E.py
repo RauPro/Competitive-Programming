@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,13 +53,33 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        print(solve(n))
 
-def solve(n ,a ):
-    pass
 
+def solve(n):
+    points = set()  # Usamos un set para evitar duplicados
+    # Añadir esquinas
+    if n <= 1:
+        points.add((1, 1))
+    if n >= 2:
+        for i in range(2, n):
+            points.add((i, 1))
+            points.add((i, n))
+            points.add((1, i))
+            points.add((n, i))
+            if i <= n // 2:
+                points.add((i, i))
+                points.add((i, n - i + 1))
+                points.add((n - i + 1, i))
+                points.add((n - i + 1, n - i + 1))
+        # Añadir centro si n es impar
+        if n % 2 == 1:
+            mid = n // 2 + 1
+            points.add((mid, mid))
+    return points
 
 
 if __name__ == "__main__":

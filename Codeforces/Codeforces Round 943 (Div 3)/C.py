@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,12 +53,26 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(ints())
+        print(*solve(n, a))
 
-def solve(n ,a ):
-    pass
+
+def solve(n ,x ):
+    a = [x[0] + 1]
+    for i in range(1, n):
+        xi = x[i - 1]
+        k = 1000000
+        ai = a[i - 1] * k + xi
+        if ai > 10 ** 9:
+            k = (10 ** 9 - xi) // a[i - 1]
+            ai = a[i - 1] * k + xi
+        a.append(ai)
+    #for i in range(len(a)-1):
+     #   print(a[i+1] % a[i], end = " ")
+    return a
 
 
 

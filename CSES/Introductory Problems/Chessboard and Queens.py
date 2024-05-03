@@ -20,8 +20,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -32,20 +38,12 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
-
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
 
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
@@ -69,14 +67,32 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
-
-def solve(n ,a ):
-    pass
+    m = []
+    for i in range(8):
+        m.append([_ for _ in input()])
+    print(solve(m))
 
 
+ans = 0
 
+
+def solve(m):
+    global ans
+    n = 8
+    rw = [False] * 8
+    ld = [False] * 16
+    rd = [False] * 16
+    def backtracking(c):
+        global ans
+        if c == n:
+            ans += 1
+            return
+        for r in range(n):
+            if m[r][c] != '*' and not rw[r] and not ld[(r-c)+(n-1)] and not rd[r+c]:
+                rw[r] = ld[r-c+n-1] = rd[r+c] = True
+                backtracking(c+1)
+                rw[r] = ld[r-c+n-1] = rd[r+c] = False
+    backtracking(0)
+    return ans
 if __name__ == "__main__":
     main()

@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,14 +53,24 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
-
-def solve(n ,a ):
-    pass
+    t = int(input())
+    for _ in range(t):
+        a, b = ints()
+        print(solve(a,b))
 
 
-
+def solve(a,b):
+    max_ = max(a,b)
+    min_ = min(a,b)
+    while max_> 0 or min_ >0:
+        if max_ >  2 and (max_ - min_ == 0 or max_ - min_ == 1):
+            return "YES"
+        acum = ceil((max_ - min_) / 2) if max_ != min_ else 1
+        max_ -= (acum * 2)
+        min_ -= acum
+        aux_max, aux_min = max_, min_
+        max_ = max(max_, min_)
+        min_ = min(aux_max, aux_min)
+    return "YES" if max_==0 and min_==0 else "NO"
 if __name__ == "__main__":
     main()

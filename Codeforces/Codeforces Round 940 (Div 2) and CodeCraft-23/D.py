@@ -69,12 +69,20 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(ints())
+        print(solve(n, a))
+
 
 def solve(n ,a ):
-    pass
+    count = 0
+    for y in range(1, n + 1):
+        if a[y - 1] > 0:  # a[y-1] corresponds to a[y] as y is 1-based in the problem description
+            # (x,y,z) tuples count where x <= y <= z
+            count += y * (n - y + 1)
+    return count
 
 
 

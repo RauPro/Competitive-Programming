@@ -69,12 +69,22 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    a = input()
+    print(solve(len(a), a))
+
 
 def solve(n ,a ):
-    pass
+    ans = 1
+    last = a[0]
+    global_max = 1
+    for i in range(1, n):
+        if last == a[i]:
+            ans += 1
+            global_max = max(global_max, ans)
+        else:
+            last = a[i]
+            ans = 1
+    return global_max
 
 
 

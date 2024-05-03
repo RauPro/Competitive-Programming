@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,13 +53,24 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    n = int(input())
+    solve(n)
 
-def solve(n ,a ):
-    pass
+ans = []
+def count_hanoi(count, start, end, intermediate):
+    global ans
+    if count == 1:
+        ans.append((start, end))
+    else:
+        count_hanoi(count-1, start, intermediate, end)
+        count_hanoi(1, start,end, intermediate )
+        count_hanoi(count-1, intermediate, end, start)
 
+def solve(n):
+    count_hanoi(n, "1", "3", "2")
+    print(len(ans))
+    for i in ans:
+        print(*i)
 
 
 if __name__ == "__main__":

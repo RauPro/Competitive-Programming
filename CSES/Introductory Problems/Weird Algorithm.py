@@ -69,12 +69,20 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    n = int(input())
+    solve(n)
 
-def solve(n ,a ):
-    pass
+
+def solve(n):
+   print(n, end = " ")
+   if n == 1:
+       return
+   if n % 2 != 0:
+        n*=3
+        n+=1
+        solve(n)
+   else:
+       solve(n//2)
 
 
 

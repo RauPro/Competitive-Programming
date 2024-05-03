@@ -35,26 +35,10 @@ def add(x, y, mod=MOD): return (x + y) % mod
 def sub(x, y, mod=MOD): return (x - y) % mod
 def mul(x, y, mod=MOD): return (x * y) % mod
 
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
-
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -69,12 +53,34 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n, k, pb, ps = ints()
+        p = list(ints())
+        a = list(ints())
+        print(solve(n, k, pb, ps, p, a))
 
-def solve(n ,a ):
-    pass
+
+def solve(n, k, pb, ps, p, a):
+    b = [0] * (n + 1)
+    s = [0] * (n + 1)
+    for i in range(1, n + 1):
+        b[i] = b[i - 1] + a[p[(pb + i - 2) % n]]
+        s[i] = s[i - 1] + a[p[(ps + i - 2) % n]]
+
+    sb, ss = 0, 0
+    for i in range(1, k + 1):
+        sb += a[p[(pb + i - 2) % n]]
+        ss += a[p[(ps + i - 2) % n]]
+        sb += s[min(k - i, n)] - s[0]
+        ss += b[min(k - i, n)] - b[0]
+
+    if sb > ss:
+        print("Bodya")
+    elif sb < ss:
+        print("Sasha")
+    else:
+        print("Draw")
 
 
 

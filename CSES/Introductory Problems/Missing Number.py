@@ -69,13 +69,23 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    n = int(input())
+    a = list(ints())
+    print(solve(n, a))
 
+def can(i, a):
+    return a[i] == i+1
 def solve(n ,a ):
-    pass
-
+    l = 0
+    r = n-1
+    a.sort()
+    while r-l != 1:
+        mid = (r+l)//2
+        if can(mid, a):
+            l = mid
+        else:
+            r = mid
+    return r+1 if n!=2 else 3 - a[0]
 
 
 if __name__ == "__main__":

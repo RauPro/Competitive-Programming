@@ -69,12 +69,30 @@ def comb(n, r):
 
 
 def main():
-    s = "104784,102386,102348,102267,102263,102219,101982,101972,101931,101915,101911,101853,101810,101801,101652,101606,101498,101350,101291"
-    s = s.split(',')
-    print(s[17])
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(ints())
+        print(solve(n, a))
+
 
 def solve(n ,a ):
-    pass
+    goal = sum(a) // 2
+    rem = sum(a) - goal
+    #print(goal, "GOAL")
+    ans = 0
+
+    @lru_cache(maxsize=None)
+    def kns(index, remW):
+        if index == n or remW == 0:
+            return 0
+        if a[index] > remW:
+            return kns(index + 1, remW)
+        return max(kns(index + 1, remW), a[index] + kns(index + 1, remW - a[index]))
+
+    ans = kns(0, goal)
+    #print(ans, "ANS")
+    return sum(a) - ans*2
 
 
 
