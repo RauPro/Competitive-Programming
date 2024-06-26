@@ -35,19 +35,31 @@ struct custom_hash {
 
 class FastScanner{
 public:
-	int nextInt(){int a;cin>>a;return a;}
+    int nextInt(){int a;cin>>a;return a;}
     char nextChar(){char a;cin>>a;return a;}
     ll nextLong(){ll a;cin>>a;return a;}
     string next(){string a;cin>>a;return a;}
     vi readArray(int n){
-		vi a(n);
-		for (size_t i = 0; i < n; i++)cin>>a[i];
-		return a;}
+        vi a(n);
+        for (size_t i = 0; i < n; i++)cin>>a[i];
+        return a;}
 };
-
+vi a;
+int n;
+ll memo[3000 + 5][3000 + 5];
+ll dp(int i,int j){
+    if (i > j) return 0;
+    ll &ans = memo[i][j];
+    if (ans != -1)return ans;
+    return ans = max(a[i] - dp(i+1, j), a[j] - dp(i, j-1));
+}
 
 int main(){
-	Fast
-	FastScanner fs;
-	return 0;
-} 
+    Fast
+    FastScanner fs;
+    n = fs.nextInt();
+    a = fs.readArray(n);
+    memset(memo, -1, sizeof memo);
+    cout << dp(0, n-1) << endl;
+    return 0;
+}

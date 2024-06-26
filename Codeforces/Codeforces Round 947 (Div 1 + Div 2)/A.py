@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,17 +37,19 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
@@ -59,8 +60,18 @@ def main():
         print(solve(n, a))
 
 
-def solve(n ,a ):
-    pass
+def solve(n ,a):
+    if all(a[i] <= a[i + 1] for i in range(n - 1)):
+        return "YES"
+    for i in range(1, n):
+        if a[i - 1] > a[i]:
+            new_a = a[i:] + a[:i]
+            if all(new_a[j] <= new_a[j + 1] for j in range(n - 1)):
+                return "YES"
+            break
+
+    return "NO"
+
 
 
 

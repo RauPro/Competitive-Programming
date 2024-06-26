@@ -52,16 +52,33 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m, q = ints()
+    solve(n, m, q)
 
 
-def solve(n ,a ):
-    pass
+def solve(V, E, q):
+    MAX_V = 500
+    AM = [[INF for j in range(MAX_V)] for i in range(MAX_V)]
+    for u in range(V):
+        AM[u][u] = 0
 
+    for i in range(E):
+        u, v, w = ints()
+        u-=1
+        v-=1
+        AM[u][v] = w
+        AM[v][u] = w
+
+    for k in range(V):  # loop order is k->u->v
+        for u in range(V):
+            for v in range(V):
+                AM[u][v] = min(AM[u][v], AM[u][k] + AM[k][v])
+
+    for _ in range(q):
+        u, v = ints()
+        u-=1
+        v-=1
+        print(AM[u][v] if AM[u][v] != INF else -1)
 
 
 if __name__ == "__main__":

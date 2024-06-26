@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,33 +32,13 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
-
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -77,28 +51,60 @@ def comb(n, r):
     if r == 0 or r == n: return 1
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
+def check_condition(x):
+    exp = 0
+    if x == 0.0:
+        return 0.0, exp
+    while abs(x) >= 1.0:
+        x /= 2.0
+        exp += 1
+    while abs(x) < 0.5:
+        x *= 2.0
+        exp -= 1
+    return x, exp
 
-s = ""
-a = []
-x = ["0", "0", "1"]
-possible = ["0", "1"]
-mapper = {"00": 0, "10": 1, "11": 2, "01": 1}
-def main():
-    global a
-    t = int(input())
-    for _ in range(t):
-        a = list(ints())
-        n = 3
-        print(solve(n,a))
+def sum_sequence(seq):
+    result = {'type': '', 'val': []}
+    if len(seq) == 1:
+        result['type'] = 'd'
+        result['val'].append(1)
+    elif len(seq) == 2:
+        result['type'] = 'd'
+        result['val'].extend([1, 2])
+    elif len(seq) == 3:
+        result['type'] = 'd'
+        result['val'].extend([1, 2, 3])
+    else:
+        for factor in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]:
+            if len(seq) % factor == 0:
+                result['type'] = 'd'
+                result['val'].extend(list(range(1, len(seq) + 1)))
+                break
+        else:
+            result['type'] = 'f'
+            sum_val = 0.0
+            for i in seq:
+                value, exp = check_condition(i)
+                sum_val += value
+                result['val'].append(exp)
+            result['val'].append(int(sum_val))
+    return result
 
 
-def solve(n, a):
-    st = str("1" * a[2]) + str("10" * ( (a[1]+1)//2)) + str("0" * a[0])
-    return st
+def solve():
+    in_ = list(map(float, input().split()))
+    seq = in_[1:]
 
+    result = sum_sequence(seq)
 
+    print(f"{{{result['type']}:", end='')
+    print(",".join(map(str, result['val'])), end='}\n')
 
 
 
 if __name__ == "__main__":
-    main()
+    solve()
+
+
+
+

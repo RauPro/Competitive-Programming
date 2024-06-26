@@ -52,17 +52,32 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m = ints()
+    print(*solve(n, m))
 
 
-def solve(n ,a ):
-    pass
+def solve(V, E):
+    AL = [[] for i in range(V)]
+    for i in range(E):
+        u, v, w = ints()
+        v -= 1
+        u -= 1
+        AL[u].append((v, w))
+        #AL[v].append((u, w))
+    dist = [INF for u in range(V)]
+    dist[0] = 0
+    pq = []
+    heappush(pq, (0, 0))
 
 
+    while (len(pq) > 0):
+        d, u = heappop(pq)
+        if (d > dist[u]): continue
+        for v, w in AL[u]:
+            if (dist[u] + w >= dist[v]): continue
+            dist[v] = dist[u] + w
+            heappush(pq, (dist[v], v))
+    return dist
 
 if __name__ == "__main__":
     main()

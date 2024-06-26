@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,17 +37,19 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
@@ -58,9 +59,46 @@ def main():
         a = list(ints())
         print(solve(n, a))
 
+lvl = []
+AL = []
+padre = []
+def dfs(u, p):
+    global lvl,AL, padre
+    lvl[u] = p
+    for v in AL[u]:
+        if v != padre[u]:
+            padre[v] = u
+            dfs(v, p + 1)
 
-def solve(n ,a ):
-    pass
+
+
+def solve(n , p ):
+    global lvl, AL, padre
+    AL = [[] for _ in range(n + 1)]
+    lvl = [0] * (n + 1)
+    padre = [0] * (n + 1)
+    for i in range(2, n + 1):
+        AL[p[i - 2]].append(i)
+    dfs(1, 1)
+    #print(lvl)
+    lvl = lvl[1:]
+    lvl.sort()
+    frec = Counter(lvl)
+    unpaired = 0
+    ans = 0
+    #print(frec)
+    frec = dict(sorted(frec.items(), key=lambda item: item[0], reverse=True))
+    for lv, it in frec.items():
+        if it > 1:
+            to_match = min(unpaired, it - 1)
+            unpaired -= to_match
+            it -= to_match
+            ans += to_match
+        ans += (it // 2)
+        #print(ans, it)
+        it %= 2
+        unpaired += it
+    return (ans)
 
 
 

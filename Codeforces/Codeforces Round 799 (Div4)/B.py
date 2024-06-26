@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,17 +37,19 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
@@ -58,9 +59,25 @@ def main():
         a = list(ints())
         print(solve(n, a))
 
-
+def get_next_val(frec, current_key):
+    for key, val in frec.items():
+        if val >= 2 and key != current_key:
+            return key
+    return 10000000
 def solve(n ,a ):
-    pass
+    frec = Counter(a)
+    for key, value in frec.items():
+        while frec[key] >= 2:
+            next = get_next_val(frec, key)
+            if next != 10000000:
+                frec[key] -= 1
+                frec[next] -= 1
+            else:
+                break
+    ans = 0
+    for value in frec.values():
+        ans += (value % 2)
+    return ans
 
 
 

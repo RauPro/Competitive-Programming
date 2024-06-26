@@ -35,19 +35,48 @@ struct custom_hash {
 
 class FastScanner{
 public:
-	int nextInt(){int a;cin>>a;return a;}
+    int nextInt(){int a;cin>>a;return a;}
     char nextChar(){char a;cin>>a;return a;}
     ll nextLong(){ll a;cin>>a;return a;}
     string next(){string a;cin>>a;return a;}
     vi readArray(int n){
-		vi a(n);
-		for (size_t i = 0; i < n; i++)cin>>a[i];
-		return a;}
+        vi a(n);
+        for (size_t i = 0; i < n; i++)cin>>a[i];
+        return a;}
 };
+vi w, v;
+int n;
 
+int memo[105][100000 + 5];
+
+
+ll dp(int index, int remV){
+    if (remV == 0)return 0;
+    if (index == n) return INT32_MAX;
+    int &ans = memo[index][remV];
+    if (ans != 0) return ans;
+    if (remV - v[index] < 0) return ans = dp(index+1, remV);
+    return ans = min(dp(index+1, remV), w[index] + dp(index+1, remV-v[index]));
+}
 
 int main(){
-	Fast
-	FastScanner fs;
-	return 0;
-} 
+    Fast
+    FastScanner fs;
+    n = fs.nextInt();
+    int m= fs.nextInt();
+    memset(memo, 0, sizeof memo);
+    for (int i = 0; i < n; ++i) {
+        w.push_back(fs.nextInt());
+        v.push_back(fs.nextInt());
+    }
+    int total_val = accumulate(v.begin(), v.end(), 0);
+    for (int i = total_val; i >= 0 ; --i) {
+        ll ans = dp(0, i);
+        if (ans <= m){
+            cout << i << endl;
+            break;
+        }
+    }
+
+    return 0;
+}

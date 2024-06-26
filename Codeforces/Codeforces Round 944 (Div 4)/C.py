@@ -2,7 +2,7 @@ import os
 import sys
 from collections import *
 from heapq import *
-from math import gcd, floor, ceil, sqrt
+from math import gcd, floor, ceil, sqrt, cos, sin, pi
 from copy import deepcopy
 from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,33 +32,13 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
-
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -78,24 +52,58 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
-s = ""
-a = []
-x = ["0", "0", "1"]
-possible = ["0", "1"]
-mapper = {"00": 0, "10": 1, "11": 2, "01": 1}
 def main():
-    global a
     t = int(input())
     for _ in range(t):
-        a = list(ints())
-        n = 3
-        print(solve(n,a))
+        a,b,c,d = ints()
+        print(solve(a,b,c,d))
+
+def orientation(p, q, r):
+    val = (q[1] - p[1]) * (r[0] - q[0]) - (q[0] - p[0]) * (r[1] - q[1])
+    if val == 0:
+        return 0
+    elif val > 0:
+        return 1
+    else:
+        return 2
 
 
-def solve(n, a):
-    st = str("1" * a[2]) + str("10" * ( (a[1]+1)//2)) + str("0" * a[0])
-    return st
+def do_segments_intersect(p1, q1, p2, q2):
+    o1 = orientation(p1, q1, p2)
+    o2 = orientation(p1, q1, q2)
+    o3 = orientation(p2, q2, p1)
+    o4 = orientation(p2, q2, q1)
+    if o1 != o2 and o3 != o4:
+        return True
+    if o1 == 0 and on_segment(p1, p2, q1):
+        return True
+    if o2 == 0 and on_segment(p1, q2, q1):
+        return True
+    if o3 == 0 and on_segment(p2, p1, q2):
+        return True
+    if o4 == 0 and on_segment(p2, q1, q2):
+        return True
 
+    return False
+
+
+def on_segment(p, q, r):
+    if min(p[0], r[0]) <= q[0] <= max(p[0], r[0]) and min(p[1], r[1]) <= q[1] <= max(p[1], r[1]):
+        return True
+    return False
+
+def point_on_clock(number):
+    angle = pi / 6 * (3 - number)
+    return (cos(angle), sin(angle))
+
+
+def solve(a,b,c,d ):
+    p1 = point_on_clock(a)
+    q1 = point_on_clock(b)
+    p2 = point_on_clock(c)
+    q2 = point_on_clock(d)
+
+    return "YES" if do_segments_intersect(p1, q1, p2, q2) else "NO"
 
 
 

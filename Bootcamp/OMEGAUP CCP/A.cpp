@@ -17,37 +17,43 @@ typedef vector<ll> vll;
 typedef pair<int, int> pi;
 
 const double EPS = 1e-9;
-
-struct custom_hash {
-    static uint64_t splitmix64(uint64_t x) {
-        // http://xorshift.di.unimi.it/splitmix64.c
-        x += 0x9e3779b97f4a7c15;
-        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
-        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
-        return x ^ (x >> 31);
-    }
-
-    size_t operator()(uint64_t x) const {
-        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
-        return splitmix64(x + FIXED_RANDOM);
-    }
-};
-
 class FastScanner{
 public:
-	int nextInt(){int a;cin>>a;return a;}
+    int nextInt(){int a;cin>>a;return a;}
     char nextChar(){char a;cin>>a;return a;}
     ll nextLong(){ll a;cin>>a;return a;}
     string next(){string a;cin>>a;return a;}
     vi readArray(int n){
-		vi a(n);
-		for (size_t i = 0; i < n; i++)cin>>a[i];
-		return a;}
+        vi a(n);
+        for (size_t i = 0; i < n; i++)cin>>a[i];
+        return a;}
 };
+
+int solve(const string& events) {
+    int people_in_club = 0;
+    int min_people = 0;
+
+    for (char event : events) {
+        if (event == '+') {
+            people_in_club += 1;
+            min_people = std::max(min_people, people_in_club);
+        } else if (event == '-' && people_in_club == 0) {
+            min_people += 1;
+        } else {
+            people_in_club -= 1;
+        }
+    }
+
+    return min_people;
+}
 
 
 int main(){
-	Fast
-	FastScanner fs;
-	return 0;
-} 
+    Fast
+    FastScanner fs;
+    string input;
+    while (cin >> input){
+        cout << solve(input) << endl;
+    }
+    return 0;
+}

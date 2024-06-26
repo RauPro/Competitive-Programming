@@ -7,7 +7,6 @@ using namespace __gnu_pbds;
 #define LSOne(S) ((S) & -(S)) // Useful bitmask operation
 #define Fast ios::sync_with_stdio(0); cin.tie(0);
 #define endl endl;
-
 typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ost;
 typedef long long ll;
 typedef long int li;
@@ -16,8 +15,17 @@ typedef vector<ll> vl;
 typedef vector<ll> vll;
 typedef pair<int, int> pi;
 
-const double EPS = 1e-9;
-
+class FastScanner{
+public:
+    int nextInt(){int a;cin>>a;return a;}
+    char nextChar(){char a;cin>>a;return a;}
+    ll nextLong(){ll a;cin>>a;return a;}
+    string next(){string a;cin>>a;return a;}
+    vi readArray(int n){
+        vi a(n);
+        for (size_t i = 0; i < n; i++)cin>>a[i];
+        return a;}
+};
 struct custom_hash {
     static uint64_t splitmix64(uint64_t x) {
         // http://xorshift.di.unimi.it/splitmix64.c
@@ -33,21 +41,24 @@ struct custom_hash {
     }
 };
 
-class FastScanner{
-public:
-	int nextInt(){int a;cin>>a;return a;}
-    char nextChar(){char a;cin>>a;return a;}
-    ll nextLong(){ll a;cin>>a;return a;}
-    string next(){string a;cin>>a;return a;}
-    vi readArray(int n){
-		vi a(n);
-		for (size_t i = 0; i < n; i++)cin>>a[i];
-		return a;}
-};
-
-
 int main(){
-	Fast
-	FastScanner fs;
-	return 0;
-} 
+    Fast
+    FastScanner fs;
+    int t = fs.nextInt();
+    while (t--){
+        int n = fs.nextInt();
+        vi a = fs.readArray(n);
+        ll sum = 0;
+        int ans = 0;
+        gp_hash_table<ll, bool, custom_hash> mapper;
+        for (int i = 0; i < n; i++){
+            sum+= a[i];
+            mapper[a[i]] = true;
+            if (!(sum & 1) && mapper[sum/2]){
+                ans+=1;
+            }
+        }
+        cout << ans << endl;
+    }
+    return 0;
+}

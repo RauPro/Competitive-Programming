@@ -20,14 +20,8 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
-
-
 def strs(): return input().split()
-
-
 def chars(): return list(input().strip())
-
-
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -38,33 +32,13 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
-
-
 def sub(x, y, mod=MOD): return (x - y) % mod
-
-
 def mul(x, y, mod=MOD): return (x * y) % mod
-
-
-# Fast power - a^b % mod
-def powmod(a, b, mod=MOD):
-    res = 1
-    a = a % mod
-    while b > 0:
-        if b % 2:
-            res = mul(res, a, mod)
-        a = mul(a, a, mod)
-        b //= 2
-    return res
-
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
-
 # GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
-
 
 # Factorial con memoización
 @lru_cache(maxsize=None)
@@ -78,26 +52,46 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
-s = ""
-a = []
-x = ["0", "0", "1"]
-possible = ["0", "1"]
-mapper = {"00": 0, "10": 1, "11": 2, "01": 1}
 def main():
-    global a
     t = int(input())
     for _ in range(t):
-        a = list(ints())
-        n = 3
-        print(solve(n,a))
+        m, x = ints()
+        cost = []
+        happiness = []
+        for i in range(m):
+            c, h = ints()
+            cost.append(c)
+            happiness.append(h)
+        print(solve(m,x, cost, happiness))
 
 
-def solve(n, a):
-    st = str("1" * a[2]) + str("10" * ( (a[1]+1)//2)) + str("0" * a[0])
-    return st
+def solve(m,x, cost, happiness ):
+    n = len(cost)
+    def knapsack(remW, index):
+        if index == n or remW == 0:
+            return 0, 0  # Return zero happiness and zero cost
 
+            # If the current item's cost exceeds the remaining weight, skip this item
+        if cost[index] > remW:
+            return knapsack(remW, index + 1)
 
+            # Explore two scenarios: not taking the current item, and taking the current item
+        without_item = knapsack(remW, index + 1)
+        with_item_happiness, with_item_cost = knapsack(remW - cost[index], index + 1)
+        with_item_happiness += happiness[index]  # Increase happiness by the current item's value
+        with_item_cost += cost[index]  # Increase cost by the current item's cost
 
+        # Choose the option that provides the maximum happiness
+        if with_item_happiness > without_item[0]:
+            return with_item_happiness, with_item_cost
+        else:
+            return without_item
+
+    ans = 0
+    for i in range(1, n):
+        curr = knapsack(x, i)
+        print(curr)
+    return ans
 
 
 if __name__ == "__main__":

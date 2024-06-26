@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -21,8 +20,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -33,35 +38,63 @@ MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
+
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
 
+
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
+
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    ana = input()
+    carolina = input()
+    print(*solve(ana, carolina))
+
+def get_score(s):
+    score = 0
+    for char in s:
+        if char.isdigit():
+            score += int(char)
+        elif char.islower():
+            score += ord(char) - ord('a') + 10
+        elif char.isupper():
+            score += (ord(char) - ord('A') + 10) * 2
+    return score
 
 
-def solve(n ,a ):
-    pass
+def solve(ana, carolina):
+    """rules = "123456789abcdefghijklmnñopqrstuvwxyz"
+    mapper = {it: i + 1 for i, it in enumerate(rules)}
+    upper = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    for i, it in enumerate(upper):
+        mapper[it] = (10 + i) * 2"""
 
+    points_a = get_score(ana)
+    points_c = get_score(carolina)
+    if points_a > points_c:
+        return ["Ana", points_a]
+    return ["Carolina", points_c]
 
 
 if __name__ == "__main__":

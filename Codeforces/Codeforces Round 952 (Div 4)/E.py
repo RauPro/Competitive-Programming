@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,31 +37,41 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        x, y, z, k = ints()
+        print(solve(x, y, z, k))
 
 
-def solve(n ,a ):
-    pass
-
-
+def solve(x, y, z, k):
+    ans = 0
+    ans = max(
+        [ans] +
+        [
+            (x - x1 + 1) * (y - y1 + 1) * (
+                        z - (k // (x1 * y1)) + 1)
+            for x1 in range(1, x + 1)
+            for y1 in range(1, y + 1)
+            if k % (x1 * y1) == 0 and (k // (x1 * y1)) <= z
+        ]
+    )
+    return ans
 
 if __name__ == "__main__":
     main()

@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,29 +37,43 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
+        n,k = ints()
         a = list(ints())
-        print(solve(n, a))
+        print(solve(n,k, a))
 
 
-def solve(n ,a ):
-    pass
+def solve(n,k ,arr ):
+    count = 0
+    for i in range(n - k):
+        is_ordered = True
+        current = arr[i]
+        for j in range(1, k + 1):
+            next_value = arr[i + j] * (2 ** j)
+            if current >= next_value:
+                is_ordered = False
+                break
+            current = next_value
+        if is_ordered:
+            count += 1
+    return count
 
 
 

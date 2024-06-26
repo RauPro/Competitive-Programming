@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,30 +37,49 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
     t = int(input())
+
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        m = []
+        #input()
+        input()
+        for i in range(8):
+            m.append(input())
+        print(solve(m))
 
-
-def solve(n ,a ):
-    pass
-
+def complete_line(m, i,j, c):
+    if c == "R":
+        line_r = [m[i][j] for j in range(8)]
+        return all(line_r[i] == line_r[i + 1] for i in range(7))
+    else:
+        line_c = [m[i][j] for i in range(8)]
+        return all(line_c[i] == line_c[i+1] for i in range(7))
+def solve(m):
+    #print(m)
+    for i in range(8):
+        for j in range(8):
+            if m[i][j] == "R":
+                if complete_line(m, i,j, "R"):
+                    return m[i][j]
+            if m[i][j] == "B":
+                if complete_line(m, i,j, "B"):
+                    return m[i][j]
 
 
 if __name__ == "__main__":

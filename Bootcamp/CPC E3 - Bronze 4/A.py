@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,29 +37,69 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+
+    n = int(input())
+    solve(n)
 
 
-def solve(n ,a ):
-    pass
+
+
+_sieve_size = 0
+bs = []
+primes = []
+
+
+def sieve(upperbound):
+  global _sieve_size, bs, primes
+
+  _sieve_size = upperbound+1
+  bs = [True] * 10000010
+  bs[0] = bs[1] = False
+  for i in range(2, _sieve_size):
+    if bs[i]:
+      for j in range(i*i, _sieve_size, i):
+        bs[j] = False
+      primes.append(i)
+
+
+def primeFactors(N):
+  global primes
+
+  factors = []
+  for p in primes:
+    if p * p > N:
+      break
+    while N % p == 0:
+      N //= p
+      print(p)
+  if N != 1:
+    print(n)
+
+  return factors
+
+
+
+def solve(n):
+    global primes
+    sieve(10000000)
+    primeFactors(n)
+
 
 
 

@@ -5,10 +5,8 @@ from heapq import *
 from math import gcd, floor, ceil, sqrt
 from copy import deepcopy
 from itertools import permutations, combinations, product
-from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,17 +36,19 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
@@ -59,9 +59,50 @@ def main():
         print(solve(n, a))
 
 
-def solve(n ,a ):
-    pass
+class SegmentTree:
+    def __init__(self, data):
+        self.n = len(data)
+        self.tree = [0] * (2 * self.n)
+        # Build the tree
+        for i in range(self.n):
+            self.tree[self.n + i] = data[i]
+        for i in range(self.n - 1, 0, -1):
+            self.tree[i] = self.tree[i * 2] | self.tree[i * 2 + 1]
 
+    def query(self, l, r):
+        l += self.n
+        r += self.n
+        res = 0
+        while l < r:
+            if l & 1:
+                res |= self.tree[l]
+                l += 1
+            if r & 1:
+                r -= 1
+                res |= self.tree[r]
+            l //= 2
+            r //= 2
+        return res
+
+
+def solve(n ,a ):
+    st = SegmentTree(a)
+
+    l, r = 1, n
+    while l < r:
+        mid = (l + r) // 2
+        valid = True
+        or_value = st.query(0, mid)
+        for i in range(1, n - mid + 1):
+            if st.query(i, i + mid) != or_value:
+                valid = False
+                break
+        if valid:
+            r = mid
+        else:
+            l = mid + 1
+
+    return l
 
 
 if __name__ == "__main__":

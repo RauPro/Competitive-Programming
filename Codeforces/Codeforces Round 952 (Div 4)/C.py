@@ -38,17 +38,19 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
@@ -60,7 +62,18 @@ def main():
 
 
 def solve(n ,a ):
-    pass
+    prefix_sum = [0] * (n + 1)
+    founded = {}
+    good_prefixes = 0
+    for i in range(1, n + 1):
+        prefix_sum[i] = prefix_sum[i - 1] + a[i - 1]
+        wx = Wrapper(a[i - 1])
+        founded[wx] = True
+
+        if prefix_sum[i] % 2  ==0 and founded.get(Wrapper(prefix_sum[i] // 2), False):
+            good_prefixes+=1
+        #print(prefix_sum, a[i-1])
+    return good_prefixes
 
 
 

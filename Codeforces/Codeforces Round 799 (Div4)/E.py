@@ -8,7 +8,6 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
-from random import getrandbits
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -38,29 +37,52 @@ def mul(x, y, mod=MOD): return (x * y) % mod
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
-
+# GCD y LCM
 def lcm(a, b): return a * b // gcd(a, b)
 
-RANDOM = getrandbits(32)
+# Factorial con memoización
+@lru_cache(maxsize=None)
+def factorial(n): return n * factorial(n - 1) if n else 1
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
 
+# Combinaciones con memoización (nCr)
+@lru_cache(maxsize=None)
+def comb(n, r):
+    if r == 0 or r == n: return 1
+    return comb(n - 1, r - 1) + comb(n - 1, r)
 
 
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
+        n, s = ints()
         a = list(ints())
-        print(solve(n, a))
+        print(solve(n,s, a))
 
 
-def solve(n ,a ):
-    pass
+def solve(n,s ,a ):
+    sum_ = sum(a)
+    if sum_ < s:
+        return -1
+    if sum_ == s:
+        return 0
+
+    current_sum = 0
+    min_operations = float('inf')
+    start = 0
+    for end in range(n):
+        current_sum += a[end]
+        while current_sum > s and start <= end:
+            current_sum -= a[start]
+            start += 1
+        if current_sum == s:
+            operations = (start) + (n - end - 1)
+            min_operations = min(min_operations, operations)
+    if min_operations == float('inf'):
+        return(-1)
+    else:
+        return(min_operations)
+
 
 
 
