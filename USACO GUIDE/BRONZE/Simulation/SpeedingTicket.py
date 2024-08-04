@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -52,16 +52,23 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
+    sys.stdin = open('speeding.in', 'r')
+    sys.stdout = open('speeding.out', 'w')
+    n, m = ints()
+    a = []
+    b = []
+    for i in range(n):
+        q,k = ints()
+        for q_ in range(q):
+            a.append(k)
+    for i in range(m):
+        q, k = ints()
+        for q_ in range(q):
+            b.append(k)
+    ans = 0
+    for i in range(100):
+        ans = max(ans, b[i] - a[i])
+    print(ans)
 
 
 if __name__ == "__main__":

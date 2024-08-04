@@ -52,11 +52,18 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('circlecross.in', 'r')
+    sys.stdout = open('circlecross.out', 'w')
+    s = input()
+    ans = 0
+    pairs = list(permutations("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2))
+
+    for pair in pairs:
+        if s.find(pair[0]) < s.find(pair[1]) < s.find(pair[0], s.find(pair[0]) + 1) < s.find(pair[1],
+                                                                                             s.find(pair[1]) + 1):
+            ans += 1
+
+    print(ans)
 
 
 def solve(n ,a ):

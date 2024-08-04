@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -52,15 +52,22 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
+    sys.stdin = open('cowsignal.in', 'r')
+    sys.stdout = open('cowsignal.out', 'w')
+    n, m, k = ints()
+    a = []
+    for i in range(n):
+        a.append(input())
+    solve(k, a)
 
 def solve(n ,a ):
-    pass
+    s = ""
+    for i in range(len(a)):
+        for j in range(len(a[i])):
+            s+= (a[i][j] * n)
+        for _ in range(n):
+            print(s)
+        s = ""
 
 
 

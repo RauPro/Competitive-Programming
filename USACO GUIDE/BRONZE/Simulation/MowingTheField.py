@@ -52,16 +52,29 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
+    n = int(input())
+    mapper = defaultdict(lambda: defaultdict(lambda : 0))
+    curr = 1
+    x, y = 0, 0
+    ans = INF
+    acum = 0
+    for i in range(n):
+        a, b = strs()
+        for j in range(curr, curr + int(b)):
+            if mapper[x][y] != 0:
+                ans = min(ans, j - mapper[x][y])
+                acum+=1
+            mapper[x][y] = j
+            if a == "N":
+                y += 1
+            elif a == "S":
+                y -= 1
+            elif a == "E":
+                x+=1
+            elif a == "W":
+                x-=1
+        curr += int(b)
+    print(ans if acum !=0 else -1)
 
 
 if __name__ == "__main__":

@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -60,7 +60,7 @@ def main():
 
 
 def solve(n ,a ):
-    pass
+    pass|
 
 
 

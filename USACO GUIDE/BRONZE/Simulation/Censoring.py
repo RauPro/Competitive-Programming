@@ -52,15 +52,16 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
+    sys.stdin = open('censor.in', 'r')
+    sys.stdout = open('censor.out', 'w')
+    s = input()
+    t = input()
+    new = ""
+    for c in s:
+        new += c
+        if new[-len(t):] == t:
+            new = new[:len(new)-len(t)]
+    print(new)
 
 
 

@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -52,17 +52,66 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m = ints()
+    print(solve(n, m))
 
 
-def solve(n ,a ):
-    pass
+def shortest_cycle(n: int, gr):
+    ans = INF
+    for i in range(n):
+        dist = [int(1e9)] * n
+        par = [-1] * n
+        dist[i] = 0
+        q = deque()
+        q.append(i)
+        temp_ans = []
+        while q:
+            x = q[0]
+            q.popleft()
+            temp_ans.append(x)
+            for child in gr[x]:
+                if dist[child] == int(1e9):
+                    dist[child] = 1 + dist[x]
+                    par[child] = x
+                    q.append(child)
+                elif par[x] != child and par[child] != x:
+                    ans = min(ans, dist[x] +
+                              dist[child] + 1)
+
+    if ans == INF:
+        return -1
+    else:
+        return ans
 
 
+def dfs(graph, marked, n, vert, start, count):
+    marked[vert] = True
+    if n == 0:
+        marked[vert] = False
+        if start in graph[vert]:
+            count += 1
+        return count
+    for i in graph[vert]:
+        if not marked[i]:
+            count = dfs(graph, marked, n - 1, i, start, count)
+    marked[vert] = False
+    return count
+
+def countCycles(graph, n, V):
+    marked = [False] * V
+    count = 0
+    for i in range(V - (n - 1)):
+        count = dfs(graph, marked, n - 1, i, i, count)
+        marked[i] = True
+    return int(count / 2)
+
+def solve(n, m):
+    AL = [[] for i in range(n+1)]
+    for i in range(m):
+        u, v = ints()
+        AL[u-1].append(v-1)
+        AL[v-1].append(u-1)
+    return countCycles(AL, shortest_cycle(n, AL), n)
 
 if __name__ == "__main__":
     main()

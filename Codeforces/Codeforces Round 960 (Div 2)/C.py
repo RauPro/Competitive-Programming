@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -58,10 +58,36 @@ def main():
         a = list(ints())
         print(solve(n, a))
 
+def getMAD(a):
+    cnt = {}
+    mad = 0
+    b = [0] * len(a)
+    for i, it in enumerate(a):
+        wx = Wrapper(it)
+        cnt[wx] = cnt.get(wx, 0) + 1
+        if cnt[wx] > 1:
+            mad = max(mad, it)
+        b[i] = mad
+    return b
 
 def solve(n ,a ):
-    pass
-
+    sum_ = 0
+    allZero = False
+    mad = getMAD(a)[i]
+    while (not allZero):
+        currentSum = 0
+        for it in a:
+            currentSum += it
+        sum_ += currentSum
+        b = [0] * n
+        for i in range(n):
+            b[i] = mad[i]
+        allZero = True
+        for i in range(n):
+            a[i] = b[i]
+            if a[i] != 0:
+                allZero = False
+    return sum_
 
 
 if __name__ == "__main__":

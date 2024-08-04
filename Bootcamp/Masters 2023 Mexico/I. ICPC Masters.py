@@ -52,11 +52,10 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m = ints()
+    while n - m > 0:
+        n-=m
+    print(n)
 
 
 def solve(n ,a ):

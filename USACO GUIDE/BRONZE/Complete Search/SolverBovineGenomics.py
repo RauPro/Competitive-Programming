@@ -52,12 +52,34 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('cownomics.in', 'r')
+    sys.stdout = open('cownomics.out', 'w')
+    n, m = ints()
+    possibilities = []
+    for i in range(0, m):
+        for j in range(i+1, m):
+            for k in range(j+1, m):
+                possibilities.append((i,j,k))
+    #print(possibilities)
+    #print(len(possibilities))
 
+    spots = []
+    plain = []
+    for i in range(n):
+        spots.append(input())
+
+    for i in range(n):
+        plain.append(input())
+
+    ans =  0
+    for a, b, c in possibilities:
+        curr = {}
+        for it in spots:
+            curr[it[a] + it[b] + it[c]] = True
+
+        ans += all(it[a] + it[b] + it[c] not in curr for it in plain)
+        #print(a,b,c)
+    print(ans)
 
 def solve(n ,a ):
     pass

@@ -49,19 +49,33 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-
+cc = 0
+visited = []
+s = ""
+def dfs(u, time, AL):
+    global cc, visited
+    cc+=1
+    visited[u] = True
+    for v, w in AL[u]:
+        if not visited[v] and w >= time and s[v-1] == '1':
+            dfs(v, time, AL)
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    global cc, visited, s
+    #sys.stdin = open('tracing.in', 'r')
+    #sys.stdout = open('tracing.out', 'w')
+    n, m =ints()
+    s = input()
+    infected = s.count('1')
+    AL = [[] for i in range(n+1)]
+    for i in range(m):
+        w, u, v = ints()
+        AL[u].append((v, w))
+        AL[v].append((u, w))
 
 
-def solve(n ,a ):
-    pass
 
+    print(zero_p, min_k, "Infinity" if max_k == INF else max_k)
 
 
 if __name__ == "__main__":

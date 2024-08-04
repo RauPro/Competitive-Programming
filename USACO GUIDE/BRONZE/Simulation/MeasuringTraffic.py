@@ -52,15 +52,49 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('traffic.in', 'r')
+    sys.stdout = open('traffic.out', 'w')
+    n = int(input())
+    action = []
+    start = []
+    end = []
+    for i in range(n):
+        a, b, c = strs()
+        action.append(a)
+        start.append(int(b))
+        end.append(int(c))
 
+    lo = 0
+    hi = INF
+    for m in range(n-1,-1,-1):
+        if action[m] == "none":
+            lo = max(lo, start[m])
+            hi = min(hi, end[m])
+        elif action[m] == "off":
+            lo += start[m]
+            hi += end[m]
+        elif action[m] == "on":
+            lo -= end[m]
+            hi -= start[m]
+            lo = max(0, lo)
 
-def solve(n ,a ):
-    pass
+    print(lo, hi)
+
+    lo = 0
+    hi = INF
+    for m in range(n):
+        if action[m] == "none":
+            lo = max(lo, start[m])
+            hi = min(hi, end[m])
+        elif action[m] == "on":
+            lo += start[m]
+            hi += end[m]
+        elif action[m] == "off":
+            lo -= end[m]
+            hi -= start[m]
+            lo = max(0, lo)
+
+    print(lo, hi)
 
 
 

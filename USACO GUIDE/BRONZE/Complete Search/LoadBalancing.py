@@ -52,16 +52,38 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
+    sys.stdin = open('balancing.in', 'r')
+    sys.stdout = open('balancing.out', 'w')
+    n, = ints()
+    cows = []
+    for i in range(n):
+        a,b = ints()
+        cows.append((a,b))
+    #print(cows)
+    x_values = sorted([x for x,y in cows])
+    y_values = sorted([y for x,y in cows])
+    best_M = INF
+    for i in range(n-1):
+        for j in range(n-1):
+            a = (x_values[i] + x_values[i + 1]) // 2
+            b = (y_values[j] + y_values[j + 1]) // 2
+            q1 = q2 = q3 = q4 = 0
+            if a % 2 != 0:
+                a += 1
+            if b % 2 != 0:
+                b += 1
+            for x, y in cows:
+                if x < a and y < b:
+                    q1 += 1
+                elif x < a and y > b:
+                    q2 += 1
+                elif x > a and y < b:
+                    q3 += 1
+                elif x > a and y > b:
+                    q4 += 1
+            M = max(q1, q2, q3, q4)
+            best_M = min(best_M, M)
+    print(best_M)
 
 
 if __name__ == "__main__":

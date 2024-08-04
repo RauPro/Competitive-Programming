@@ -52,15 +52,31 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('cownomics.in', 'r')
+    sys.stdout = open('cownomics.out', 'w')
+    n, m = ints()
+    positions_spot = [[] for i in range(m)]
+    positions_plain = [[] for i in range(m)]
+    for i in range(n):
+        s = input()
+        for i,it in enumerate(s):
+            positions_spot[i].append(it)
 
+    for i in range(n):
+        s = input()
+        for i,it in enumerate(s):
+            positions_plain[i].append(it)
+    ans = 0
+    for i, it in enumerate(positions_spot):
+        unique = set(it)
+        flag = True
+        for u in unique:
+            if u in positions_plain[i]:
+                flag = False
+        if flag:
+            ans +=1
 
-def solve(n ,a ):
-    pass
+    print(ans)
 
 
 

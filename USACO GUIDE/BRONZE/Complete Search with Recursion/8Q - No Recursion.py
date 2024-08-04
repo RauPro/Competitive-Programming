@@ -52,16 +52,39 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    m = []
+    for i in range(8):
+        m.append(list(input().strip()))
+    ans = 0
+    possibilities = permutations(range(8))
+    #possibilities = [[6,0,5,1,4,3,7,2]]
 
+    for it in possibilities:
+        works = True
+        taken = [False] * 15
+        taken_ = defaultdict(lambda: False)
+        for i, col in enumerate(it):
+            if m[i][col] == '*':
+                works = False
+                break
 
-def solve(n ,a ):
-    pass
+        #Checking Diagonal
+        for i in range(8):
+            if taken[i + it[i]]:
+                works = False
+                break
+            taken[i + it[i]] = True
 
+        for i in range(8):
+            if taken_[i - it[i]]:
+                works = False
+                break
+            taken_[i - it[i]] = True
+
+        if works:
+            ans +=1
+
+    print(ans)
 
 
 if __name__ == "__main__":

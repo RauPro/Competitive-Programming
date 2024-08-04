@@ -52,15 +52,17 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
+    sys.stdin = open('gymnastics.in', 'r')
+    sys.stdout = open('gymnastics.out', 'w')
+    n, m = ints()
+    mapper = defaultdict(int)
+    for _ in range(n):
         a = list(ints())
-        print(solve(n, a))
+        for i in range(m):
+            for j in range(i + 1, m):
+                mapper[(a[i], a[j])] += 1
 
-
-def solve(n ,a ):
-    pass
+    print(list(mapper.values()).count(n))
 
 
 

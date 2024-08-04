@@ -21,48 +21,67 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
+
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
 
+
 def lcm(a, b): return a * b // gcd(a, b)
 
+
 RANDOM = getrandbits(32)
+
 
 class Wrapper(int):
     def __init__(self, x):
         int.__init__(x)
+
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
 
-
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, k = ints()
+    prob = list(map(float, input().split()))
+    print(solve(n, k, prob))
 
 
-def solve(n ,a ):
-    pass
+def solve(n, k, prob):
+    def dp(question, k_):
+        if question == 0:
+            return 1
+        if k_ > k:
+            return 0
+        return prob[question-1] * dp(question - 1, k_ - 1) + (1 - prob[question-1]) * dp(question - 1, k_ + 1)
 
 
+    ans = dp(n,0)
+    return ans
 
 if __name__ == "__main__":
     main()

@@ -54,14 +54,30 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        s = input()
+        print(solve(s))
 
 
-def solve(n ,a ):
-    pass
+def calculate_typing_time(password):
+    time = 2
+    for i in range(1, len(password)):
+        if password[i] == password[i-1]:
+            time += 1
+        else:
+            time += 2
+    return time
 
+def solve(password):
+    max_time = 0
+    best_password = ""
+    for i in range(len(password) + 1):
+        for letter in abcd:
+            new_password = password[:i] + letter + password[i:]
+            new_time = calculate_typing_time(new_password)
+            if new_time > max_time:
+                max_time = new_time
+                best_password = new_password
+    return best_password
 
 
 if __name__ == "__main__":

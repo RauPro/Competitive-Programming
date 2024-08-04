@@ -52,17 +52,24 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
-
+    sys.stdin = open('blocks.in', 'r')
+    sys.stdout = open('blocks.out', 'w')
+    n = int(input())
+    mapper = defaultdict(int)
+    for i in range(n):
+        a, b = strs()
+        tem_map = defaultdict(int)
+        tem_map_2 = defaultdict(int)
+        for it in a:
+            tem_map[it] += 1
+        for it in b:
+            tem_map_2[it] += 1
+        for key, value in tem_map_2.items():
+            tem_map[key] = max(value, tem_map[key])
+        for key, value in tem_map.items():
+            mapper[key] += value
+    for it in abcd:
+        print(mapper[it])
 
 if __name__ == "__main__":
     main()

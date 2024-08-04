@@ -50,19 +50,28 @@ class Wrapper(int):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
 
-
+def traversal(r, index, total):
+    ans = 0
+    while (total > 0):
+        total -= r[index]
+        index += 1
+        index = index if index < len(r) else 0
+        ans += total
+    return ans
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('cbarn.in', 'r')
+    sys.stdout = open('cbarn.out', 'w')
+    n = int(input())
+    r = []
+    for i in range(n):
+        r.append(int(input()))
 
-
-def solve(n ,a ):
-    pass
-
-
+    ans = INF
+    total = sum(r)
+    for i, it in enumerate(r):
+        #print(traversal(r, i, total), i)
+        ans = min(ans, traversal(r, i, total))
+    print(ans)
 
 if __name__ == "__main__":
     main()

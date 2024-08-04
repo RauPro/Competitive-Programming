@@ -49,18 +49,53 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-
-
+visited = []
+def dfs(u, AL):
+    global visited
+    visited[u] = True
+    for (v,w) in AL[u]:
+        if not visited[v]:
+            dfs(v, AL)
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    global visited
+    V, E, S, D = ints()
+    AL = [[] for i in range(V+1)]
+    raw = []
+    for i in range(E):
+        u, v, w = ints()
+        raw.append((u,v,w))
+    profit = list(ints())
+    for u, v, w in raw:
+        w -= profit[v-1]
+        AL[u].append((v, w))
 
-
-def solve(n ,a ):
-    pass
+    dist = [INF] * (V+1)
+    dist[S] = 0
+    for i in range(V):
+        modified = False
+        for u in range(V+1):
+            if dist[u] != INF:
+                for v, w in AL[u]:
+                    if dist[u] + w >= dist[v]:
+                        continue
+                    dist[v] = dist[u] + w
+    negative = []
+    hasNegativeCycle = False
+    for u in range(V+1):
+        if dist[u] != INF:
+            for (v,w) in AL[u]:
+                if dist[v] > dist[u] + w:
+                    hasNegativeCycle = True
+                    negative.append(u)
+    #print(negative)
+    visited = [False] * (V + 1)
+    for u in negative:
+        dfs(u, AL)
+    #print(visited)
+    if hasNegativeCycle and visited[D]:
+        print("Money hack!")
+    else:
+        print(dist[D]*-1 if dist[D] != INF else "Bad trip")
 
 
 

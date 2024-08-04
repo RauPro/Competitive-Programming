@@ -55,12 +55,35 @@ def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        s = input()
+        print(solve(n, s))
 
 
-def solve(n ,a ):
-    pass
+def solve(n, s):
+    s = list(s)
+    balance = 0
+    ans = 0
+    stack = []
+    for i in range(n):
+        if s[i] == '(':
+            balance += 1
+            stack.append(i)
+        elif s[i] == ')':
+            balance -= 1
+            open_pos = stack.pop()
+            ans += i - open_pos
+        else:
+            if balance > 0:
+                s[i] = ')'
+                balance -= 1
+                open_pos = stack.pop()
+                ans += i - open_pos
+            else:
+                s[i] = '('
+                balance += 1
+                stack.append(i)
+
+    return ans
 
 
 

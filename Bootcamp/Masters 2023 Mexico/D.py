@@ -52,11 +52,41 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n = int(input())
+    a = list(ints())
+
+    left = [-1] * n
+    stack = []
+    for i in range(n):
+        while stack and a[stack[-1]] <= a[i]:
+            stack.pop()
+        if stack:
+            left[i] = stack[-1]
+        stack.append(i)
+    #print(left)
+
+    right = [-1] * n
+    stack = []
+    for i in range(n-1, -1, -1):
+        while stack and a[stack[-1]] <= a[i]:
+            stack.pop()
+        if stack:
+            right[i] = stack[-1]
+        stack.append(i)
+    #print(right)
+    prefix_sum = [0]
+    for i in range(n):
+        prefix_sum.append(prefix_sum[-1] + a[i])
+
+    max_area = 0
+    for i in range(n):
+        if left[i] != -1 and right[i] != -1:
+            height = min(a[left[i]], a[right[i]])
+            width = right[i] - left[i] - 1
+            area = (height * width) - (prefix_sum[right[i]] - prefix_sum[left[i] + 1])
+            max_area = max(max_area, area)
+    print(max_area)
+
 
 
 def solve(n ,a ):

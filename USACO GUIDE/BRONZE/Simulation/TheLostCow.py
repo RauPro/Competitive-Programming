@@ -29,7 +29,7 @@ def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m e
 # Constantes útiles
 INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
-abcd = "abcdefghijklmnopqrstuvwxyz"
+
 
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
@@ -52,15 +52,39 @@ class Wrapper(int):
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    sys.stdin = open('lostcow.in', 'r')
+    sys.stdout = open('lostcow.out', 'w')
+    x, y = ints()
+    print(solve(x,y))
 
 
-def solve(n ,a ):
-    pass
+def solve(x, y):
+    if x < y:
+        min_x = min(x, y)
+        max_x = max(x, y)
+        distance = 0
+        piv = 1
+        pos = min_x
+        last = min_x
+        while pos < max_x:
+            pos = min_x + piv
+            distance += abs(last - pos)
+            last = pos
+            piv *= (-2)
+        return (distance - (last - max_x))
+    else:
+        min_x = min(x, y)
+        max_x = max(x, y)
+        distance = 0
+        piv = 1
+        pos = max_x
+        last = max_x
+        while pos > min_x:
+            pos = max_x + piv
+            distance += abs(last - pos)
+            last = pos
+            piv *= (-2)
+        return (distance - (min_x - last))
 
 
 

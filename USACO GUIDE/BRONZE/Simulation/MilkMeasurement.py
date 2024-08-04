@@ -50,19 +50,37 @@ class Wrapper(int):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
 
-
+def getMaxIndex(curr):
+    ans = []
+    max_ = max(curr)
+    for i in range(len(curr)):
+        if curr[i] == max_:
+            ans.append(i)
+    return ''.join(map(str, ans))
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
-
+    sys.stdin = open('measurement.in', 'r')
+    sys.stdout = open('measurement.out', 'w')
+    n = int(input())
+    cows = []
+    for i in range(n):
+        a,b,c = strs()
+        cows.append((int(a), b, int(c)))
+    cows.sort()
+    curr = [7, 7, 7]
+    ans = '012'
+    res = 0
+    for a, b, c in cows:
+        if b == "Mildred":
+            curr[0] += c
+        if b == "Elsie":
+            curr[1] += c
+        if b == "Bessie":
+            curr[2] += c
+        temp = getMaxIndex(curr)
+        if temp != ans:
+            res+=1
+            ans = temp
+    print(res)
 
 if __name__ == "__main__":
     main()
