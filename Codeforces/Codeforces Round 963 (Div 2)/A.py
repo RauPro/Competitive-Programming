@@ -55,14 +55,34 @@ def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        s = input()
+        print(solve(n, s))
 
 
 def solve(n ,a ):
-    pass
+    frec = Counter(a)
+    ans = 0
+    if frec['A'] >= n:
+        ans += n
+    elif frec['A'] <= n:
+        ans += frec['A']
 
+    if frec['B'] >= n:
+        ans += n
+    elif frec['B'] <= n:
+        ans += frec['B']
 
+    if frec['C'] >= n:
+        ans += n
+    elif frec['C'] <= n:
+        ans += frec['C']
+
+    if frec['D'] >= n:
+        ans += n
+    elif frec['D'] <= n:
+        ans += frec['D']
+
+    return ans
 
 if __name__ == "__main__":
     main()

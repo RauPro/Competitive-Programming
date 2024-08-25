@@ -49,42 +49,34 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-
+ans = 0
+diag1 = defaultdict(lambda: False)
+diag2 = defaultdict(lambda: False)
+row_taken = [False] * 8
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
-
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+    m = []
+    for i in range(8):
+        m.append(list(input().strip()))
+    solve(0, m)
+    print(ans)
 
 
+
+def solve(c, m):
+    global ans, diag1, diag2, row_taken
+    if c == 8:
+        ans +=1
+        return
+    for r in range(8):
+        if m[r][c] == '*' or row_taken[r] or diag1[r + c] or diag2[r - c]: continue
+        row_taken[r] = True
+        diag1[r + c] = True
+        diag2[r - c] = True
+        solve(c+1, m)
+        row_taken[r] = False
+        diag1[r + c] = False
+        diag2[r - c] = False
 
 
 if __name__ == "__main__":

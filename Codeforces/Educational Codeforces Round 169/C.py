@@ -58,33 +58,18 @@ def main():
         a = list(ints())
         print(solve(n, a, k))
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
+def solve(n ,a, k ):
+    a.sort(reverse=True)
     for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
-
-
+        if i & 1:
+            if a[i] < a[i-1] and k > 0:
+                rest = min(abs(a[i-1] - a[i]), k)
+                a[i] += rest
+                k -= rest
+    bob = sum([a[i] for i in range(n) if i & 1])
+    alice = sum([a[i] for i in range(n) if i & 1 == 0])
+    return max(alice - bob, 0)
 
 
 if __name__ == "__main__":

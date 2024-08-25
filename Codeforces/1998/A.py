@@ -54,37 +54,26 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
-
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+        xc, yc, k = ints()
+        solve(xc, yc, k)
 
 
+def solve(xc, yc, k):
+    ans = []
+    for i in range(k // 2):
+        ans.append((xc + i + 1, yc))
+        ans.append((xc - i - 1, yc))
+    ans_x = 0
+    ans_y = 0
+    if k % 2 != 0:
+        ans.append((xc, yc))
+    for it in ans:
+        x, y = it
+        ans_x += x
+        ans_y += y
+        print(*it, end="\n")
+    #print(ans_x // k, ans_x)
+    #print(ans_y // k)
 
 
 if __name__ == "__main__":

@@ -49,40 +49,38 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-
-
+names = ["Bessie", "Buttercup", "Belinda", "Beatrice", "Bella", "Blue", "Betsy", "Sue"]
+AL = []
+visited = []
+depth = []
+def dfs(u, d, p = False):
+    global visited, AL, depth
+    if p ==  True: print(names[u])
+    visited[u] = True
+    depth[u] = (d, u)
+    for v in AL[u]:
+        if not visited[v]:
+            dfs(v, d+1)
 def main():
-    t = int(input())
-    for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
-
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
+    global visited, AL, depth
+    sys.stdin = open('lineup.in', 'r')
+    sys.stdout = open('lineup.out', 'w')
+    n = int(input())
+    AL = defaultdict(list)
+    mapper = {names[i]: i for i in range(8)}
     for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+        aux = list(input().split())
+        AL[mapper[aux[0]]].append(mapper[aux[-1]])
+        AL[mapper[aux[-1]]].append(mapper[aux[0]])
+    visited = [False] * 8
+    depth = [0] * 8
+    for i in range(8):
+        if not visited[i]:
+            dfs(i, 0)
+    depth.sort(reverse=True)
+    visited = [False] * 8
+    for d, u in depth:
+        dfs(u, 0,  True)
 
 
 

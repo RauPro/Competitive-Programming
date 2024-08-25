@@ -21,8 +21,14 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
@@ -31,24 +37,33 @@ INF = float('inf')
 MOD = 1000000007  # Modulo por defecto, cambiar si se necesita otro
 abcd = "abcdefghijklmnopqrstuvwxyz"
 
+
 # Algunas funciones útiles
 def add(x, y, mod=MOD): return (x + y) % mod
+
+
 def sub(x, y, mod=MOD): return (x - y) % mod
+
+
 def mul(x, y, mod=MOD): return (x * y) % mod
+
 
 # Inverso multiplicativo de a modulo m (cuando m es primo)
 def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
 
+
 def lcm(a, b): return a * b // gcd(a, b)
 
+
 RANDOM = getrandbits(32)
+
 
 class Wrapper(int):
     def __init__(self, x):
         int.__init__(x)
+
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
-
 
 
 def main():
@@ -56,35 +71,58 @@ def main():
     for _ in range(t):
         n, k = ints()
         a = list(ints())
-        print(solve(n, a, k))
+        b = list(ints())
+        print(solve(n, k, a, b))
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
+def get_median(a):
+    a = deepcopy(a)
+    a.sort()
+    return a[(len(a) + 1) // 2]
+
+def can(mid, index_ord, a, b, k, requiered):
+    for i in index_ord:
+        if b[i] == 1:
+            x = mid - a[i] - k
+            rest = sum(1 for j in index_ord if j != i and a[j] >= x)
+            if rest >= requiered:
+                return True
+            break
+
+    for i in index_ord:
+        if b[i] == 0:
+            x = mid - a[i]
+            rest = 0
+            sum_ = 0
+            for j in index_ord:
+                if j == i:
+                    continue
+                if b[j]:
+                    sum_ += max(0, x - a[j])
+                if a[j] >= x or b[j]:
+                    rest += 1
+                if rest >= requiered:
+                    if sum_ <= k:
+                        return True
+                    break
+            break
+
+    return False
+
+
+def solve(n, k, a, b):
+    index_ord = sorted(range(n), key=lambda i: -a[i])
+    required = (n - 1) // 2 + 1
+    low, high = 0, int(10e9) + 5
+
+    while low < high:
+        mid = (low + high + 1) // 2
+        if can(mid, index_ord, a, b, k, required):
+            low = mid
         else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+            high = mid - 1
 
-
+    return low
 
 
 if __name__ == "__main__":

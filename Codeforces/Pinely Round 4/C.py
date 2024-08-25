@@ -54,35 +54,33 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
+        n = int(input())
         a = list(ints())
-        print(solve(n, a, k))
+        solve(n, a)
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+def solve(n ,a ):
+    operations = 0
+    ans = []
+    while operations <= 40:
+        max_ = max(a)
+        min_ = min(a)
+        if max_ == 0 and min_ ==0:
+            break
+        mid = (max_ + min_) // 2
+        for i in range(n):
+            a[i] = abs(mid-a[i])
+        operations+=1
+        ans.append(mid)
+    if any(a[i] != 0 for i in range(n)):
+        print(-1)
+    else:
+        print(len(ans))
+        if len(ans) == 0:
+            print()
+        for i in range(len(ans)):
+            print(ans[i], end=" ")
+        if len(ans) != 0: print()
 
 
 

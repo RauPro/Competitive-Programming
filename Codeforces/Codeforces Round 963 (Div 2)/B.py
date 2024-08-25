@@ -60,7 +60,21 @@ def main():
 
 
 def solve(n ,a ):
-    pass
+    max_even = max((num for num in a if num % 2 == 0), default=0)
+    max_odd = max((num for num in a if num % 2 != 0), default=0)
+    if max_even == 0 or max_odd == 0:
+        return 0
+    a.sort()
+    ans = sum(1 for num in a if num % 2 == 0)
+    if max_even > max_odd:
+        for num in a:
+            if num % 2 == 0 and num < max_odd:
+                if max_odd < max_even:
+                    max_odd += num
+            elif num % 2 == 0:
+                ans += 1
+                break
+    return ans
 
 
 

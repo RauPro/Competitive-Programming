@@ -54,36 +54,20 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
+        print(solve())
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
+def solve():
+    low, high = 2, 1000
+    while low < high:
+        mid = (low + high) // 2
+        print(f"? {1} {mid}")
+        area = int(input())
+        if area > mid:
+            high = mid
         else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
-
+            low = mid + 1
+    return (f"! {high}")
 
 
 

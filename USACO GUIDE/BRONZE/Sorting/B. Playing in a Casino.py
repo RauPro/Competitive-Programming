@@ -54,37 +54,27 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
-
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+        n, m = ints()
+        matrix = []
+        for i in range(n):
+            matrix.append(list(ints()))
+        print(solve(n, m, matrix))
 
 
+def solve(n ,m, matrix ):
+    inverse = []
+    for i in range(m):
+        curr = []
+        for j in range(n):
+            curr.append(matrix[j][i])
+        inverse.append(sorted(curr))
+    ans = 0
+    for a in inverse:
+        prefix = 0
+        for j in range(n):
+            ans += (a[j] * j - prefix)
+            prefix += a[j]
+    return ans
 
 
 if __name__ == "__main__":

@@ -54,35 +54,22 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
+        n = int(input())
         a = list(ints())
-        print(solve(n, a, k))
+        print(solve(n, a))
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
+def solve(n ,a ):
+    seats = [0] * (n+2)
+    seats[0] = 0
+    seats[n+1] = 0
+    for i, it in enumerate(a):
+        if i == 0:
+            seats[it] = 1
         else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+            if seats[it-1] == 1 or  seats[it+1] == 1:
+                seats[it] = 1
+    return "YES" if sum(seats) == n else "NO"
 
 
 

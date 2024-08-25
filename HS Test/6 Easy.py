@@ -21,63 +21,49 @@ sys.setrecursionlimit(100000)
 
 # Funciones para lectura de múltiples tipos de datos
 def ints(): return map(int, input().split())
+
+
 def strs(): return input().split()
+
+
 def chars(): return list(input().strip())
+
+
 def mat(n): return [list(ints()) for _ in range(n)]  # Matriz de n x m donde m es el número de enteros en una línea
 
 
-def tiene_conexion_directa(grafo, nodo):
-    # BFS para encontrar los hijos del hijo
-    for vecino in grafo[nodo]:
-        for nieto in grafo[vecino]:
-            if nodo in grafo[nieto]:
-                return True
-    return False
+counter_nodes = 0
+counter_degree = 0
+visited = []
+AL = []
 
 
-
-if __name__ == "__main__":
-    n, m = ints()
-    AL = [[] for i in range(n+1)]
-    existing_roads = set()
-    for _ in range(m):
-        u, v = ints()
-        AL[u].append(v)
-        AL[v].append(u)
-        existing_roads.add((min(u, v), max(u, v)))
+def dfs(u):
+    global counter_nodes, counter_degree, visited
+    visited[u] = True
+    counter_nodes += 1
+    for v in AL[u]:
+        counter_degree += 1
+        if not visited[v]:
+            dfs(v)
 
 
-    for i in range(1, n+1):
-        print(tiene_conexion_directa(AL, i))
-    def bfs(s, visited):
-        queue = deque([s])
-        nodes = []
-        while queue:
-            node = queue.popleft()
-            if not visited[node]:
-                visited[node] = True
-                nodes.append(node)
-                for neighbor in AL[node]:
-                    if not visited[neighbor]:
-                        queue.append(neighbor)
-        return nodes
+n, m = ints()
+AL = [[] for i in range(n + 1)]
+for _ in range(m):
+    u, v = ints()
+    AL[u].append(v)
+    AL[v].append(u)
 
+ans = 0
+counter_nodes = 0
+counter_degree = 0
+visited = [False] * (n+1)
+for u in range(1, n + 1):
+    if not visited[u]:
+        dfs(u)
+        ans += (((counter_nodes * (counter_nodes - 1)) // 2) - (counter_degree // 2))
+        counter_nodes = 0
+        counter_degree = 0
 
-    visited = [False] * (n + 1)
-    ccs = []
-
-    # Buscando todos los ccs
-    for i in range(1, n + 1):
-        if not visited[i]:
-            cc = bfs(i, visited)
-            ccs.append(cc)
-
-    ans = 0
-    for cc in ccs:
-        for i in range(len(cc)):
-            for j in range(i + 1, len(cc)):
-                a, b = cc[i], cc[j]
-                if (a, b) not in existing_roads and (b, a) not in existing_roads:
-                    ans += 1
-
-    print(ans)
+print(ans)

@@ -54,35 +54,36 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
+        n = int(input())
         a = list(ints())
-        print(solve(n, a, k))
+        solve(n, a)
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
 
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+def solve(n ,a):
+    s = int(input())
+    set_a = set(a)
+    total = []
+    for _ in range(s):
+        st = input()
+        #print(len(set(st)), len(set(a)))
+        mapper = {}
+        if len(set(st)) != len(set_a):
+            total.append("NO")
+            continue
+        ans = True
+        for i, c in enumerate(st):
+            if len(st) != len(a):
+                ans = False
+                break
+            wx = Wrapper(ord(c))
+            if wx not in mapper:
+                mapper[wx] = a[i]
+            else:
+                if mapper[wx] != a[i]:
+                    ans = False
+                    break
+        total.append("YES" if ans else "NO")
+    print("\n".join(total))
 
 
 

@@ -50,40 +50,54 @@ class Wrapper(int):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
 
-
+def can_be_covered(subset, barn, airs):
+    total_cost = 0
+    current = [0] * 100
+    ans = INF
+    for i in subset:
+        ai, bi, pi, mi = airs[i]
+        ai -= 1
+        bi -= 1
+        total_cost += mi
+        for j in range(ai, bi+1):
+            current[j] += pi
+    all_covered = True
+    for i in range(100):
+        if barn[i] == INF: continue
+        if current[i] < barn[i]:
+            all_covered = False
+            break
+    if all_covered:
+        ans = min(total_cost, ans)
+    return ans
 def main():
-    t = int(input())
-    for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
-
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
+    n, m = ints()
+    barn = [INF] * 100
     for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
+        ai, bi, t = ints()
+        ai -= 1
+        bi -= 1
+        for j in range(ai, bi + 1):
+            if barn[j] == INF:
+                barn[j] = t
+            barn[j] = max(barn[j], t)
+    airs = []
+    ans = INF
+    for i in range(m):
+        ai, bi, pi, mi = ints()
+        airs.append((ai, bi, pi, mi))
+    for b in range(1<<m):
+        current = []
+        for i in range(m):
+            if b & (1 << i):
+                current.append(i)
+        if len(current) == 0: continue
+        ans = min(ans, can_be_covered(current, barn, airs))
+    print(ans)
 
+
+def solve(n ,a ):
+    pass
 
 
 

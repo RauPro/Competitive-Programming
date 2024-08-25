@@ -54,36 +54,26 @@ class Wrapper(int):
 def main():
     t = int(input())
     for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
+        n, s, m = ints()
+        intervals = [0]
+        for i in range(n):
+            a, b = ints()
+            intervals.append(a)
+            intervals.append(b)
+        intervals.append(m)
+        print(solve(n, intervals, m, s))
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
-
+# 0 3 5 6 8 9 10 10
+def solve(n, intervals, m, s):
+    #print(intervals)
+    aux = []
+    for i in range(0, len(intervals)-1, 2):
+        aux.append(intervals[i+1] - intervals[i])
+    #print(aux)
+    for it in aux:
+        if it >= s:
+            return "YES"
+    return "NO"
 
 
 

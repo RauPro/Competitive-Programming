@@ -50,42 +50,47 @@ class Wrapper(int):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
 
+def can_place(a,b,c, len_side):
+    to_place = [a,b,c]
+    chars_ = ["A", "B", "C"]
+    index= 0
+    matrix = [["z" for j in range(len_side)] for i in range(len_side)]
+    for i in range(len_side):
+        for j in range(len_side):
+            if matrix[i][j] == "z":
+                if index == 3: return matrix, False
+                for i_ in range(to_place[index][0]):
+                    for j_ in range(to_place[index][1]):
+                        if i + i_ >= len_side or j + j_ >= len_side:
+                            return matrix, False
+                        matrix[i+i_][j + j_] = chars_[index]
+                index += 1
+
+    return matrix, True
+
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n, k = ints()
-        a = list(ints())
-        print(solve(n, a, k))
+    rectangles = list(ints())
+    area = sum([rectangles[l] * rectangles[l+1] for l in range(0,5, 2)])
+    len_side = sqrt(area)
+    if ceil(len_side) != floor(len_side):
+        print(-1)
+        exit(0)
+    len_side = int(len_side)
+    a_list = [(rectangles[0], rectangles[1]), (rectangles[1], rectangles[0])]
+    b_list = [(rectangles[2], rectangles[3]), (rectangles[3], rectangles[2])]
+    c_list = [(rectangles[4], rectangles[5]), (rectangles[5], rectangles[4])]
 
-def all_lights_on_at_time(time, a, k):
-    for ai in a:
-        if (time - ai) % (2 * k) >= k or time < ai:
-            return False
-    return True
-
-def solve(n ,a , k):
-    left, max_time = 0, max(a)
-    low, lo = 0, 0
-    high, hi = 2 * k - 1, 2 * k - 1
-    for i in range(n):
-        time = (max_time - a[i]) // k
-        parity = True
-        if time % 2:
-            parity = False
-        curr_time = k - ((max_time - a[i]) % k)
-        if parity:
-            high = min(high, curr_time - 1)
-            lo = max(lo, curr_time + k)
-        else:
-            low = max(low, curr_time)
-            hi = min(hi, curr_time + k - 1)
-    lo = max(lo, low)
-    high = min(high, hi)
-    return -1 if low > high and lo > hi else low + max_time if low <= high else lo + max_time
-
-
-
+    for a in a_list:
+        for b in b_list:
+            for c in c_list:
+                matrix, can = can_place(a,b,c, len_side)
+                if can:
+                    print(len_side)
+                    for m in matrix:
+                        print("".join(m))
+                    exit(0)
+    print(-1)
 
 if __name__ == "__main__":
     main()
