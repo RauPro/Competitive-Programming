@@ -4,12 +4,11 @@ from collections import *
 from heapq import *
 from math import gcd, floor, ceil, sqrt
 from copy import deepcopy
-from itertools import permutations, combinations, product
+from itertools import permutations, combinations, product, accumulate
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,17 +46,18 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
-
+    n, k = ints()
+    a = list(ints())
+    prefix = [0] + list(accumulate(a))
+    #print(prefix)
+    mapper = {}
+    mapper[Wrapper(0)] = 1
+    ans = 0
+    for i in range(1, n+1):
+        wx = Wrapper(prefix[i]-k)
+        ans += mapper.get(wx, 0)
+        mapper[Wrapper(prefix[i])] = mapper.get(Wrapper(prefix[i]), 0) + 1
+    print(ans)
 
 if __name__ == "__main__":
     main()

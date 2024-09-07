@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,13 +46,29 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
+    n, m, q = ints()
+    mx = [[0] * (m+1)]
+    for i in range(n):
+        mx.append([0] + [it == '1' for it in input()])
+    #print(mx)
+    prefix = [[0] * (m+1) for i in range(n+1)]
+    for i in range(1, n+1):
+        for j in range(1, m+1):
+            prefix[i][j] = prefix[i-1][j] + prefix[i][j-1] - prefix[i-1][j-1] + (1 if mx[i][j] and not mx[i-1][j] and not mx[i][j-1] else
+                                                                                 -1 if mx[i][j] and mx[i-1][j] and mx[i][j-1] else 0)
+    #print(prefix)
+    hor_prefix = [[0] * (m+1) for i in range(n+1)]
+    ver_prefix = [[0] * (m + 1) for i in range(n + 1)]
+    for i in range(1, n+1):
+        for j in range(1, m+1):
+            hor_prefix[i][j] = hor_prefix[i][j-1] + (mx[i][j] and not mx[i][j-1])
+            ver_prefix[i][j] = ver_prefix[i-1][j] + (mx[i][j] and not mx[i-1][j])
+    #print(ver_prefix)
+    for i in range(q):
+        a, b, c, d = ints()
+        ans = mx[a][b] + (hor_prefix[a][d] - hor_prefix[a][b]) + (ver_prefix[c][b] - ver_prefix[a][b]) + (
+                    prefix[c][d] - prefix[a][d] - prefix[c][b] + prefix[a][b])
+        print(ans)
 def solve(n ,a ):
     pass
 

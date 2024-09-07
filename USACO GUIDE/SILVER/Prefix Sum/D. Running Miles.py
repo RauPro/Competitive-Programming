@@ -68,9 +68,10 @@ def comb(n, r):
     return comb(n - 1, r - 1) + comb(n - 1, r)
 
 b = []
+n = 0
 
 def main():
-
+    global n
     t = int(input())
     for _ in range(t):
         n = int(input())
@@ -80,19 +81,58 @@ def main():
 
 
 @lru_cache(maxsize=None)
-def dp(i, state):
-    if i == 0:
-        return int(1e9) * -1
-    if state == 0:
-        return max(dp(i-1, 0), b[i-1] + (i-1))
-    if state == 1:
-        return max(dp(i-1, 1), dp(i-1, 0) + b[i-1])
-    if state == 2:
-        return max(dp(i-1, 2), dp(i-1, 1)  + b[i-1] - (i-1))
+def dp(i, taken):
+    #print(taken)
+    if taken == 3:
+        return 0
+    if i == n or taken > 3:
+        return int(1e5) * -1
+    include = 0
+    if taken == 0:
+        include = dp(i + 1, taken + 1) + b[i] + i + 1
+    elif taken == 1:
+        include = dp(i + 1, taken + 1) + b[i]
+    elif taken == 2:
+        include = (dp(i + 1, taken + 1) + b[i]) - (i+1)
+    exclude = dp(i + 1, taken)
+    return max(include, exclude)
+
+
+def iterative_dp(n, b):
+    # Initialize DP table with a large negative value
+    dp = [[-1e5 * 1000 for _ in range(4)] for _ in range(n + 1)]
+
+    # Base case: when taken == 3, return 0
+    for i in range(n + 1):
+        dp[i][3] = 0
+
+    # Iterate in reverse order
+    for i in range(n - 1, -1, -1):
+        for taken in range(3):
+            # Calculate the 'exclude' case
+            exclude = dp[i + 1][taken]
+
+            # Calculate the 'include' case
+            include = -1e5 * 1000
+            if taken == 0:
+                include = dp[i + 1][taken + 1] + b[i] + i + 1
+            elif taken == 1:
+                include = dp[i + 1][taken + 1] + b[i]
+            elif taken == 2:
+                include = dp[i + 1][taken + 1] + b[i] - (i + 1)
+
+            # Store the maximum of include and exclude
+            dp[i][taken] = max(include, exclude)
+
+    # Return the maximum value achievable starting from the beginning
+    return dp[0][0]
+
+
 def solve(n ,a ):
     global b
     b = a
-    return dp(n, 2)
+    #return dp(0, 0)
+    return iterative_dp(n, b)
 
 
 

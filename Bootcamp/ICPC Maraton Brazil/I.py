@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,15 +46,64 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n = int(input())
+    f = list(ints())
+    q = int(input())
+    solve(n, f,q)
 
 
-def solve(n ,a ):
-    pass
+_sieve_size = 0
+bs = []
+primes = []
+
+
+def sieve(upperbound):
+    global _sieve_size, bs, primes
+
+    _sieve_size = upperbound + 1
+    bs = [True] * 10000010
+    bs[0] = bs[1] = False
+    for i in range(2, _sieve_size):
+        if bs[i]:
+            for j in range(i * i, _sieve_size, i):
+                bs[j] = False
+            primes.append(i)
+
+
+def isPrime(N):
+    global _sieve_size, primes
+    if N <= _sieve_size:
+        return bs[N]
+    for p in primes:
+        if p * p > N:
+            break
+        if N % p == 0:
+            return False
+    return True
+
+
+def primeFactors(N):
+    global primes
+
+    factors = []
+    for p in primes:
+        if p * p > N:
+            break
+        while N % p == 0:
+            N //= p
+            factors.append(p)
+    if N != 1:
+        factors.append(N)
+
+    return factors
+def solve(n, foods, q):
+    sieve(1000001)
+    food_prime_factors = [set(primeFactors(food)) for food in foods]
+    for i in range(q):
+        allergy = int(input())
+        allergy_prime_factors = set(primeFactors(allergy))
+        ans = [food for food in food_prime_factors if not food & allergy_prime_factors]
+        print(pow(2, len(ans), MOD))
 
 
 

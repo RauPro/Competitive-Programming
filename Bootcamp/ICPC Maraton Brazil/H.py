@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,15 +46,27 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    m = input()
+    n = input()
+    print(solve(m, n))
 
 
-def solve(n ,a ):
-    pass
+def solve(m, n):
+    m_index = [i for i, bit in enumerate(m) if bit == '*']
+    n_index = [i for i, bit in enumerate(n) if bit == '*']
+    for m_bits in product('01', repeat=len(m_index)):
+        for n_bits in product('01', repeat=len(n_index)):
+            m_recovered = list(m)
+            for index, bit in zip(m_index, m_bits):
+                m_recovered[index] = bit
+            n_recovered = list(n)
+            for index, bit in zip(n_index, n_bits):
+                n_recovered[index] = bit
+            M_int = int(''.join(m_recovered), 2)
+            N_int = int(''.join(n_recovered), 2)
+            #print(M_int, N_int)
+            if M_int % N_int == 0:
+                return ''.join(m_recovered)
 
 
 

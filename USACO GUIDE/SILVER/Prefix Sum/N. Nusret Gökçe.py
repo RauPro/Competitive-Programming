@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,12 +46,34 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m = ints()
+    a = list(ints())
+    for i in range(n):
+        if i == 0:
+            if a[i] < a[i + 1] and a[i + 1] - a[i] > m:
+                a[i] = a[i + 1] - m
+        elif i == n - 1:
+            if a[i] < a[i - 1] and a[i - 1] - a[i] > m:
+                a[i] = a[i - 1] - m
+        else:
+            max_side = max(a[i + 1], a[i - 1])
+            if a[i] < max_side and max_side - a[i] > m:
+                a[i] = max_side - m
+    for i in range(n-1, -1, -1):
+        if i == 0:
+            if a[i] < a[i + 1] and a[i + 1] - a[i] > m:
+                a[i] = a[i + 1] - m
+        elif i == n - 1:
+            if a[i] < a[i - 1] and a[i - 1] - a[i] > m:
+                a[i] = a[i - 1] - m
+        else:
+            max_side = max(a[i + 1], a[i - 1])
+            if a[i] < max_side and max_side - a[i] > m:
+                a[i] = max_side - m
 
+
+    #ans = a if m != 0 else ([max(a)] * n)
+    print(*a)
 
 def solve(n ,a ):
     pass

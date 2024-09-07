@@ -47,16 +47,27 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
+    n, m, q = ints()
+    a = list(ints())
+    queries = []
+    diff = [0] * (n + 2)
+    for i in range(m):
+        l,r,d = ints()
+        queries.append((l,r,d))
+    operations = [0] * (m+2)
+    for i in range(q):
+        l, r = ints()
+        operations[l-1] += 1
+        operations[r] -=1
+    prefix_operations = list(accumulate(operations))
+    #print(prefix_operations)
+    for i in range(m):
+        li, ri, di = queries[i]
+        diff[li-1] += di * prefix_operations[i]
+        diff[ri] -= di * prefix_operations[i]
+    prefix_sum = list(accumulate(diff))
+    ans = [a[i] + prefix_sum[i] for i in range(n)]
+    print(*ans)
 
 
 if __name__ == "__main__":

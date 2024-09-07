@@ -46,16 +46,42 @@ class Wrapper(int):
 # wx = Wrapper(x)
 # cnt[wx] = cnt.get(wx, 0) + 1
 
+segments = set()
+n = 0
+res = 0
+
+@lru_cache(maxsize=None)
+def ways_(rem):
+    global res
+    if rem > n:
+        return 0
+    if rem == n:
+        return 1
+    total = 0
+    for i in segments:
+        total += ways(rem + i)  % 998244353
+        #print(total, rem)
+    return total % 998244353
+
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
+    global segments, n
+    n, m = ints()
+    segments = []
+    prefix = [0] * (n + 2)
+    ways = [0] * (n + 2)
+    for i in range(m):
+        a, b = ints()
+        segments.append((b+1, a))
+    prefix[1] = 1
+    ways[1] = 1
+    for i in range(2, n+1):
+        for j in range(m):
+            l, r = segments[j]
+            l = max(0, i - l)
+            r = max(0, i- r)
+            ways[i] = ways[i]  % 998244353 + (prefix[r] - prefix[l])  % 998244353
+        prefix[i] = (ways[i] + prefix[i-1]) % 998244353
+    print(ways[n] % 998244353)
 
 
 

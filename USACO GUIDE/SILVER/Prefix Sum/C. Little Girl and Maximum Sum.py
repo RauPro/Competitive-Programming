@@ -10,7 +10,6 @@ from functools import lru_cache, reduce
 import operator
 from random import getrandbits
 from itertools import accumulate
-
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
 print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
@@ -47,16 +46,17 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n ,a ):
-    pass
-
+    n, m = ints()
+    a = list(ints())
+    diff = [0] * (n+1)
+    for i in range(m):
+        l, r = ints()
+        diff[l-1] += 1
+        diff[r] -= 1
+    prefix_sum = list(accumulate(diff))[:n]
+    prefix_sum.sort(reverse=True)
+    a.sort(reverse=True)
+    print(sum(a[i] * prefix_sum[i] for i in range(n)))
 
 
 if __name__ == "__main__":

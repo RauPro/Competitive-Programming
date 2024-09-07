@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -47,16 +46,23 @@ class Wrapper(int):
 # cnt[wx] = cnt.get(wx, 0) + 1
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, m = ints()
+    mx = []
+    for i in range(n):
+        mx.append([1 if it == "*" else 0 for it in input()])
+    solve(n,m, mx)
 
 
-def solve(n ,a ):
-    pass
-
+def solve(n ,m,mx ):
+    #print(mx)
+    prefix_sum = [[0] * (n+1) for i in range(n+1)]
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            prefix_sum[i][j] = prefix_sum[i-1][j] + prefix_sum[i][j-1] + mx[i-1][j-1] - prefix_sum[i-1][j-1]
+    for i in range(m):
+        x0, y0, x1, y1= ints()
+        print(prefix_sum[x1][y1] - prefix_sum[x1][y0-1] - prefix_sum[x0-1][y1] + prefix_sum[x0-1][y0-1])
+    #print(prefix_sum)
 
 
 if __name__ == "__main__":

@@ -9,7 +9,6 @@ from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
 from random import getrandbits
-from itertools import accumulate
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
@@ -43,19 +42,42 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-# wx = Wrapper(x)
-# cnt[wx] = cnt.get(wx, 0) + 1
+
 
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
+        b = list(ints())
         a = list(ints())
-        print(solve(n, a))
+        print(solve(a, b))
 
+def can(mid, a, c, d, n):
+    return (sum(a[i % mid] for i in range(d) if i % mid < n)) >= c
+def solve(a, b):
+    n = b[0]
+    c = b[1]
+    d = b[2]
+    a.sort()
+    if a[-1]*d < c:
+        return "Impossible"
 
-def solve(n ,a ):
-    pass
+    a.reverse()
+    if sum(a[:d]) >= c:
+        return "Infinity"
+
+    ans = 0
+
+    l = 1
+    h = d
+    #print(can(2, a, c, d))
+    while l < h:
+        mid = (l+h) // 2
+        if can(mid, a, c, d, n):
+            l = mid + 1
+            ans = mid
+        else:
+            h = mid
+    return(ans-1 if ans != 0 else 0)
 
 
 
