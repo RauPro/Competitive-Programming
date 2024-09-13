@@ -1,97 +1,112 @@
-import os
 import sys
-from collections import *
-from heapq import *
-from math import gcd, floor, ceil, sqrt
-from copy import deepcopy
-from itertools import permutations, combinations, product
-from bisect import bisect_left, bisect_right
-from functools import lru_cache, reduce
-import operator
-from random import getrandbits
+from collections import deque, defaultdict
+
+# import psutil
 
 input = lambda: sys.stdin.readline().strip()
 flush = lambda: sys.stdout.flush()
 print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
 
 sys.setrecursionlimit(100000)
-
+parent = []
+AL = []
 
 def ints(): return map(int, input().split())
-def strs(): return input().split()
-def chars(): return list(input().strip())
-def mat(n): return [list(ints()) for _ in range(n)]
 
-INF = float('inf')
-MOD = 1000000007
-abcd = "abcdefghijklmnopqrstuvwxyz"
 
-def add(x, y, mod=MOD): return (x + y) % mod
-def sub(x, y, mod=MOD): return (x - y) % mod
-def mul(x, y, mod=MOD): return (x * y) % mod
+"""def check_memory(location):
+    process = psutil.Process()
+    memory_info = process.memory_info()
+    memory_usage = memory_info.rss / (1024 * 1024)  # Convert to MB
+    print(f"Memory usage at {location}: {memory_usage:.2f} MB")"""
 
-def invmod(a, mod=MOD): return powmod(a, mod - 2, mod)
 
-def lcm(a, b): return a * b // gcd(a, b)
+class UnionFind:
+    def __init__(self, n):
+        self.parent = list(range(n + 1))
+        self.size = [1] * n
 
-RANDOM = getrandbits(32)
+    def find(self, a):
+        acopy = a
+        while a != self.parent[a]:
+            a = self.parent[a]
+        while acopy != a:
+            self.parent[acopy], acopy = a, self.parent[acopy]
+        return a
 
-class Wrapper(int):
-    def __init__(self, x):
-        int.__init__(x)
-    def __hash__(self):
-        return super(Wrapper, self).__hash__() ^ RANDOM
+    def union(self, a, b):
+        a, b = self.find(a), self.find(b)
+        if a == b:
+            return
+        if self.size[a] < self.size[b]:
+            a, b = b, a
+        self.parent[b] = a
+        self.size[a] += self.size[b]
 
-# wx = Wrapper(x)
-# cnt[wx] = cnt.get(wx, 0) + 1
+
+def dfs(u, p):
+    stack = [(u, p)]
+    parent[u] = p
+    while stack:
+        u, p = stack.pop()
+        for v in AL[u]:
+            if v not in parent:
+                parent[v] = u
+                stack.append((v, u))
+
 
 def main():
-    n,m = ints()
-    solve(n,m)
+    n, m = ints()
+    solve(n, m)
+
 
 def solve(n, m):
-    graph = {}
+    global parent, AL
+    movies = [[] for _ in range(m)]
     for i in range(n):
-        movie = list(map(int, input().split()))[1:]
-        for j in movie:
-            if j not in graph:
-                graph[j] = set()
-            for k in movie:
-                if j != k:
-                    graph[j].add((k, i + 1))
-
+        _, *actors = map(int, input().split())
+        for actor in actors:
+            movies[actor - 1].append(i)
+    uf = UnionFind(n)
+    AL = [[] for _ in range(n)]
+    movie = [[-1] * n for _ in range(n)]
+    for i in range(m):
+        if movies[i]:
+            for j in range(1, len(movies[i])):
+                a, b = movies[i][j], movies[i][0]
+                if uf.find(a) != uf.find(b):
+                    uf.union(a, b)
+                    AL[a].append(b)
+                    AL[b].append(a)
+                    movie[b][a] = movie[a][b] = i
+    parent = [-1] * n
     q = int(input())
-    for _ in range(q):
-        start, end = map(int, input().split())
-        visited = set()
-        parent = {}
-        queue = deque([(start, None)])
-        visited.add(start)
-
-        while queue:
-            u, _ = queue.popleft()
-            if u == end:
-                break
-            for v, movie in graph.get(u, []):
-                if v not in visited:
-                    visited.add(v)
-                    parent[v] = (u, movie)
-                    queue.append((v, movie))
-
-        if end in visited:
-            path = []
-            u = end
-            while u != start:
-                path.append(u)
-                u, movie = parent[u]
-                path.append(movie)
-            path.append(start)
-            path.reverse()
-            print(len(path) // 2 + 1)
-            print(*path)
+    ans = []
+    for i in range(q):
+        start, end = ints()
+        start-=1
+        end-=1
+        if not movies[start] or not movies[end] or uf.find(movies[start][0]) != uf.find(movies[end][0]):
+            ans.append(str(-1))
         else:
-            print(-1)
-
-
+            parent = [-1] * n
+            dfs(movies[start][0], movies[start][0])
+            u = movies[end][0]
+            path = []
+            while u != movies[start][0]:
+                path.append(u)
+                u = parent[u]
+            path.append(movies[start][0])
+            path.reverse()
+            ans.append(str((3 + 2 * (len(path) - 1) + 1) // 2))
+            aux = []
+            aux.append(str(start + 1))
+            aux.append(str(path[0] + 1))
+            for i in range(1, len(path)):
+                aux.append(str(movie[path[i - 1]][path[i]] + 1))
+                aux.append(str(path[i] + 1))
+            aux.append(str(end + 1))
+            ans.append(" ".join(aux))
+    print("\n".join(ans))
 if __name__ == "__main__":
     main()
