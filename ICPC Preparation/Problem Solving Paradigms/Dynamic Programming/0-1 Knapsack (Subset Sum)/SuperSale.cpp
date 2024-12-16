@@ -53,6 +53,7 @@ int main(){
         }
         int ans = 0;
         int g = fs.nextInt();
+
         while (g--){
             int w = fs.nextInt();
             ans += dp(0, w, n, arr);

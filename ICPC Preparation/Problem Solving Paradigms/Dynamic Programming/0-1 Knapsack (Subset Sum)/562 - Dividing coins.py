@@ -70,27 +70,27 @@ def comb(n, r):
 
 def main():
     t = int(input())
+    res = []
     for _ in range(t):
         n = int(input())
         a = list(ints())
-        print(solve(n, a))
-
+        res.append(solve(n, a))
+    print("\n".join(map(str, res)))
 
 def solve(n ,a ):
     goal = sum(a) // 2
     rem = sum(a) - goal
     #print(goal, "GOAL")
     ans = 0
-
-    @lru_cache(maxsize=None)
-    def kns(index, remW):
-        if index == n or remW == 0:
-            return 0
-        if a[index] > remW:
-            return kns(index + 1, remW)
-        return max(kns(index + 1, remW), a[index] + kns(index + 1, remW - a[index]))
-
-    ans = kns(0, goal)
+    w = goal
+    dp = [[0 for i in range(w + 1)] for i in range(n + 1)]
+    for i in range(n - 1, -1, -1):
+        for remW in range(w, -1, -1):
+            if remW - a[i] < 0:
+                dp[i][remW] = dp[i + 1][remW]
+            else:
+                dp[i][remW] = max(dp[i + 1][remW], a[i] + dp[i + 1][remW - a[i]])
+    ans = dp[0][w]
     #print(ans, "ANS")
     return sum(a) - ans*2
 

@@ -65,7 +65,15 @@ class Wrapper(int):
     def __hash__(self):
         return super(Wrapper, self).__hash__() ^ RANDOM
 
-
+def can(target, a):
+    curr = 0
+    for num in a:
+        curr += num
+        if curr > target:
+            return False
+        elif curr == target:
+            curr = 0
+    return curr == 0
 def main():
     #sys.stdin = open('circlecross.in', 'r')
     #sys.stdout = open('circlecross.out', 'w')
@@ -75,25 +83,15 @@ def main():
         a = list(ints())
         sum_ = sum(a)
         ans = INF
-        for l in range(sum_ + 1):
-            if l != 0 and sum_ % l != 0:
-                continue
-            curr = 0
-            flag = True
-            for it in a:
-                curr += it
-                if curr > l:
-                    flag = False
-                    break
-                elif curr == l:
-                    curr = 0
-            if flag:
+        possible_ls = [l for l in range(1, sum_ + 1) if sum_ % l == 0]
+        for l in possible_ls:
+            if can(l, a):
                 if l == 0:
                     ans = 0
                 else:
                     ans = n - sum_ // l
                 break
-        print(ans)
+        print(0 if ans == INF else ans)
 
 
 if __name__ == "__main__":

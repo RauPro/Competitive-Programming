@@ -76,7 +76,6 @@ def main():
         curr = {}
         for it in spots:
             curr[it[a] + it[b] + it[c]] = True
-
         ans += all(it[a] + it[b] + it[c] not in curr for it in plain)
         #print(a,b,c)
     print(ans)

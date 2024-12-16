@@ -1,0 +1,186 @@
+Solve this competitive programming problem
+
+
+---
+
+The IEEE 754 single-precision floating-point format is a 32-bit binary format that represents real numbers. These 32 bits are divided into three distinct parts:
+
+1. **Sign bit (1 bit):**
+   - The first bit (bit 31) indicates the sign of the number.
+   - `0` means the number is positive.
+   - `1` means the number is negative.
+
+2. **Exponent (8 bits):**
+   - The next 8 bits (bits 30 to 23) represent the exponent of the number.
+   - The exponent is stored using a "biased" format, with a bias of 127. This means the actual exponent is calculated as:
+     \[
+     \text{exponent} = \text{exponent bits value} - 127
+     \]
+   - For example, the bit pattern `10000001` represents \(129\) in decimal, and the actual exponent is \(129 - 127 = 2\).
+
+3. **Fraction (mantissa) (23 bits):**
+   - The remaining 23 bits (bits 22 to 0) represent the fraction (mantissa) of the number.
+   - IEEE 754 format assumes a "normalized" representation where the leading bit is always 1 and is not stored (it is implied). Therefore, the actual value of the mantissa is:
+     \[
+     1 + \text{fraction bits}
+     \]
+
+The fraction bits represent the fractional part of the number.
+
+The value of the floating-point number is calculated as:
+\[
+(-1)^{\text{sign bit}} \times (1 + \text{mantissa}) \times 2^{(\text{exponent} - 127)}
+\]
+
+For the hexadecimal value `0x3f800000`, the breakdown is:
+
+- **Sign bit:** `0` (positive)
+- **Exponent bits:** `01111111` (decimal 128, so actual exponent = \(128 - 127 = 1\))
+- **Mantissa bits:** `00000000000000000000000` (which corresponds to a fraction slightly greater than 1)
+
+This combination represents the number `1.1415927410125732421875` approximately.
+
+More information about floating-point numbers (with a calculator for testing) can be found in the following links:
+- **Addition and subtraction**
+- **Multiplication**
+
+---
+
+**Note:** Consider the following special rules:
+- \( x + x = +0 \) for \( x = 0 \).
+- \( x + (-x) = +0 \) for all \( x \neq 0 \).
+- \( 0/0 = \text{NaN} \).
+- \( x/0 = \text{NaN} \).
+- \( 0 \times \text{NaN} = 0 \).
+- \( x \times \text{NaN} = \text{NaN} \).
+
+To compute approximated values of functions we will assume that we must store first an hexadecimal value and then the result of many commands which (possibly) use some previously stored values.
+
+One of these interesting commands is Fused Multiply-Add (FMA), which receives 3 floating point values \(a\), \(b\), and \(c\) and computes \(a \times b + c\) with only one rounding step. This command differs with multiplying and then adding because general multiplication does one rounding step and addition makes another one, so precision might be lost due to this.
+
+We will start with a single hexadecimal value `C[0]` and then many commands follow:
+
+1. **Look-Up Table (LUT):** Consider that many hexadecimal values are stored in many tables `LUT^k` of size \(2^{k}\) for some \(k \geq 1\). Then, if we execute a LUT command `L i j b`, then we must compute the integer value of the bits in position \(j, j+1, \dots, j + b - 1\) from `C[i]` (this value will be masked) and the answer will be `LUT[j][\text{mask}]`. It must be guaranteed that both \(b \leq k\) and \(0 \leq j \leq j + b - 1 < 32\).
+
+2. **NAND Gate:** If we execute a NAND command `N i h`, then we must compute the Bitwise NAND of the values `C[i]` and `C[h]`.
+
+3. **Fused Multiply-Add:** If we execute an FMA command `F i j k`, then we must compute `C[i] = C[j] \times C[k] + C[h]`.
+
+4. **Constant declaration:** If we execute a Constant command `C h`, then we must store the hexadecimal `h`.
+
+Given `C[0]`, the LUTs and the commands to execute, your task is to compute the value stored by the last command.
+
+---
+
+### Standard Input
+The first line of input contains an integer `T`, the number of test cases.
+
+The following `T` blocks are for `T` test cases.
+
+The first line of each test case contains an hexadecimal value `C[0]` that represents a single-precision floating-point value.
+
+The second line of the test case contains an integer `n`, the number of commands to read.
+
+The `i`-th of the following `n` lines contains an integer `p`, followed by `2^k` hexadecimal bits that represent single-precision floating point values.
+
+The `n`-th of the following `n` lines contains a command.
+
+- **L i j b:** Store the corresponding result for this command. It is guaranteed that \(0 \leq i, j \leq j + b - 1 < 32\) and \(b \leq k\).
+- **N i j:** Store the corresponding NAND result for this command. It is guaranteed that \(0 \leq i, j \leq k\).
+- **F i j k:** Store the corresponding FMA command result. It is guaranteed that \(0 \leq i, j, k < n\).
+- **C h:** Store the corresponding Constant result for this command. It is guaranteed that `h` is an hexadecimal value.
+
+---
+
+### Standard Output
+Print `T` lines, the i-th line must contain the value stored by the last command of the i-th test case.
+
+Input:
+4
+00000000
+0
+3
+C bf800000
+C 40800000
+F 2 0 1
+3f800000
+0
+3
+C bf800000
+C 40800000
+F 2 0 1
+40490fdb
+0
+3
+C bf800000
+C 40800000
+F 2 0 1
+bf800001
+0
+3
+C bf800000
+C 40800000
+F 2 0 1
+
+
+Output:
+bf800000
+40400000
+41390fdb
+c0a00001
+
+
+Input:
+5
+00000000
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+12345678
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+cccccccc
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+cdef0123
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+01020304
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+
+
+output:
+80000000
+92345678
+4ccccccc
+4def0123
+81020304
+
+
+
+

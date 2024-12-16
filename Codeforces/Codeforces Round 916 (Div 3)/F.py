@@ -8,6 +8,7 @@ from itertools import permutations, combinations, product
 from bisect import bisect_left, bisect_right
 from functools import lru_cache, reduce
 import operator
+from types import GeneratorType
 
 # Para mejorar el rendimiento de la entrada/salida
 input = lambda: sys.stdin.readline().strip()
@@ -44,6 +45,24 @@ def lcm(a, b): return a * b // gcd(a, b)
 @lru_cache(maxsize=None)
 def factorial(n): return n * factorial(n - 1) if n else 1
 
+def bootstrap(f, stack=[]):
+    def wrappedfunc(*args, **kwargs):
+        if stack:
+            return f(*args, **kwargs)
+        to = f(*args, **kwargs)
+        while True:
+            if type(to) is GeneratorType:
+                stack.append(to)
+                to = next(to)
+            else:
+                stack.pop()
+                if not stack:
+                    break
+                to = stack[-1].send(to)
+        return to
+
+    return wrappedfunc
+
 
 # Combinaciones con memoización (nCr)
 @lru_cache(maxsize=None)
@@ -62,14 +81,16 @@ def main():
 lvl = []
 AL = []
 padre = []
+
+@bootstrap
 def dfs(u, p):
     global lvl,AL, padre
     lvl[u] = p
     for v in AL[u]:
         if v != padre[u]:
             padre[v] = u
-            dfs(v, p + 1)
-
+            yield dfs(v, p + 1)
+    yield
 
 
 def solve(n , p ):

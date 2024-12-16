@@ -81,6 +81,7 @@ def main():
             if barn[j] == INF:
                 barn[j] = t
             barn[j] = max(barn[j], t)
+    print(barn)
     airs = []
     ans = INF
     for i in range(m):
@@ -91,6 +92,7 @@ def main():
         for i in range(m):
             if b & (1 << i):
                 current.append(i)
+        print(current)
         if len(current) == 0: continue
         ans = min(ans, can_be_covered(current, barn, airs))
     print(ans)

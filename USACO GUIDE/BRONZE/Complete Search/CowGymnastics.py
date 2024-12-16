@@ -61,7 +61,6 @@ def main():
         for i in range(m):
             for j in range(i + 1, m):
                 mapper[(a[i], a[j])] += 1
-
     print(list(mapper.values()).count(n))
 
 

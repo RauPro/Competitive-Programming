@@ -1,0 +1,131 @@
+Solve this competitive programming problem
+
+Here’s a formatted plain text version of the problem:
+
+---
+
+**Memory limit**: 512 MB
+
+Given an integer array **A** (1-indexed) with even length **n**, you can do the following operation as many times as you want:
+
+- Choose a pair of positions **2k - 1** and **2k** and multiply both **A[2k-1]** and **A[2k]** by **-1**.
+
+After finishing your operations, you must compute the maximum subarray sum of the resulting array. Maximize this value.
+
+**Standard input**
+The first line contains an integer **T**, the number of test cases.
+The following lines describe **T** test cases.
+The first line of each test case contains an even integer **N_i**, the length of the array.
+The second line contains **N_i** integers **A_j**, where the **j**-th integer is the **j**-th element of the array.
+
+**Standard output**
+Print **T** lines, where the **i**-th line must contain the answer to the **i**-th test case.
+
+**Constraints and notes**
+- **1 ≤ T ≤ 10^5**
+- **1 ≤ Σ N_i ≤ 4 * 10^5**
+- **2 ≤ N_i ≤ 2 * 10^5** for every **i = 1, …, T**
+- **N_i** is even for every **i = 1, …, T**
+- **|A_j| ≤ 10^4** for every valid **j**
+
+**Example**
+
+**Input**
+```
+2
+6
+9 -5 -3 8 0 -6
+2
+-8 0
+```
+
+**Output**
+```
+16
+8
+```
+
+**Explanation**
+For the first test case, it's possible to apply the operation on positions
+
+2 and
+
+6, which gives the array
+
+(−9,5,−3,8,0,6) and its maximum subarray sum is
+
+5+(−3)+8+0+6=16.
+
+
+For the second test case, it's possible to apply the operation on position
+
+2, which gives the array
+
+(8,0) and its maximum subarray sum is
+
+8+0=8 .
+
+---
+
+
+
+For this test case:
+
+5
+00000000
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+12345678
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+cccccccc
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+cdef0123
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+01020304
+0
+5
+C 80000000
+N 0 1
+N 0 2
+N 2 1
+N 3 4
+
+
+It provides:
+80000000
+80000000
+80000000
+80000000
+80000000
+
+
+But the correct answer is:
+80000000
+92345678
+4ccccccc
+4def0123
+81020304
+

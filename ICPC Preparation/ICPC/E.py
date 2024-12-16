@@ -107,7 +107,7 @@ def solve():
                 continue
             graph[i].append(j)
             graph[j].append(i)
-
+    print(graph)
     color = [-1] * (n + 1)
     ok = [True]
 
