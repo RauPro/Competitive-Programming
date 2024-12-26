@@ -127,13 +127,18 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        n, d = ints()
+        print(solve(n, d))
 
 
-def solve(n, a):
-    pass
+def solve(n, d):
+    ans = [1]
+    odds = {3, 6, 9}
+    if n >= 3 or (n == 2 and d in odds): ans.append(3)
+    if d == 5: ans.append(5)
+    if n >= 3 or (n == 2 and d == 7): ans.append(7)
+    if n >= 6 or (n == 2 and d == 9) or (3 <= n <= 5 and d in odds): ans.append(9)
+    return ' '.join(map(str, ans))
 
 if __name__ == "__main__":
     main()

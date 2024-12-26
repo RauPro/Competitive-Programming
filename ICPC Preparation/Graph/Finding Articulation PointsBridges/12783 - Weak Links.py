@@ -12,7 +12,7 @@ from random import getrandbits
 from itertools import accumulate
 from io import BytesIO, IOBase
 from types import GeneratorType
-
+from enum import Enum
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 flush = lambda: sys.stdout.flush()
 print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
@@ -125,15 +125,62 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    while True:
+        n, m = ints()
+        if n == m == 0: break
+        AL = [[] for i in range(n)]
+        for i in range(m):
+            u, v = ints()
+            AL[u].append(v)
+            AL[v].append(u)
 
+        class flag(Enum):
+            UNVISITED = -1
 
-def solve(n, a):
-    pass
+        dfs_num = []
+        dfs_low = []
+        dfs_parent = []
+        articulation_vertex = []
+        dfsNumberCounter = 0
+        dfsRoot = 0
+        rootChildren = 0
+        ans = []
+        def articulationPointAndBridge(u):
+            nonlocal AL
+            nonlocal dfs_num, dfs_parent, dfs_low, articulation_vertex
+            nonlocal dfsNumberCounter, dfsRoot, rootChildren
+
+            dfs_low[u] = dfs_num[u] = dfsNumberCounter
+            dfsNumberCounter += 1
+            for (v) in AL[u]:
+                if dfs_num[v] == flag.UNVISITED.value:
+                    dfs_parent[v] = u
+                    if u == dfsRoot:
+                        rootChildren += 1
+
+                    articulationPointAndBridge(v)
+
+                    if dfs_low[v] >= dfs_num[u]:
+                        articulation_vertex[u] = True
+                    if dfs_low[v] > dfs_num[u]:
+                        ans.append(u)
+                        ans.append(v)
+                    dfs_low[u] = min(dfs_low[u], dfs_low[v])
+                elif v != dfs_parent[u]:
+                    dfs_low[u] = min(dfs_low[u], dfs_num[v])
+        V = n
+        dfs_num = [flag.UNVISITED.value] * V
+        dfs_low = [0] * V
+        dfs_parent = [-1] * V
+        articulation_vertex = [False] * V
+        dfsNumberCounter = 0
+        for u in range(V):
+            if dfs_num[u] == flag.UNVISITED.value:
+                dfsRoot = u
+                rootChildren = 0
+                articulationPointAndBridge(u)
+        ans = [len(ans) // 2] + ans
+        print(*ans)
 
 if __name__ == "__main__":
     main()

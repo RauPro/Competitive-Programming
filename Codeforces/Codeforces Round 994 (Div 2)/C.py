@@ -127,13 +127,28 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        n,x,y = ints()
+        print(*solve(n, x, y))
 
 
-def solve(n, a):
-    pass
+def solve(n ,x, y):
+    AL =  [[] for i in range(n+1)]
+    for i in range(n+1):
+        AL[i].append((i - 1) if i > 1 else n)
+        AL[i].append((i + 1) if i < n else 1)
+    AL[x].append(y)
+    AL[y].append(x)
+    ans = [-1] * (n + 1)
+    for u in range(1, n + 1):
+        mex = 0
+        set_ = set()
+        for friend in AL[u]:
+            if ans[friend] != -1:
+                set_.add(ans[friend])
+        while mex in set_: #POC
+            mex += 1
+        ans[u] = mex
+    return ans[1:]
 
 if __name__ == "__main__":
     main()

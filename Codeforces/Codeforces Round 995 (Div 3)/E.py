@@ -126,14 +126,18 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 def main():
     t = int(input())
+    res = []
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        n, k = ints()
+        a, b = sorted(list(ints())), sorted(list(ints()))
+        union = sorted(set(a + b))
+        res.append(str(solve(n, k, a, b, union)))
+    print("\n".join(res))
 
 
-def solve(n, a):
-    pass
+def solve(n, k, a, b, union):
+    return max((it * (n - left_b) for it in union
+               if (left_a := bisect_left(a, it)) - (left_b := bisect_left(b, it)) <= k), default=0)
 
 if __name__ == "__main__":
     main()

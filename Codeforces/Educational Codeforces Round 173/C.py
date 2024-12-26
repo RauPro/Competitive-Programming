@@ -131,9 +131,61 @@ def main():
         a = list(ints())
         print(solve(n, a))
 
+def minmax_kadane(a):
+    prefix = min_pref = max_pref = 0
+    min_kadane, max_kadane = INF, -INF
+    for it in a:
+        prefix += it
+        max_kadane, min_kadane = max(max_kadane, prefix - min_pref), min(min_kadane, prefix - max_pref)
+        min_pref, max_pref = min(min_pref, prefix), max(max_pref, prefix)
+    return min(min_kadane, 0), max(max_kadane, 0)
+
+def suffix_(a):
+    if len(a) == 0: return 0, 0
+    prefix = [0] + list(accumulate(a))
+    total = prefix[-1]
+    min_pref, max_pref = INF, -INF
+    for i in range(len(a) + 1):
+        min_pref = min(min_pref,  prefix[i])
+        max_pref = max(max_pref, prefix[i])
+    return total - max_pref, total - min_pref
+
+def prefix_(a):
+    if not a: return 0, 0
+    prefix = min_pref = max_pref = 0
+    for x in a:
+        prefix += x
+        min_pref = min(min_pref, prefix)
+        max_pref = max(max_pref, prefix)
+    return min_pref, max_pref
 
 def solve(n, a):
-    pass
+    res = []
+    pos =  next((i for i, v in enumerate(a) if v not in (-1, 1)), -1)
+    if pos == -1:
+        l, r = minmax_kadane(a)
+        res.append(str(r - l + 1))
+        res.append(" ".join(map(str, range(l, r + 1))) + " ")
+    else:
+        x = a[pos]
+        left, right = a[:pos], a[pos + 1:]
+        l_min, l_max = minmax_kadane(left)
+        r_min, r_max = minmax_kadane(right)
+        l_suffix, r_suffix = suffix_(left)
+        l_prefix, r_prefix = prefix_(right)
+        intervals = sorted([(l_min, l_max), (r_min, r_max), (l_suffix + x + l_prefix, r_suffix + x + r_prefix)])
+        merged = []
+        cur_start, cur_end = intervals[0]
+        for l, r in intervals[1:]:
+            if l <= cur_end + 1:
+                cur_end = max(cur_end, r)
+            else:
+                merged.append((cur_start, cur_end))
+                cur_start, cur_end = l, r
+        merged.append((cur_start, cur_end))
+        res.append(str(sum(e - s + 1 for s, e in merged)))
+        res.append(" ".join(str(it) for interval in merged for it in range(interval[0], interval[1]+1)))
+    return "\n".join(res)
 
 if __name__ == "__main__":
     main()

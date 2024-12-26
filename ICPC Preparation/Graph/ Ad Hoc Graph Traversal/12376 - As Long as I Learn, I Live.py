@@ -118,7 +118,7 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+#sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 # endregion
@@ -126,14 +126,31 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 def main():
     t = int(input())
-    for _ in range(t):
-        n = int(input())
+    for case in range(t):
+        input()
+        n, m = ints()
         a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n, a):
-    pass
-
+        AL = [[] for i in range(n)]
+        for _ in range(m):
+            u, v = ints()
+            AL[u].append(v)
+        visited = [False] * n
+        ans = 0
+        last = 0
+        def dfs(u):
+            nonlocal ans, last
+            last = u
+            visited[u] = True
+            to_ = None
+            cur = 0
+            for v in AL[u]:
+                if a[v] > cur:
+                    cur = a[v]
+                    to_ = v
+            if to_ is not None:
+                ans += a[to_]
+                dfs(to_)
+        dfs(0)
+        print(f"Case {case+1}: {ans} {last}")
 if __name__ == "__main__":
     main()

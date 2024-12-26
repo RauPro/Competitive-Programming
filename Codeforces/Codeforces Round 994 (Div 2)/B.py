@@ -126,14 +126,36 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 def main():
     t = int(input())
+    res = []
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        s = input()
+        res.append(solve(n, s))
+    print("\n".join(res))
 
-
-def solve(n, a):
-    pass
-
+def solve(n, s):
+    if n == 1: return "YES"
+    p = [INF] * (n + 1)
+    for i, it in enumerate(s, 1):
+        if it == 'p' and i < n:
+            p[i] = i
+    p_r = [INF] * (n + 2)
+    for i in range(n, 0, -1):
+        p_r[i] = min(p[i], p_r[i + 1])
+    values = [INF] * (n + 1)
+    for i, it in enumerate(s, 1):
+        if it == 's' and i > 1:
+            values[i] = n - i + 1
+    p_l = [INF] * (n + 1)
+    for i in range(1, n + 1):
+        p_l[i] = min(p_l[i - 1], values[i]) if i > 1 else values[i]
+    max_ = [min(p_r[i], p_l[i]) if min(p_r[i], p_l[i]) != INF else n for i in range(n + 1)]
+    ans = sorted((max_[i], i) for i in range(1, n + 1))
+    can, count = True, 1
+    for bound, _ in ans:
+        #print(count)
+        if count > bound: return "NO"
+        count += 1
+    return "YES" if can else "NO"
 if __name__ == "__main__":
     main()

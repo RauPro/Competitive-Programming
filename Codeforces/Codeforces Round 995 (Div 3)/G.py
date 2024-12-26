@@ -125,15 +125,49 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+    n, q = ints()
+    a = [strs() for i in range(q)]
+    #print(a)
+    print(solve(n, q, a))
 
 
-def solve(n, a):
-    pass
+
+def solve(n, q, a):
+    e = [[0] * (q + 1) for _ in range(n)]
+    s = [[0] * (q + 1) for _ in range(n)]
+    for j in range(1, q + 1):
+        i, g = int(a[j - 1][0]) - 1, a[j - 1][1]
+        for k in range(n):
+            e[k][j] = e[k][j - 1]
+            s[k][j] = s[k][j - 1]
+        (e if g == '+' else s)[i][j] += 1
+    #print(s, e)
+    matching = [[max(e[i][t] + 1 - s[j][t] for t in range(q + 1)) if i != j else 0 for j in range(n)] for i in range(n)]
+    size = 1 << n
+    dp_min = [[INF] * n for _ in range(size)]
+    dp_ans = [[INF] * n for _ in range(size)]
+    for last in range(n):
+        mask = 1 << last
+        dp_min[mask][last] = 1
+        dp_ans[mask][last] = 1 + e[last][q]
+    for mask in range(1, size):
+        for last in range(n):
+            if not (mask & (1 << last)):
+                continue
+            prev_mask = mask ^ (1 << last)
+            if prev_mask == 0:
+                continue
+            for prev in range(n):
+                if not (prev_mask & (1 << prev)):
+                    continue
+                next_min = dp_min[prev_mask][prev]
+                next_ans = dp_ans[prev_mask][prev]
+                new_min = next_min + matching[prev][last]
+                cur = max(next_ans, new_min + e[last][q])
+                if cur < dp_ans[mask][last] or (cur == dp_ans[mask][last] and new_min < dp_min[mask][last]):
+                    dp_min[mask][last] = new_min
+                    dp_ans[mask][last] = cur
+    return min(dp_ans[ (1 << n) - 1][last] for last in range(n))
 
 if __name__ == "__main__":
     main()

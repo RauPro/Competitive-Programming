@@ -128,12 +128,10 @@ def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n, a):
-    pass
-
+        ans = 1
+        while n > 3:
+            ans *= 2
+            n //=  4
+        print(ans)
 if __name__ == "__main__":
     main()

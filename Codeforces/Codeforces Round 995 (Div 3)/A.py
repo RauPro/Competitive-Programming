@@ -129,11 +129,17 @@ def main():
     for _ in range(t):
         n = int(input())
         a = list(ints())
-        print(solve(n, a))
+        b = list(ints())
+        print(solve(n, a, b))
 
 
-def solve(n, a):
-    pass
-
+def solve(n ,a, b ):
+    x, y = 0, 0
+    b += [0]
+    for i in range(n):
+        if (x + a[i]) - (y + b[i+1]) > x - y:
+            x += a[i]
+            y += b[i+1]
+    return x - y
 if __name__ == "__main__":
     main()

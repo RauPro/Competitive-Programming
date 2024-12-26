@@ -126,14 +126,33 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 def main():
     t = int(input())
+    res = []
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        n, x, y = ints()
+        a = sorted(list(ints()))
+        res.append(str(solve(n, x, y ,a)))
+    print("\n".join(res))
 
+def can(a, hi, lo, target):
+    return a[lo] + a[hi] <= target
 
-def solve(n, a):
-    pass
+def sliding(n, a, target):
+    ans = 0
+    lo = 0
+    hi = n - 1
+    while lo < hi:
+        if can(a, hi, lo, target):
+            ans += (hi - lo)
+            lo += 1
+        else:
+            hi -= 1
+    return ans
 
+def solve(n, x, y ,a ):
+    sum_ = sum(a)
+    lo = sum_ - y
+    hi = sum_ - x
+    #print(sum_, lo, hi)
+    return sliding(n, a, hi) - sliding(n, a, lo - 1)
 if __name__ == "__main__":
     main()

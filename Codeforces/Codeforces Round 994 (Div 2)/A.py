@@ -132,8 +132,18 @@ def main():
         print(solve(n, a))
 
 
-def solve(n, a):
-    pass
+def solve(n ,a ):
+    if all(it == 0 for it in a):
+        return 0
+    ans = 0
+    flag = False
+    for it in a:
+        if it != 0 and not flag:
+            ans += 1
+            flag = True
+        elif it == 0:
+            flag = False
+    return 1 if ans == 1 else 2
 
 if __name__ == "__main__":
     main()

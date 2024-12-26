@@ -127,13 +127,18 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
+        n,m,k = ints()
         a = list(ints())
-        print(solve(n, a))
+        q = list(ints())
+        print(solve(n, m, k, a, q))
 
 
-def solve(n, a):
-    pass
+def solve(n, m, k, a, q ):
+    cur = 1
+    for it in q:
+        if it == cur: cur += 1
+        elif it > cur: break
+    return "".join('1' if x == min(cur, n) else '0' for x in a) if k == n - 1 else "1" * m if k == n else "0" * m
 
 if __name__ == "__main__":
     main()

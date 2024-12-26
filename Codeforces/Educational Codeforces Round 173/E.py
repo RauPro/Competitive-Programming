@@ -127,13 +127,28 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        l,r,g = ints()
+        print(solve(l, r, g))
 
 
-def solve(n, a):
-    pass
+def solve(l,r,g):
+    g_floor, g_ceil = r//g, (l+g-1)//g
+    if g_ceil > g_floor:
+        return f"{g} {g}" if g_ceil == 1 else "-1 -1"
+    elif g_ceil == g_floor:
+        return f"{g} {g}" if g_ceil == 1 else "-1 -1"
+    else:
+        l = list(range(g_ceil, min(g_floor, g_ceil + 25) + 1))
+        r = list(range(max(g_ceil, g_floor - 25), g_floor + 1))
+        ans = (-1, -1, -1)
+        for x in l:
+            for y in r:
+                if y >= x and gcd(x, y) == 1:
+                    diff = y - x
+                    if diff > ans[0] or (diff == ans[0] and x < ans[1]):
+                        ans = (diff, x, y)
+        return f"{g * ans[1]} {g * ans[2]}" if ans[0] >= 0 else (f"{g} {g}" if g_ceil <= 1 <= g_floor else "-1 -1")
+
 
 if __name__ == "__main__":
     main()

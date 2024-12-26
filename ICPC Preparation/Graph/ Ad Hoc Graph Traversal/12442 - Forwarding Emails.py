@@ -118,7 +118,7 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+#sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 # endregion
@@ -126,13 +126,38 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 def main():
     t = int(input())
+    res = []
     for _ in range(t):
         n = int(input())
-        a = list(ints())
-        print(solve(n, a))
+        AL = [[] for i in range(n+1)]
+        for i in range(n):
+            u, v = ints()
+            AL[u].append(v)
+        ans = 0
+        visited = [False] * (n+1)
+        d = [-1] * (n+1)
+        def dfs(u):
+            visited[u] = True
+            ans = 0
+            for v in AL[u]:
+                if not visited[v]:
+                    ans += 1 + dfs(v)
+            visited[u] = False
+            d[u] = ans
+            return ans
+        #print(dfs(1),dfs(5))
+        node = 0
+        for u in range(1, n+1):
+            if (d[u] == -1): dfs(u)
+            # print(d)
+            if ans < d[u]:
+                ans = d[u]
+                node = u
 
+        res.append(f"Case {_+1}: {node}")
+    print("\n".join(res))
 
-def solve(n, a):
+def solve(n ,a ):
     pass
 
 if __name__ == "__main__":

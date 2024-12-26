@@ -127,13 +127,23 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def main():
     t = int(input())
     for _ in range(t):
-        n = int(input())
         a = list(ints())
+        n = a[0]
+        a = a[1:]
         print(solve(n, a))
 
 
-def solve(n, a):
-    pass
-
+def solve(n ,a ):
+    total = sum(a)
+    steps = n // total
+    rem_steps = n % total
+    ans = steps * 3
+    index = 0
+    #print(rem_steps)
+    while rem_steps > 0:
+        rem_steps -= a[(index % n)]
+        ans += 1
+        index += 1
+    return ans
 if __name__ == "__main__":
     main()

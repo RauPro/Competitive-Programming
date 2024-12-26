@@ -118,21 +118,53 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+#sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 # endregion
 
 
 def main():
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        a = list(ints())
-        print(solve(n, a))
-
-
-def solve(n, a):
+    mapper = {
+        'O': {"D":"N", "E":"S"},
+        'N': {"D":"L", "E":"O"},
+        'S': {"D":"O", "E":"L"},
+        'L': {"D":"S", "E":"N"}
+    }
+    while True:
+        n, m , q = ints()
+        if n == m == q == 0: break
+        mx = [list(input().strip()) for i in range(n)]
+        s = input()
+        o_i, o_j = 0, 0
+        curr = ""
+        for i in range(n):
+            for j in range(m):
+                if mx[i][j] != '.' and mx[i][j] != '#' and mx[i][j] != '*':
+                    o_i, o_j = i, j
+                    curr = mx[i][j]
+                    mx[i][j] = "."
+        ans = 0
+        for it in s:
+            if curr == 'O' and it == 'F':
+                if o_j > 0  and mx[o_i][o_j - 1] != '#':
+                    o_j -= 1
+            elif curr == 'N' and it == 'F':
+                if o_i > 0  and mx[o_i - 1][o_j] != '#':
+                    o_i -= 1
+            elif curr == 'S' and it == 'F':
+                if o_i < n - 1  and mx[o_i + 1][o_j] != '#':
+                    o_i += 1
+            elif curr == 'L' and it == 'F':
+                if o_j < m - 1  and mx[o_i][o_j + 1] != '#':
+                    o_j += 1
+            elif it == 'D' or it  == 'E':
+                curr = mapper[curr][it]
+            if mx[o_i][o_j] == '*':
+                ans += 1
+                mx[o_i][o_j] = '.'
+        print(ans)
+def solve(n ,a ):
     pass
 
 if __name__ == "__main__":
