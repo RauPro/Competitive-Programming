@@ -148,34 +148,12 @@ def main():
 
 debug = False
 def solve(x, m):
-    # 2 3 = 2
-    # 3 3 = 2
-    # 4 1 = 1
-    # 5 5 = 3
-    if x == 1: return m
-    mapper = {}
-    ans = 0
-    k = 0
-    while k * x <= m + x and k <= min(m, 10 ** 6) + 1:
-        z = k * x
-        y = x ^ z
-        if debug: print(z, y)
-        if 1 <= y <= m and not mapper.get(Wrapper(y), False):
-            ans += 1
-            if debug: print("ENTRE",z, y)
-            mapper[Wrapper(y)] = True
-        k += 1
-        if debug: print("ENTRE", k)
-        #if k > x.bit_length() + 2: break
-
-    for y in range(1, min(m, 10 ** 6) + 1):
-        if not mapper.get(Wrapper(y), False):
-            z = x ^ y
-            if z != 0 and z % y == 0:
-                if debug: print("ENTRE", z, y)
-                ans += 1
-                mapper[Wrapper(y)] = True
-    return ans
+    p = m - m % x
+    ans = p / x - (x < p)
+    ans += (1 <= (x ^ p) <= m) + (1 <= (x ^ (p + x)) <= m)
+    ans += sum(1 for y in range(1, min(x, m) + 1) if (x ^ y) % y == 0)
+    ans -= x <= m
+    return int(ans)
 
 if __name__ == "__main__":
     main()
