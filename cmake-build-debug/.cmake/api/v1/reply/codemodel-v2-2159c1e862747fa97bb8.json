@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.30"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Competitive_Programming",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "11709::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-11709-Debug-3b7f5f8edb8ea8142fab.json",
+					"name" : "11709",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "11770::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-11770-Debug-8ec7acd527bb5765574b.json",
+					"name" : "11770",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Competitive_Programming::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Competitive_Programming-Debug-e799b2ddb828271478f0.json",
+					"name" : "Competitive_Programming",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Dominos::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Dominos-Debug-d1983c9fceba3e272e38.json",
+					"name" : "Dominos",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "F::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-F-Debug-9082bd8e02f8ef6b3d6a.json",
+					"name" : "F",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "L::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-L-Debug-b5ba9217a3d5a3243444.json",
+					"name" : "L",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/cmake-build-debug",
+		"source" : "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

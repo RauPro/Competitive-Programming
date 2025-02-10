@@ -3,14 +3,9 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.8" />
   </component>
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/STL Algorithms">
-    <contentRoot DIR="$PROJECT_DIR$" />
+  <component name="CMakePythonSetting">
+    <option name="pythonIntegrationState" value="YES" />
   </component>
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
-  </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8" project-jdk-type="Python SDK" />
-  <component name="PyCharmDSProjectLayout">
-    <option name="id" value="JupyterRightHiddenStructureLayout" />
-  </component>
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Torogoz-Trade-Engine)" project-jdk-type="Python SDK" />
 </project>

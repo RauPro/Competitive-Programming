@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Competitive_Programming" targetName="11709" />
+      <config projectName="Competitive_Programming" targetName="11770" />
+      <config projectName="Competitive_Programming" targetName="F" />
+      <config projectName="Competitive_Programming" targetName="Dominos" />
+      <config projectName="Competitive_Programming" targetName="L" />
+      <config projectName="Competitive_Programming" targetName="Competitive_Programming" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2022-2023 ICPC Central Europe Regional Contest (CERC 22)/K.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2022-2023 ICPC Northwestern European Regional Programming Contest (NWERC 2022)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/F.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Connected Components/247 - Calling Circles" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11504 - Dominos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11709-Trust groups.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11770 - Lighting Away .cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/247 - Calling Circles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Flood Fill/11094 - Continents.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Flood Fill/852 - Deciding victory in Go.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Minimum Spanning Tree/Variants/10048 - Audiophobia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Mathematics/Probability/12461 - Airplane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/13/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/13/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/13/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/13/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/15/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/15/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/15/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/15/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/porno/F.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/porno/L.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.qodo/indexes.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/F__Final_Boss.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/bunny_hopscotch_input.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/cottontail_climb_part_1_input.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Template.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template.py" beforeDir="false" afterPath="$PROJECT_DIR$/Template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RauPro&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/RauPro/Competitive-Programming.git&quot;,
+    &quot;accountId&quot;: &quot;0569e05c-29fd-4078-8e29-8d7e8447e275&quot;
+  }
+}</component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2slmI0cTNYFg4Ay3AVHUytqnLMX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "AutoCp Solution.11504 - Dominos.executor": "Run",
+    "CMake Application.11709.executor": "Run",
+    "CMake Application.11770.executor": "Run",
+    "CMake Application.Competitive_Programming.executor": "Run",
+    "CMake Application.Dominos.executor": "Run",
+    "CMake Application.F.executor": "Run",
+    "CMake Application.L.executor": "Run",
+    "Python.M.executor": "Run",
+    "Python.temp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/main.cpp",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.temp">
+    <configuration name="11504 - Dominos" type="AutoCp" factoryName="AutoCp" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="solutionFilePath" value="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming\ICPC Preparation\Graph\Finding Strongly Connected Components\11504 - Dominos.cpp" />
+      <method v="2" />
+    </configuration>
+    <configuration name="11709" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="11709" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="11709">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="11770" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="11770" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="11770">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Competitive_Programming" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="Competitive_Programming" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="Competitive_Programming">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dominos" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="Dominos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="Dominos">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="F" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="F" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="F">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="L" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="L" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="L">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Competitive-Programming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.temp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.temp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="" />
+      <created>1739038451563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739038451563</updated>
+      <workItem from="1739038452854" duration="9795000" />
+      <workItem from="1739133808909" duration="2347000" />
+      <workItem from="1739143042415" duration="7343000" />
+      <workItem from="1739156455521" duration="2868000" />
+      <workItem from="1739209041575" duration="3340000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/M.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/M.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/M.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/M.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/M.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739134057084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739211999187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

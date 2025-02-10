@@ -118,7 +118,7 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+#sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 # endregion
