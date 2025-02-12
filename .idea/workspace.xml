@@ -14,11 +14,9 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Competitive_Programming" targetName="11709" />
-      <config projectName="Competitive_Programming" targetName="11770" />
+      <config projectName="Competitive_Programming" targetName="A" />
       <config projectName="Competitive_Programming" targetName="F" />
-      <config projectName="Competitive_Programming" targetName="Dominos" />
-      <config projectName="Competitive_Programming" targetName="L" />
+      <config projectName="Competitive_Programming" targetName="N" />
       <config projectName="Competitive_Programming" targetName="Competitive_Programming" />
     </generated>
   </component>
@@ -29,56 +27,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2022-2023 ICPC Central Europe Regional Contest (CERC 22)/K.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2022-2023 ICPC Northwestern European Regional Programming Contest (NWERC 2022)/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/F.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Connected Components/247 - Calling Circles" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11504 - Dominos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11709-Trust groups.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/11770 - Lighting Away .cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Finding Strongly Connected Components/247 - Calling Circles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Flood Fill/11094 - Continents.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Flood Fill/852 - Deciding victory in Go.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Graph/Minimum Spanning Tree/Variants/10048 - Audiophobia.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Mathematics/Probability/12461 - Airplane.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/M.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/13/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/13/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/13/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/13/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/1/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/2/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/14/3/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/15/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/15/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/15/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThemeCP/15/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/porno/F.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/porno/L.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.qodo/indexes.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/A.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/F.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/H.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/N.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/F.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/F__Final_Boss.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/bunny_hopscotch_input.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/cottontail_climb_part_1_input.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_31_2025_5_21_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Template.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template.py" beforeDir="false" afterPath="$PROJECT_DIR$/Template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2159c1e862747fa97bb8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-09T23-56-26-0492.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-11709-Debug-3b7f5f8edb8ea8142fab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-11770-Debug-8ec7acd527bb5765574b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Dominos-Debug-d1983c9fceba3e272e38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-F-Debug-9082bd8e02f8ef6b3d6a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-L-Debug-b5ba9217a3d5a3243444.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/F.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/F.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/porno/F.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bootcamp/ICPC Latin 2019/F.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/porno/L.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bootcamp/ICPC Latin 2019/L.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,10 +105,16 @@
     "AutoCp Solution.11504 - Dominos.executor": "Run",
     "CMake Application.11709.executor": "Run",
     "CMake Application.11770.executor": "Run",
+    "CMake Application.A.executor": "Run",
     "CMake Application.Competitive_Programming.executor": "Run",
     "CMake Application.Dominos.executor": "Run",
     "CMake Application.F.executor": "Run",
     "CMake Application.L.executor": "Run",
+    "CMake Application.N.executor": "Debug",
+    "Python.E.executor": "Run",
+    "Python.F.executor": "Run",
+    "Python.H.executor": "Run",
+    "Python.K.executor": "Run",
     "Python.M.executor": "Run",
     "Python.temp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -144,6 +125,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -153,22 +135,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.temp">
-    <configuration name="11504 - Dominos" type="AutoCp" factoryName="AutoCp" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="solutionFilePath" value="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming\ICPC Preparation\Graph\Finding Strongly Connected Components\11504 - Dominos.cpp" />
-      <method v="2" />
-    </configuration>
-    <configuration name="11709" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="11709" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="11709">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming\Bootcamp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.E">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="11770" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="11770" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="11770">
+    <configuration name="A" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="A" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="A">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -178,20 +156,107 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dominos" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="Dominos" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="Dominos">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="F" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="F" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="F">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="L" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="L" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="L">
+    <configuration name="N" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="N" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="N">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="E" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Competitive-Programming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/E.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="F" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Competitive-Programming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/F.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="H" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Competitive-Programming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/H.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="K" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Competitive-Programming" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
@@ -217,10 +282,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.E" />
+      <item itemvalue="Python.F" />
+      <item itemvalue="Python.K" />
+      <item itemvalue="Python.H" />
       <item itemvalue="Python.temp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.E" />
+        <item itemvalue="Python.K" />
+        <item itemvalue="Python.F" />
+        <item itemvalue="Python.H" />
         <item itemvalue="Python.temp" />
       </list>
     </recent_temporary>
@@ -246,6 +319,12 @@
       <workItem from="1739143042415" duration="7343000" />
       <workItem from="1739156455521" duration="2868000" />
       <workItem from="1739209041575" duration="3340000" />
+      <workItem from="1739223013195" duration="574000" />
+      <workItem from="1739223626395" duration="46000" />
+      <workItem from="1739223673329" duration="15000" />
+      <workItem from="1739223718959" duration="5831000" />
+      <workItem from="1739243610588" duration="1126000" />
+      <workItem from="1739295020447" duration="16662000" />
     </task>
     <servers />
   </component>
@@ -292,24 +371,83 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/temp.py</url>
-          <line>118</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/temp.py</url>
-          <line>94</line>
+          <line>89</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/temp.py</url>
-          <line>104</line>
+          <line>98</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>153</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>156</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>158</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py</url>
+          <line>159</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/E.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739134057084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739211999187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$F.coverage" NAME="F Coverage Results" MODIFIED="1739297415354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739223386733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$H.coverage" NAME="H Coverage Results" MODIFIED="1739295274651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$K.coverage" NAME="K Coverage Results" MODIFIED="1739299197920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$E.coverage" NAME="E Coverage Results" MODIFIED="1739321137419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
   </component>
 </project>

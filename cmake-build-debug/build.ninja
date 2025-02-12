@@ -74,103 +74,70 @@ build Competitive_Programming.exe: CXX_EXECUTABLE_LINKER__Competitive_Programmin
   TARGET_PDB = Competitive_Programming.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Dominos
+# Object build statements for EXECUTABLE target A
 
 
 #############################################
-# Order-only phony target for Dominos
+# Order-only phony target for A
 
-build cmake_object_order_depends_target_Dominos: phony || .
+build cmake_object_order_depends_target_A: phony || .
 
-build CMakeFiles/Dominos.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11504_-_Dominos.cpp.obj: CXX_COMPILER__Dominos_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/ICPC$ Preparation/Graph/Finding$ Strongly$ Connected$ Components/11504$ -$ Dominos.cpp || cmake_object_order_depends_target_Dominos
-  DEP_FILE = CMakeFiles\Dominos.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components\11504_-_Dominos.cpp.obj.d
+build CMakeFiles/A.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/A.cpp.obj: CXX_COMPILER__A_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/Bootcamp/2021-2022$ ICPC$ Moscow$ Subregional/A.cpp || cmake_object_order_depends_target_A
+  DEP_FILE = CMakeFiles\A.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional\A.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Dominos.dir
-  OBJECT_FILE_DIR = CMakeFiles\Dominos.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components
+  OBJECT_DIR = CMakeFiles\A.dir
+  OBJECT_FILE_DIR = CMakeFiles\A.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Dominos
+# Link build statements for EXECUTABLE target A
 
 
 #############################################
-# Link the executable Dominos.exe
+# Link the executable A.exe
 
-build Dominos.exe: CXX_EXECUTABLE_LINKER__Dominos_Debug CMakeFiles/Dominos.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11504_-_Dominos.cpp.obj
+build A.exe: CXX_EXECUTABLE_LINKER__A_Debug CMakeFiles/A.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/A.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Dominos.dir
+  OBJECT_DIR = CMakeFiles\A.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Dominos.exe
-  TARGET_IMPLIB = libDominos.dll.a
-  TARGET_PDB = Dominos.exe.dbg
+  TARGET_FILE = A.exe
+  TARGET_IMPLIB = libA.dll.a
+  TARGET_PDB = A.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target 11709
+# Object build statements for EXECUTABLE target N
 
 
 #############################################
-# Order-only phony target for 11709
+# Order-only phony target for N
 
-build cmake_object_order_depends_target_11709: phony || .
+build cmake_object_order_depends_target_N: phony || .
 
-build CMakeFiles/11709.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11709-Trust_groups.cpp.obj: CXX_COMPILER__11709_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/ICPC$ Preparation/Graph/Finding$ Strongly$ Connected$ Components/11709-Trust$ groups.cpp || cmake_object_order_depends_target_11709
-  DEP_FILE = CMakeFiles\11709.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components\11709-Trust_groups.cpp.obj.d
+build CMakeFiles/N.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/N.cpp.obj: CXX_COMPILER__N_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/Bootcamp/2021-2022$ ICPC$ Moscow$ Subregional/N.cpp || cmake_object_order_depends_target_N
+  DEP_FILE = CMakeFiles\N.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional\N.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\11709.dir
-  OBJECT_FILE_DIR = CMakeFiles\11709.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components
+  OBJECT_DIR = CMakeFiles\N.dir
+  OBJECT_FILE_DIR = CMakeFiles\N.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target 11709
+# Link build statements for EXECUTABLE target N
 
 
 #############################################
-# Link the executable 11709.exe
+# Link the executable N.exe
 
-build 11709.exe: CXX_EXECUTABLE_LINKER__11709_Debug CMakeFiles/11709.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11709-Trust_groups.cpp.obj
+build N.exe: CXX_EXECUTABLE_LINKER__N_Debug CMakeFiles/N.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/N.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\11709.dir
+  OBJECT_DIR = CMakeFiles\N.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = 11709.exe
-  TARGET_IMPLIB = lib11709.dll.a
-  TARGET_PDB = 11709.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target 11770
-
-
-#############################################
-# Order-only phony target for 11770
-
-build cmake_object_order_depends_target_11770: phony || .
-
-build CMakeFiles/11770.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11770_-_Lighting_Away_.cpp.obj: CXX_COMPILER__11770_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/ICPC$ Preparation/Graph/Finding$ Strongly$ Connected$ Components/11770$ -$ Lighting$ Away$ .cpp || cmake_object_order_depends_target_11770
-  DEP_FILE = CMakeFiles\11770.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components\11770_-_Lighting_Away_.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\11770.dir
-  OBJECT_FILE_DIR = CMakeFiles\11770.dir\ICPC_Preparation\Graph\Finding_Strongly_Connected_Components
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target 11770
-
-
-#############################################
-# Link the executable 11770.exe
-
-build 11770.exe: CXX_EXECUTABLE_LINKER__11770_Debug CMakeFiles/11770.dir/ICPC_Preparation/Graph/Finding_Strongly_Connected_Components/11770_-_Lighting_Away_.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\11770.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = 11770.exe
-  TARGET_IMPLIB = lib11770.dll.a
-  TARGET_PDB = 11770.exe.dbg
+  TARGET_FILE = N.exe
+  TARGET_IMPLIB = libN.dll.a
+  TARGET_PDB = N.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target F
@@ -181,11 +148,11 @@ build 11770.exe: CXX_EXECUTABLE_LINKER__11770_Debug CMakeFiles/11770.dir/ICPC_Pr
 
 build cmake_object_order_depends_target_F: phony || .
 
-build CMakeFiles/F.dir/porno/F.cpp.obj: CXX_COMPILER__F_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/porno/F.cpp || cmake_object_order_depends_target_F
-  DEP_FILE = CMakeFiles\F.dir\porno\F.cpp.obj.d
+build CMakeFiles/F.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/F.cpp.obj: CXX_COMPILER__F_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/Bootcamp/2021-2022$ ICPC$ Moscow$ Subregional/F.cpp || cmake_object_order_depends_target_F
+  DEP_FILE = CMakeFiles\F.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional\F.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\F.dir
-  OBJECT_FILE_DIR = CMakeFiles\F.dir\porno
+  OBJECT_FILE_DIR = CMakeFiles\F.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional
 
 
 # =============================================================================
@@ -195,7 +162,7 @@ build CMakeFiles/F.dir/porno/F.cpp.obj: CXX_COMPILER__F_unscanned_Debug C$:/User
 #############################################
 # Link the executable F.exe
 
-build F.exe: CXX_EXECUTABLE_LINKER__F_Debug CMakeFiles/F.dir/porno/F.cpp.obj
+build F.exe: CXX_EXECUTABLE_LINKER__F_Debug CMakeFiles/F.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/F.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\F.dir
@@ -204,39 +171,6 @@ build F.exe: CXX_EXECUTABLE_LINKER__F_Debug CMakeFiles/F.dir/porno/F.cpp.obj
   TARGET_FILE = F.exe
   TARGET_IMPLIB = libF.dll.a
   TARGET_PDB = F.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target L
-
-
-#############################################
-# Order-only phony target for L
-
-build cmake_object_order_depends_target_L: phony || .
-
-build CMakeFiles/L.dir/porno/L.cpp.obj: CXX_COMPILER__L_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/porno/L.cpp || cmake_object_order_depends_target_L
-  DEP_FILE = CMakeFiles\L.dir\porno\L.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\L.dir
-  OBJECT_FILE_DIR = CMakeFiles\L.dir\porno
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target L
-
-
-#############################################
-# Link the executable L.exe
-
-build L.exe: CXX_EXECUTABLE_LINKER__L_Debug CMakeFiles/L.dir/porno/L.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\L.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = L.exe
-  TARGET_IMPLIB = libL.dll.a
-  TARGET_PDB = L.exe.dbg
 
 
 #############################################
@@ -264,17 +198,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build 11709: phony 11709.exe
-
-build 11770: phony 11770.exe
+build A: phony A.exe
 
 build Competitive_Programming: phony Competitive_Programming.exe
 
-build Dominos: phony Dominos.exe
-
 build F: phony F.exe
 
-build L: phony L.exe
+build N: phony N.exe
 
 # =============================================================================
 # Folder targets.
@@ -284,7 +214,7 @@ build L: phony L.exe
 #############################################
 # Folder: C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/cmake-build-debug
 
-build all: phony Competitive_Programming.exe Dominos.exe 11709.exe 11770.exe F.exe L.exe
+build all: phony Competitive_Programming.exe A.exe N.exe F.exe
 
 # =============================================================================
 # Built-in targets

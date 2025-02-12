@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "11770.exe"
+			"path" : "F.exe"
 		},
 		{
-			"path" : "11770.pdb"
+			"path" : "F.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "11770::@6890427a1f51a3e7e1df",
+	"id" : "F::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "11770",
-	"nameOnDisk" : "11770.exe",
+	"name" : "F",
+	"nameOnDisk" : "F.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -98,7 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "ICPC Preparation/Graph/Finding Strongly Connected Components/11770 - Lighting Away .cpp",
+			"path" : "Bootcamp/2021-2022 ICPC Moscow Subregional/F.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

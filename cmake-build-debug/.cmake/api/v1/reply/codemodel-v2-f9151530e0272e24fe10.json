@@ -18,9 +18,7 @@
 						0,
 						1,
 						2,
-						3,
-						4,
-						5
+						3
 					]
 				}
 			],
@@ -38,9 +36,7 @@
 						0,
 						1,
 						2,
-						3,
-						4,
-						5
+						3
 					]
 				}
 			],
@@ -48,16 +44,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "11709::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-11709-Debug-3b7f5f8edb8ea8142fab.json",
-					"name" : "11709",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "11770::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-11770-Debug-8ec7acd527bb5765574b.json",
-					"name" : "11770",
+					"id" : "A::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-A-Debug-82a185ce36ece0608402.json",
+					"name" : "A",
 					"projectIndex" : 0
 				},
 				{
@@ -69,23 +58,16 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "Dominos::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Dominos-Debug-d1983c9fceba3e272e38.json",
-					"name" : "Dominos",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "F::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-F-Debug-9082bd8e02f8ef6b3d6a.json",
+					"jsonFile" : "target-F-Debug-9c8f1359f2e46e9c9278.json",
 					"name" : "F",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "L::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-L-Debug-b5ba9217a3d5a3243444.json",
-					"name" : "L",
+					"id" : "N::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-N-Debug-3ef30b5e5c97b67c9e62.json",
+					"name" : "N",
 					"projectIndex" : 0
 				}
 			]
