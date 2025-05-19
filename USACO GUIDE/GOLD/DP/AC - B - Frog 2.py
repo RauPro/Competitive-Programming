@@ -12,12 +12,14 @@ from random import getrandbits
 from itertools import accumulate
 from io import BytesIO, IOBase
 from types import GeneratorType
+import functools
 
 #input = lambda: sys.stdin.readline().rstrip("\r\n")
 flush = lambda: sys.stdout.flush()
 print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
 
 sys.setrecursionlimit(100000)
+
 
 def bootstrap(f, stack=[]):
     def wrappedfunc(*args, **kwargs):
@@ -134,25 +136,22 @@ def main():
 
 
 def solve(n ,a, k ):
-    dp = [INF] * (n+1)
-    dp[-1] = 0
-    dp[-2] = 0
-    for i in range(n-2, -1, -1):
-        for j in range(1, k + 1):
-            if i + j < n:
-                dp[i] = min(dp[i], abs(a[i] - a[i + j]) + (dp[i + j]))
-
-    return dp[0]
-    """@lru_cache(maxsize=None)
+    memo = [-1] * (100009)
+    @bootstrap
     def dp(i):
+        if memo[i] != -1:
+            yield memo[i]
         if i == n - 1:
-            return 0
+            memo[i] = 0
+            yield 0
         else:
             ans = INF
-            for j in range(1, k+1):
+            for j in range(1, k + 1):
                 if i + j < n:
-                    ans = min(ans, abs(a[i] - a[i + j]) + (dp(i + j)))
-            return ans"""
+                    res = yield dp(i + j)
+                    ans = min(ans, abs(a[i] - a[i + j]) + res)
+            memo[i] = ans
+            yield ans
 
     return dp(0)
 

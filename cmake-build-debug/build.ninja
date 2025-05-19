@@ -82,11 +82,11 @@ build Competitive_Programming.exe: CXX_EXECUTABLE_LINKER__Competitive_Programmin
 
 build cmake_object_order_depends_target_A: phony || .
 
-build CMakeFiles/A.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/A.cpp.obj: CXX_COMPILER__A_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/Bootcamp/2021-2022$ ICPC$ Moscow$ Subregional/A.cpp || cmake_object_order_depends_target_A
-  DEP_FILE = CMakeFiles\A.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional\A.cpp.obj.d
+build CMakeFiles/A.dir/Bootcamp/CPC_18/A.cpp.obj: CXX_COMPILER__A_unscanned_Debug C$:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/Bootcamp/CPC$ 18/A.cpp || cmake_object_order_depends_target_A
+  DEP_FILE = CMakeFiles\A.dir\Bootcamp\CPC_18\A.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\A.dir
-  OBJECT_FILE_DIR = CMakeFiles\A.dir\Bootcamp\2021-2022_ICPC_Moscow_Subregional
+  OBJECT_FILE_DIR = CMakeFiles\A.dir\Bootcamp\CPC_18
 
 
 # =============================================================================
@@ -96,7 +96,7 @@ build CMakeFiles/A.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/A.cpp.obj: CXX
 #############################################
 # Link the executable A.exe
 
-build A.exe: CXX_EXECUTABLE_LINKER__A_Debug CMakeFiles/A.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/A.cpp.obj
+build A.exe: CXX_EXECUTABLE_LINKER__A_Debug CMakeFiles/A.dir/Bootcamp/CPC_18/A.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\A.dir

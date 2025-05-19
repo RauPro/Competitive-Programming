@@ -1,42 +1,53 @@
 #include <bits/stdc++.h>
-#include <bits/extc++.h> // pbds
-
 using namespace std;
-using namespace __gnu_pbds;
 
-#define LSOne(S) ((S) & -(S)) // Useful bitmask operation
-#define Fast ios::sync_with_stdio(0); cin.tie(0);
-#define endl endl;
-#define int long long
+vector<int> parent, sz;
+vector<long long> ans;
 
-typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ost;
-typedef vector<int> vi;
-typedef pair<int, int> pi;
+int find(int a) {
+    return parent[a] == a ? a : find(parent[a]);
+}
 
-const double EPS = 1e-9;
-
-struct custom_hash {
-    static uint64_t splitmix64(uint64_t x) {
-        // http://xorshift.di.unimi.it/splitmix64.c
-        x += 0x9e3779b97f4a7c15;
-        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
-        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
-        return x ^ (x >> 31);
+void unite(int a, int b, int w) {
+    a = find(a), b = find(b);
+    if (a != b) {
+        if (sz[a] < sz[b]) swap(a, b);
+        ans[a - 1] += 1LL * w * sz[b];
+        ans[b - 1] += 1LL * w * sz[a];
+        ans[b - 1] -= ans[a - 1];
+        parent[b] = a;
+        sz[a] += sz[b];
     }
+}
 
-    size_t operator()(uint64_t x) const {
-        static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
-        return splitmix64(x + FIXED_RANDOM);
+long long dfs(int u) {
+    if (u == parent[u]) return ans[u - 1];
+    return ans[u - 1] + dfs(parent[u]);
+}
+
+int main() {
+    ios::sync_with_stdio(0); cin.tie(0);
+    int n, m;
+    cin >> n >> m;
+    vector<int> d(n);
+    for (int &x : d) cin >> x;
+    vector<tuple<int, int, int>> edges(m);
+    for (int i = 0; i < m; ++i) {
+        int u, v;
+        cin >> u >> v;
+        edges[i] = {max(d[u - 1], d[v - 1]), u, v};
     }
-};
-
-
-signed main(){
-    double a, b, c,d,e,f; cin>>a>>b>>c>>d>>e>>f;
-    double A = a/(b* 1.0);
-    double B = c/(d* 1.0);
-    double C = e/(f* 1.0);
-    cout << A << B << C << endl;
-    cout << (ceil(A + B+ C) == floor(A + B+ C) ? (int)(A + B + C) : -1) << endl;
+    sort(edges.begin(), edges.end());
+    parent.resize(n + 1);
+    sz.assign(n + 1, 1);
+    ans.assign(n + 1, 0);
+    iota(parent.begin(), parent.end(), 0);
+    for (auto &[w, u, v] : edges) {
+        if (find(u) != find(v)) unite(u, v, w);
+    }
+    for (int i = 1; i <= n; ++i) {
+        cout << dfs(i) + d[i - 1] << " ";
+    }
+    cout << "\n";
     return 0;
 }

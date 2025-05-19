@@ -27,33 +27,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/A.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/F.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/H.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/N.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/E.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/F.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/G.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/L.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/M.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/M.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Asia Jakarta Regional Contest (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/E. Expression Correction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/F.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/J.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/Asia 2025 Championship/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/Asia 2025 Championship/G.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/Asia 2025 Championship/L.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/Asia Championship 2024/H.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/CPC 18/A.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/CPC 18/G.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/CPC 18/H.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/CPC 18/J.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/RPC #2 2025/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/RPC #2 2025/G.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootcamp/RPC #2 2025/L.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/F.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 175 (Rated for Div 2)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 175 (Rated for Div 2)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 175 (Rated for Div 2)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 175 (Rated for Div 2)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 175 (Rated for Div 2)/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)/D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/A. Binary search in array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/B. Restaurants on the road.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/C. Root of a polynomial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow/11418 - Clever Naming Patterns.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow/820 - Internet Bandwidth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ICPC Preparation/Rare Topics/Min-Cost Max-Flow/12821 - Double Shortest Paths.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USACO GUIDE/GOLD/DP/CF - D. Distance in Tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USACO GUIDE/PLATINO/D. Choosing Capital for Treeland.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USACO GUIDE/PLATINO/DP TREE/D. Road Improvement.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USACO GUIDE/PLATINO/MATCHING/C Array and Operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/N.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/N.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2159c1e862747fa97bb8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-09T23-56-26-0492.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-11709-Debug-3b7f5f8edb8ea8142fab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-11770-Debug-8ec7acd527bb5765574b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Dominos-Debug-d1983c9fceba3e272e38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-F-Debug-9082bd8e02f8ef6b3d6a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-L-Debug-b5ba9217a3d5a3243444.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IEEE/A.py" beforeDir="false" afterPath="$PROJECT_DIR$/IEEE/A.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USACO GUIDE/GOLD/DP/AC - B - Frog 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/USACO GUIDE/GOLD/DP/AC - B - Frog 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f9151530e0272e24fe10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-10T22-59-57-0043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-A-Debug-82a185ce36ece0608402.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/A.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/A.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/N.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/N.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/N.dir/Bootcamp/2021-2022_ICPC_Moscow_Subregional/N.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/F.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/F.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/N.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/N.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/porno/F.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bootcamp/ICPC Latin 2019/F.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/porno/L.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Bootcamp/ICPC Latin 2019/L.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp2.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,12 +170,41 @@
     "CMake Application.F.executor": "Run",
     "CMake Application.L.executor": "Run",
     "CMake Application.N.executor": "Debug",
+    "Python.11418 - Clever Naming Patterns.executor": "Run",
+    "Python.12821 - Double Shortest Paths.executor": "Run",
+    "Python.820 - Internet Bandwidth.executor": "Run",
+    "Python.A (1).executor": "Run",
+    "Python.A. Binary search in array.executor": "Run",
+    "Python.A.executor": "Run",
+    "Python.AC - A - Frog 1.executor": "Run",
+    "Python.AC - B - Frog 2.executor": "Run",
+    "Python.B (1).executor": "Run",
+    "Python.B. Restaurants on the road.executor": "Run",
+    "Python.B.executor": "Run",
+    "Python.C (1).executor": "Run",
+    "Python.C Array and Operations.executor": "Run",
+    "Python.C. Root of a polynomial.executor": "Run",
+    "Python.C.executor": "Run",
+    "Python.CF - D. Distance in Tree.executor": "Run",
+    "Python.D (1).executor": "Run",
+    "Python.D. Choosing Capital for Treeland.executor": "Run",
+    "Python.D. Road Improvement.executor": "Run",
+    "Python.D.executor": "Run",
+    "Python.E. Expression Correction.executor": "Run",
     "Python.E.executor": "Run",
     "Python.F.executor": "Run",
+    "Python.G.executor": "Run",
     "Python.H.executor": "Run",
+    "Python.I.executor": "Debug",
+    "Python.J (1).executor": "Run",
+    "Python.J.executor": "Run",
     "Python.K.executor": "Run",
+    "Python.L.executor": "Run",
+    "Python.M (1).executor": "Run",
     "Python.M.executor": "Run",
     "Python.temp.executor": "Run",
+    "Python.temp2.executor": "Run",
+    "Python.temp3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -125,27 +213,27 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming",
+    "last_opened_file_path": "C:/Users/paypa/OneDrive/Desktop/AnyRepo/AnyRepo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/paypa/OneDrive/Desktop/Project/Competitive-Programming/main.cpp",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming\Bootcamp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.E">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Python.temp3">
     <configuration name="A" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="A" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="A">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -166,7 +254,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="A. Binary search in array" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,12 +263,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/E.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/A. Binary search in array.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,7 +277,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="F" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="B. Restaurants on the road" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,12 +286,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/F.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/B. Restaurants on the road.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,7 +300,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="H" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="C (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,12 +309,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional/H.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)/C.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,7 +323,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="K" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="C. Root of a polynomial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,12 +332,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/K.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/C. Root of a polynomial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,7 +346,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="temp3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -272,7 +360,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -282,19 +370,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.E" />
-      <item itemvalue="Python.F" />
-      <item itemvalue="Python.K" />
-      <item itemvalue="Python.H" />
-      <item itemvalue="Python.temp" />
+      <item itemvalue="Python.A. Binary search in array" />
+      <item itemvalue="Python.B. Restaurants on the road" />
+      <item itemvalue="Python.C. Root of a polynomial" />
+      <item itemvalue="Python.temp3" />
+      <item itemvalue="Python.C (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.E" />
-        <item itemvalue="Python.K" />
-        <item itemvalue="Python.F" />
-        <item itemvalue="Python.H" />
-        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.temp3" />
+        <item itemvalue="Python.C. Root of a polynomial" />
+        <item itemvalue="Python.B. Restaurants on the road" />
+        <item itemvalue="Python.A. Binary search in array" />
+        <item itemvalue="Python.C (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +412,59 @@
       <workItem from="1739223673329" duration="15000" />
       <workItem from="1739223718959" duration="5831000" />
       <workItem from="1739243610588" duration="1126000" />
-      <workItem from="1739295020447" duration="16662000" />
+      <workItem from="1739295020447" duration="23779000" />
+      <workItem from="1739375998808" duration="4033000" />
+      <workItem from="1739391101824" duration="1853000" />
+      <workItem from="1739464641772" duration="8612000" />
+      <workItem from="1739563693287" duration="17605000" />
+      <workItem from="1739675081628" duration="1881000" />
+      <workItem from="1739717735746" duration="5310000" />
+      <workItem from="1739723981549" duration="22000" />
+      <workItem from="1739728800096" duration="1000" />
+      <workItem from="1739755995314" duration="3974000" />
+      <workItem from="1739811644112" duration="17992000" />
+      <workItem from="1739896001977" duration="10847000" />
+      <workItem from="1739923327388" duration="14944000" />
+      <workItem from="1739980063239" duration="4811000" />
+      <workItem from="1740002599075" duration="5579000" />
+      <workItem from="1740009294641" duration="6814000" />
+      <workItem from="1740089332183" duration="3761000" />
+      <workItem from="1740283982653" duration="2640000" />
+      <workItem from="1740329641623" duration="748000" />
+      <workItem from="1740371935766" duration="10000" />
+      <workItem from="1740415595051" duration="2563000" />
+      <workItem from="1740434325897" duration="10399000" />
+      <workItem from="1740448302162" duration="13000" />
+      <workItem from="1740493791628" duration="9756000" />
+      <workItem from="1740592200690" duration="6403000" />
+      <workItem from="1740623612840" duration="1127000" />
+      <workItem from="1740666769732" duration="9670000" />
+      <workItem from="1740796610315" duration="1292000" />
+      <workItem from="1740858233299" duration="10867000" />
+      <workItem from="1740875253659" duration="1139000" />
+      <workItem from="1740883308247" duration="6349000" />
+      <workItem from="1741023314849" duration="25732000" />
+      <workItem from="1741193872505" duration="651000" />
+      <workItem from="1741224230314" duration="3706000" />
+      <workItem from="1741459478649" duration="3000" />
+      <workItem from="1741462738322" duration="18575000" />
+      <workItem from="1741581618449" duration="2277000" />
+      <workItem from="1741918065572" duration="580000" />
+      <workItem from="1742056681188" duration="12146000" />
+      <workItem from="1742578742695" duration="3583000" />
+      <workItem from="1742603733077" duration="3096000" />
+      <workItem from="1742920979587" duration="1664000" />
+      <workItem from="1743011741182" duration="4538000" />
+      <workItem from="1743690155633" duration="7252000" />
+      <workItem from="1744194060379" duration="3327000" />
+      <workItem from="1744622507930" duration="1021000" />
+      <workItem from="1744709665989" duration="1218000" />
+      <workItem from="1745827750230" duration="68000" />
+      <workItem from="1746109797069" duration="5554000" />
+      <workItem from="1746201742972" duration="25000" />
+      <workItem from="1746455635765" duration="2638000" />
+      <workItem from="1746589543747" duration="28000" />
+      <workItem from="1747636293586" duration="8509000" />
     </task>
     <servers />
   </component>
@@ -439,15 +579,315 @@
           <line>168</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest/D.py</url>
+          <line>186</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>134</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>143</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/F.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/F.py</url>
+          <line>143</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/E. Expression Correction.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/E. Expression Correction.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/E. Expression Correction.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/E. Expression Correction.py</url>
+          <line>174</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/J.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/B.py</url>
+          <line>154</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/M.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/C.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)/M.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/C.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/M.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/B.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/B.py</url>
+          <line>216</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>164</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>167</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>168</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>169</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>170</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023/I.py</url>
+          <line>172</line>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/Asia Championship 2024/H.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="c == 70" language="Python" />
+          <url>file://$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/A.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Codeforces/Codeforces Round 998 (Div 3)/B.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/A.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/A.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)/A.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/C.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/C.py</url>
+          <line>141</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/C.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/ 2024-2025 ICPC, NERC, Southern and Volga Russian Regional Contest/G.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/Asia 2025 Championship/L.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/USACO GUIDE/PLATINO/DP TREE/D. Road Improvement.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/RPC #2 2025/G.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Bootcamp/RPC #2 2025/G.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/B. Restaurants on the road.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/B. Restaurants on the road.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/C. Root of a polynomial.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search/C. Root of a polynomial.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739134057084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$F.coverage" NAME="F Coverage Results" MODIFIED="1739297415354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739223386733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$H.coverage" NAME="H Coverage Results" MODIFIED="1739295274651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2021-2022 ICPC Moscow Subregional" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$E__Expression_Correction.coverage" NAME="E. Expression Correction Coverage Results" MODIFIED="1739818900477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$AC___B___Frog_2.coverage" NAME="AC - B - Frog 2 Coverage Results" MODIFIED="1739378433017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B__Restaurants_on_the_road.coverage" NAME="B. Restaurants on the road Coverage Results" MODIFIED="1747640480607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$J__1_.coverage" NAME="J (1) Coverage Results" MODIFIED="1739839741682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$M__1_.coverage" NAME="M (1) Coverage Results" MODIFIED="1740005229826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Road_Improvement.coverage" NAME="D. Road Improvement Coverage Results" MODIFIED="1741054520451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/DP TREE" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C__Root_of_a_polynomial.coverage" NAME="C. Root of a polynomial Coverage Results" MODIFIED="1747644332822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$820___Internet_Bandwidth.coverage" NAME="820 - Internet Bandwidth Coverage Results" MODIFIED="1739391717735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D__1_.coverage" NAME="D (1) Coverage Results" MODIFIED="1740497783721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$H.coverage" NAME="H Coverage Results" MODIFIED="1740285174857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/Asia Championship 2024" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$I.coverage" NAME="I Coverage Results" MODIFIED="1740099806736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$E.coverage" NAME="E Coverage Results" MODIFIED="1743697914541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$12821___Double_Shortest_Paths.coverage" NAME="12821 - Double Shortest Paths Coverage Results" MODIFIED="1739564497226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/Rare Topics/Min-Cost Max-Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$F.coverage" NAME="F Coverage Results" MODIFIED="1740498577804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739500605257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C__1_.coverage" NAME="C (1) Coverage Results" MODIFIED="1746459473259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp2.coverage" NAME="temp2 Coverage Results" MODIFIED="1744709682542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Competitive_Programming$K.coverage" NAME="K Coverage Results" MODIFIED="1739299197920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$E.coverage" NAME="E Coverage Results" MODIFIED="1739321137419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B__1_.coverage" NAME="B (1) Coverage Results" MODIFIED="1746456969876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__1_.coverage" NAME="A (1) Coverage Results" MODIFIED="1746456260251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1023 (Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C.coverage" NAME="C Coverage Results" MODIFIED="1746116116066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__Binary_search_in_array.coverage" NAME="A. Binary search in array Coverage Results" MODIFIED="1747637802469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D.coverage" NAME="D Coverage Results" MODIFIED="1743696057922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A.coverage" NAME="A Coverage Results" MODIFIED="1746110473486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$G.coverage" NAME="G Coverage Results" MODIFIED="1741467644820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/RPC #2 2025" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$J.coverage" NAME="J Coverage Results" MODIFIED="1739741259503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/CPC 18" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739931760105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C_Array_and_Operations.coverage" NAME="C Array and Operations Coverage Results" MODIFIED="1741227949080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/MATCHING" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp3.coverage" NAME="temp3 Coverage Results" MODIFIED="1747644401270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$11418___Clever_Naming_Patterns.coverage" NAME="11418 - Clever Naming Patterns Coverage Results" MODIFIED="1739469259233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$CF___D__Distance_in_Tree.coverage" NAME="CF - D. Distance in Tree Coverage Results" MODIFIED="1741044470191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Choosing_Capital_for_Treeland.coverage" NAME="D. Choosing Capital for Treeland Coverage Results" MODIFIED="1741047721434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$L.coverage" NAME="L Coverage Results" MODIFIED="1741472252965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/RPC #2 2025" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$AC___A___Frog_1.coverage" NAME="AC - A - Frog 1 Coverage Results" MODIFIED="1739376216129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B.coverage" NAME="B Coverage Results" MODIFIED="1746112442483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1022 (Div 2)" />
   </component>
 </project>

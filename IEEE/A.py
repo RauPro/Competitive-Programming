@@ -46,63 +46,24 @@ class Wrapper(int):
 
 # wx = Wrapper(x)
 # cnt[wx] = cnt.get(wx, 0) + 1
-starts = []
-visited = []
-
-
-AL = []
-dfs_num = []
-ts = []
-DAG = []
-
-class flag(Enum):
-  UNVISITED = -1
-  VISITED = -2
-
-def toposort(u):
-  global AL
-  global dfs_num
-  global ts
-  global DAG
-
-  dfs_num[u] = flag.VISITED.value
-  for v in DAG[u]:
-    if dfs_num[v] == flag.UNVISITED.value:
-      toposort(v)
-  ts.append(u)
-
-depth_list = []
 def main():
-    global starts, AL, visited, dfs_num, DAG, ts
     n = int(input())
     starts = list(ints())
     AL = [[] for i in range(n+1)]
     for i in range(n-1):
         u, v = ints()
+        u-=1
+        v-=1
         AL[u].append(v)
         AL[v].append(u)
-    DAG = [[] for i in range(n+1)]
-    for u in range(1, n+1):
+    def dfs(u, p):
+        ans = 0
         for v in AL[u]:
-            if starts[u-1] < starts[v-1]:
-                DAG[u].append(v)
-            elif starts[v-1] > starts[u-1]:
-                DAG[v].append(u)
+            if v != p:
+                if starts[v] > starts[u]:
+                    ans += 1 + dfs(v, u)
+                else:
 
-    visited = [False] * (n+1)
-    dfs_num = [flag.UNVISITED.value] * (n+1)
-    for u in range(1, n+1):
-        if dfs_num[u] == flag.UNVISITED.value:
-            toposort(u)
-    ts = ts[::-1]
-    dp = [1] * (n+1)
-    print(ts)
-    for u in ts:
-        for v in DAG[u]:
-            if dp[u] > dp[v] + 1:
-                dp[u] += dp[v] + 1
-
-    print(dp)
 
 
 def solve(n ,a ):
