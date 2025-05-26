@@ -1,27 +1,47 @@
-import sys, bisect, math
+import random
+import itertools
 
-input = lambda: sys.stdin.readline().rstrip("\r\n")
-flush = lambda: sys.stdout.flush()
-print = lambda *args, **kwargs: sys.stdout.write(' '.join(map(str, args)) + kwargs.get("end", "\n")) and flush()
-def ints(): return map(int, input().split())
-def strs(): return input().split()
-def chars(): return list(input().strip())
-def mat(n): return [list(ints()) for _ in range(n)]
-
-def main():
-    a = list(ints())
-    def pol(x):
-        return a[0]*x**3 + a[1]*x**2 + a[2]*x + a[3]
-    lo = -10000.0
-    hi = 10000.0
-    while hi - lo > 1e-9:
-        mid = (lo + hi) / 2
-        if pol(lo) * pol(mid) <= 0:
-            hi = mid
+def generate_test(k_min=2, k_max=10,
+                  len_min=0, len_max=20,
+                  val_min=-1000, val_max=1000,
+                  num_tests=5,
+                  ensure_nonempty=False):
+    """
+    Generates `num_tests` random testcases for the “merge k sorted arrays” problem.
+    - k_min, k_max: range for number of arrays (k)
+    - len_min, len_max: range for each array’s length
+    - val_min, val_max: range for element values
+    - ensure_nonempty: if True, guarantees each array has at least 1 element
+    """
+    for ti in range(1, num_tests+1):
+        k = random.randint(k_min, k_max)
+        print(f"# Test #{ti}")
+        print(k)
+        arrays = []
+        for _ in range(k):
+            # optionally force minimum length of 1 to avoid empty array
+            L = random.randint(max(1, len_min) if ensure_nonempty else len_min,
+                               len_max)
+            arr = sorted(random.randint(val_min, val_max) for __ in range(L))
+            arrays.append(arr)
+            if L:
+                print(" ".join(map(str, arr)))
+            else:
+                print()  # blank line for an empty array
+        # compute expected merged output
+        merged = list(itertools.chain.from_iterable(arrays))
+        merged.sort()
+        print("# Expected output:")
+        if merged:
+            print(" ".join(map(str, merged)))
         else:
-            lo = mid
-    print(f"{(lo + hi) / 2:.5f}")
-
+            print()  # nothing
+        print()  # blank line between tests
 
 if __name__ == "__main__":
-    main()
+    # Example: generate 10 random tests, total arrays 2..8, lengths up to 15
+    generate_test(k_min=2, k_max=8,
+                  len_min=0, len_max=15,
+                  val_min=-500, val_max=500,
+                  num_tests=10,
+                  ensure_nonempty=False)
