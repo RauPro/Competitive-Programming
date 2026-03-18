@@ -1,0 +1,2 @@
+g=open('buckets.in').read();B,L,R=[(g.find(c)//10,g.find(c)%10)for c in'BLR']
+open('buckets.out','w').write(str(abs(B[0]-L[0])+abs(B[1]-L[1])-1 + 2*((B[0]==L[0]==R[0] and min(B[1],L[1])<R[1]<max(B[1],L[1])) or (B[1]==L[1]==R[1] and min(B[0],L[0])<R[0]<max(B[0],L[0])))))
