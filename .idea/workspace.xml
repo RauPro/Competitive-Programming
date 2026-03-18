@@ -26,25 +26,40 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/D.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure/A. Inserting numbers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure/D. Maximal correct parenthesis substring.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers/A.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers/B.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers/C.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers/D.py" afterDir="false" />
+    <list default="true" id="27f010b1-3347-401b-9a32-a3402ea6bbe0" name="Changes" comment="feat: Add solution for tree path sum and LCA problem&#10;&#10;Implements:&#10;- LCA (Lowest Common Ancestor) finding using DFS&#10;- Tree path sum calculation using prefix sums&#10;- Helper functions for competitive programming input/output">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codeforces/2025 ICPC Gran Premio de Mexico 2da Fecha/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DFS/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DFS/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DFS/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/A2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/B2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP/C2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Strings/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Strings/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Toposort/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Toposort/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Toposort/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/backtracking/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/extra points/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/extra points/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/extra points/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Meta Hacker Cup 2025/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Meta Hacker Cup 2025/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Meta Hacker Cup 2025/E.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/4/A.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/4/B.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/4/C.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ThemeCP/14/4/D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Competitive-Programming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/A.py" beforeDir="false" afterPath="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort/A.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +92,9 @@
     &quot;accountId&quot;: &quot;0569e05c-29fd-4078-8e29-8d7e8447e275&quot;
   }
 }</component>
+  <component name="LLMProjectSettings">
+    <option name="turned_on" value="false" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
@@ -106,18 +124,24 @@
     &quot;Python.12821 - Double Shortest Paths.executor&quot;: &quot;Run&quot;,
     &quot;Python.820 - Internet Bandwidth.executor&quot;: &quot;Run&quot;,
     &quot;Python.A (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.A (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.A (3).executor&quot;: &quot;Run&quot;,
     &quot;Python.A. Binary search in array.executor&quot;: &quot;Run&quot;,
     &quot;Python.A. Inserting numbers.executor&quot;: &quot;Run&quot;,
     &quot;Python.A.executor&quot;: &quot;Run&quot;,
     &quot;Python.AC - A - Frog 1.executor&quot;: &quot;Run&quot;,
     &quot;Python.AC - B - Frog 2.executor&quot;: &quot;Run&quot;,
     &quot;Python.B (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.B (2).executor&quot;: &quot;Run&quot;,
     &quot;Python.B. Restaurants on the road.executor&quot;: &quot;Run&quot;,
     &quot;Python.B.executor&quot;: &quot;Run&quot;,
+    &quot;Python.B2.executor&quot;: &quot;Run&quot;,
     &quot;Python.C (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.C (2).executor&quot;: &quot;Run&quot;,
     &quot;Python.C Array and Operations.executor&quot;: &quot;Run&quot;,
     &quot;Python.C. Root of a polynomial.executor&quot;: &quot;Run&quot;,
-    &quot;Python.C.executor&quot;: &quot;Run&quot;,
+    &quot;Python.C.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.C2.executor&quot;: &quot;Run&quot;,
     &quot;Python.CF - D. Distance in Tree.executor&quot;: &quot;Run&quot;,
     &quot;Python.D (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.D. Choosing Capital for Treeland.executor&quot;: &quot;Run&quot;,
@@ -139,15 +163,18 @@
     &quot;Python.temp.executor&quot;: &quot;Run&quot;,
     &quot;Python.temp2.executor&quot;: &quot;Run&quot;,
     &quot;Python.temp3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/paypa/OneDrive/Desktop/AnyRepo/AnyRepo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/paypa/OneDrive/Desktop/chatterbox&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -168,7 +195,7 @@
       <recent name="C:\Users\paypa\OneDrive\Desktop\Project\Competitive-Programming\Bootcamp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.A">
+  <component name="RunManager" selected="Python.C">
     <configuration name="A" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Competitive_Programming" TARGET_NAME="A" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Competitive_Programming" RUN_TARGET_NAME="A">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -198,12 +225,41 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/backtracking" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/A.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/backtracking/A.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="A (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (SolanaMultiWayTrade)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ThemeCP/14/4" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ThemeCP/14/4/A.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -213,7 +269,6 @@
       <method v="2" />
     </configuration>
     <configuration name="A" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -221,12 +276,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree" />
+      <option name="SDK_NAME" value="Python 3.13 (SolanaMultiWayTrade)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Meta Hacker Cup 2025" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree/A.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Meta Hacker Cup 2025/A.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,8 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="B" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Competitive-Programming" />
+    <configuration name="C" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,12 +305,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
+      <option name="SDK_NAME" value="Python 3.8 (WSDS-API)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ThemeCP/14/4" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/B.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ThemeCP/14/4/C.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,8 +326,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="C (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Competitive-Programming" />
+    <configuration name="Python" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -267,12 +334,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
+      <option name="SDK_NAME" value="Python 3.8" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2/C.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -281,7 +355,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="temp3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Competitive-Programming" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -290,12 +364,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Codeforces/2025 ICPC Gran Premio de Mexico 2da Fecha" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp3.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Codeforces/2025 ICPC Gran Premio de Mexico 2da Fecha/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,27 +384,28 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.A" />
+      <item itemvalue="Python.Python" />
       <item itemvalue="Python.A (1)" />
-      <item itemvalue="Python.B" />
-      <item itemvalue="Python.C (1)" />
-      <item itemvalue="Python.temp3" />
+      <item itemvalue="Python.A (2)" />
+      <item itemvalue="Python.A" />
+      <item itemvalue="Python.C" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.C" />
+        <item itemvalue="Python.A (2)" />
         <item itemvalue="Python.A" />
-        <item itemvalue="Python.B" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.A (1)" />
-        <item itemvalue="Python.temp3" />
-        <item itemvalue="Python.C (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -410,8 +490,44 @@
       <workItem from="1748148706318" duration="3418000" />
       <workItem from="1748221872804" duration="1109000" />
       <workItem from="1748232215932" duration="5288000" />
-      <workItem from="1748244755431" duration="762000" />
+      <workItem from="1748244755431" duration="6616000" />
+      <workItem from="1748327456644" duration="18000" />
+      <workItem from="1748361922540" duration="2528000" />
+      <workItem from="1748411634927" duration="1820000" />
+      <workItem from="1748424991745" duration="40000" />
+      <workItem from="1748571619393" duration="5530000" />
+      <workItem from="1748707055682" duration="55000" />
+      <workItem from="1748751985272" duration="4863000" />
+      <workItem from="1748793591719" duration="34000" />
+      <workItem from="1748840101148" duration="813000" />
+      <workItem from="1748851373354" duration="29000" />
+      <workItem from="1748923249400" duration="1939000" />
+      <workItem from="1748931070671" duration="23000" />
+      <workItem from="1748935746760" duration="5694000" />
+      <workItem from="1749004563603" duration="2060000" />
+      <workItem from="1749045847759" duration="1964000" />
+      <workItem from="1749095790723" duration="97000" />
+      <workItem from="1749103701690" duration="2521000" />
+      <workItem from="1751760909651" duration="6305000" />
+      <workItem from="1751770629156" duration="83000" />
+      <workItem from="1752076835551" duration="1000" />
+      <workItem from="1759924311887" duration="62000" />
+      <workItem from="1760805775955" duration="1072000" />
+      <workItem from="1760807592489" duration="4580000" />
+      <workItem from="1761660664426" duration="2000" />
+      <workItem from="1761732462351" duration="7745000" />
+      <workItem from="1768487881605" duration="216000" />
+      <workItem from="1768488113989" duration="808000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Add solution for tree path sum and LCA problem&#10;&#10;Implements:&#10;- LCA (Lowest Common Ancestor) finding using DFS&#10;- Tree path sum calculation using prefix sums&#10;- Helper functions for competitive programming input/output">
+      <option name="closed" value="true" />
+      <created>1748245978940</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748245978940</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +537,10 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Add solution for tree path sum and LCA problem&#10;&#10;Implements:&#10;- LCA (Lowest Common Ancestor) finding using DFS&#10;- Tree path sum calculation using prefix sums&#10;- Helper functions for competitive programming input/output" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add solution for tree path sum and LCA problem&#10;&#10;Implements:&#10;- LCA (Lowest Common Ancestor) finding using DFS&#10;- Tree path sum calculation using prefix sums&#10;- Helper functions for competitive programming input/output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -831,46 +951,58 @@
           <line>41</line>
           <option name="timeStamp" value="225" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Codeforces/2025 ICPC Gran Premio de Mexico 2da Fecha/test.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Competitive_Programming$E__Expression_Correction.coverage" NAME="E. Expression Correction Coverage Results" MODIFIED="1739818900477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$AC___B___Frog_2.coverage" NAME="AC - B - Frog 2 Coverage Results" MODIFIED="1739378433017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$B__Restaurants_on_the_road.coverage" NAME="B. Restaurants on the road Coverage Results" MODIFIED="1747640480607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$J__1_.coverage" NAME="J (1) Coverage Results" MODIFIED="1739839741682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$M__1_.coverage" NAME="M (1) Coverage Results" MODIFIED="1740005229826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Road_Improvement.coverage" NAME="D. Road Improvement Coverage Results" MODIFIED="1741054520451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/DP TREE" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$C__Root_of_a_polynomial.coverage" NAME="C. Root of a polynomial Coverage Results" MODIFIED="1747644332822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$820___Internet_Bandwidth.coverage" NAME="820 - Internet Bandwidth Coverage Results" MODIFIED="1739391717735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
     <SUITE FILE_PATH="coverage/Competitive_Programming$D__1_.coverage" NAME="D (1) Coverage Results" MODIFIED="1747974757766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$H.coverage" NAME="H Coverage Results" MODIFIED="1740285174857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/Asia Championship 2024" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$I.coverage" NAME="I Coverage Results" MODIFIED="1740099806736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$E.coverage" NAME="E Coverage Results" MODIFIED="1743697914541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Maximal_correct_parenthesis_substring.coverage" NAME="D. Maximal correct parenthesis substring Coverage Results" MODIFIED="1747730354787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$A__Inserting_numbers.coverage" NAME="A. Inserting numbers Coverage Results" MODIFIED="1747726492593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$12821___Double_Shortest_Paths.coverage" NAME="12821 - Double Shortest Paths Coverage Results" MODIFIED="1739564497226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/Rare Topics/Min-Cost Max-Flow" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$F.coverage" NAME="F Coverage Results" MODIFIED="1740498577804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739500605257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$C__1_.coverage" NAME="C (1) Coverage Results" MODIFIED="1748088302534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$temp2.coverage" NAME="temp2 Coverage Results" MODIFIED="1744709682542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$K.coverage" NAME="K Coverage Results" MODIFIED="1739299197920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$B__1_.coverage" NAME="B (1) Coverage Results" MODIFIED="1747921769775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$A__1_.coverage" NAME="A (1) Coverage Results" MODIFIED="1748151325775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$A__Binary_search_in_array.coverage" NAME="A. Binary search in array Coverage Results" MODIFIED="1747637802469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$C.coverage" NAME="C Coverage Results" MODIFIED="1747929212247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$D.coverage" NAME="D Coverage Results" MODIFIED="1747831724786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$A.coverage" NAME="A Coverage Results" MODIFIED="1748241467116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Tree" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$G.coverage" NAME="G Coverage Results" MODIFIED="1741467644820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/RPC #2 2025" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$J.coverage" NAME="J Coverage Results" MODIFIED="1739741259503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/CPC 18" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739931760105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$C_Array_and_Operations.coverage" NAME="C Array and Operations Coverage Results" MODIFIED="1741227949080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/MATCHING" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$temp3.coverage" NAME="temp3 Coverage Results" MODIFIED="1748150066370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$11418___Clever_Naming_Patterns.coverage" NAME="11418 - Clever Naming Patterns Coverage Results" MODIFIED="1739469259233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$CF___D__Distance_in_Tree.coverage" NAME="CF - D. Distance in Tree Coverage Results" MODIFIED="1741044470191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
     <SUITE FILE_PATH="coverage/Competitive_Programming$D__Choosing_Capital_for_Treeland.coverage" NAME="D. Choosing Capital for Treeland Coverage Results" MODIFIED="1741047721434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$K.coverage" NAME="K Coverage Results" MODIFIED="1739299197920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC Latin American Regional Programming Contest" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$E.coverage" NAME="E Coverage Results" MODIFIED="1743697914541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Educational Codeforces Round 177 (Rated for Div 2)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__1_.coverage" NAME="A (1) Coverage Results" MODIFIED="1749105602000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/backtracking" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$J__1_.coverage" NAME="J (1) Coverage Results" MODIFIED="1739839741682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp.coverage" NAME="temp Coverage Results" MODIFIED="1739500605257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B__1_.coverage" NAME="B (1) Coverage Results" MODIFIED="1748753579081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Toposort" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$CF___D__Distance_in_Tree.coverage" NAME="CF - D. Distance in Tree Coverage Results" MODIFIED="1741044470191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$M__1_.coverage" NAME="M (1) Coverage Results" MODIFIED="1740005229826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C__1_.coverage" NAME="C (1) Coverage Results" MODIFIED="1748755270993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Toposort" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B.coverage" NAME="B Coverage Results" MODIFIED="1748840916539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/extra points" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$test.coverage" NAME="test Coverage Results" MODIFIED="1751775307653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/2025 ICPC Gran Premio de Mexico 2da Fecha" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$AC___B___Frog_2.coverage" NAME="AC - B - Frog 2 Coverage Results" MODIFIED="1739378433017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__Binary_search_in_array.coverage" NAME="A. Binary search in array Coverage Results" MODIFIED="1747637802469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C.coverage" NAME="C Coverage Results" MODIFIED="1749104086773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp2.coverage" NAME="temp2 Coverage Results" MODIFIED="1744709682542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$11418___Clever_Naming_Patterns.coverage" NAME="11418 - Clever Naming Patterns Coverage Results" MODIFIED="1739469259233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$H.coverage" NAME="H Coverage Results" MODIFIED="1740285174857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/Asia Championship 2024" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__3_.coverage" NAME="A (3) Coverage Results" MODIFIED="1748412038635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Strings" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B2.coverage" NAME="B2 Coverage Results" MODIFIED="1749104700049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__Inserting_numbers.coverage" NAME="A. Inserting numbers Coverage Results" MODIFIED="1747726492593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A.coverage" NAME="A Coverage Results" MODIFIED="1748948635807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Road_Improvement.coverage" NAME="D. Road Improvement Coverage Results" MODIFIED="1741054520451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/DP TREE" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B__Restaurants_on_the_road.coverage" NAME="B. Restaurants on the road Coverage Results" MODIFIED="1747640480607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$J.coverage" NAME="J Coverage Results" MODIFIED="1739741259503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/CPC 18" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C__2_.coverage" NAME="C (2) Coverage Results" MODIFIED="1748760814693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/extra points" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$M.coverage" NAME="M Coverage Results" MODIFIED="1739931760105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024 ICPC Asia Taichung Regional Contest (Unrated, Online Mirror, ICPC Rules, Preferably Teams)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$820___Internet_Bandwidth.coverage" NAME="820 - Internet Bandwidth Coverage Results" MODIFIED="1739391717735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/More Advanced Topics/Network Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$E__Expression_Correction.coverage" NAME="E. Expression Correction Coverage Results" MODIFIED="1739818900477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2024-2025 ICPC, NERC, Northern Eurasia Finals (Unrated, Online Mirror, ICPC Rules, Teams Preferred)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$F.coverage" NAME="F Coverage Results" MODIFIED="1740498577804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codeforces/Codeforces Round 1006 (Div 3)" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D__Maximal_correct_parenthesis_substring.coverage" NAME="D. Maximal correct parenthesis substring Coverage Results" MODIFIED="1747730354787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Data Structure" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$I.coverage" NAME="I Coverage Results" MODIFIED="1740099806736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/2023-2024 ICPC, Asia Yokohama Regional Contest 2023" />
     <SUITE FILE_PATH="coverage/Competitive_Programming$L.coverage" NAME="L Coverage Results" MODIFIED="1741472252965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/RPC #2 2025" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$temp3.coverage" NAME="temp3 Coverage Results" MODIFIED="1748150066370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$B__2_.coverage" NAME="B (2) Coverage Results" MODIFIED="1748946518969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C2.coverage" NAME="C2 Coverage Results" MODIFIED="1749104453567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/DP" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C__Root_of_a_polynomial.coverage" NAME="C. Root of a polynomial Coverage Results" MODIFIED="1747644332822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Binary Search" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$G.coverage" NAME="G Coverage Results" MODIFIED="1741467644820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bootcamp/RPC #2 2025" />
     <SUITE FILE_PATH="coverage/Competitive_Programming$AC___A___Frog_1.coverage" NAME="AC - A - Frog 1 Coverage Results" MODIFIED="1739376216129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/GOLD/DP" />
-    <SUITE FILE_PATH="coverage/Competitive_Programming$B.coverage" NAME="B Coverage Results" MODIFIED="1748222418488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Shorting Algo 2" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$C_Array_and_Operations.coverage" NAME="C Array and Operations Coverage Results" MODIFIED="1741227949080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/USACO GUIDE/PLATINO/MATCHING" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$A__2_.coverage" NAME="A (2) Coverage Results" MODIFIED="1748361951665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/Count Sort and Heap Sort" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$12821___Double_Shortest_Paths.coverage" NAME="12821 - Double Shortest Paths Coverage Results" MODIFIED="1739564497226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ICPC Preparation/Rare Topics/Min-Cost Max-Flow" />
+    <SUITE FILE_PATH="coverage/Competitive_Programming$D.coverage" NAME="D Coverage Results" MODIFIED="1747831724786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HarbourSpace Basic of Algorithms 2025 BKK/hash table and two pointers" />
   </component>
 </project>
